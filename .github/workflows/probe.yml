@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
     inputs:
       urls: { description: 'Space-separated URLs (blank = default list)', required: false, default: '' }
+      show_text: { description: 'Print page text (1 = yes)', required: false, default: '' }
 permissions: { contents: read }
 jobs:
   probe:
@@ -11,4 +12,5 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
-      - run: node scripts/probe.mjs ${{ inputs.urls }}
+      - run: node scripts/probe.mjs $URLS
+        env: { URLS: '${{ inputs.urls }}', SHOW_TEXT: '${{ inputs.show_text }}' }

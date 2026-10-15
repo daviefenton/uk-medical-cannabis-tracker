@@ -22,6 +22,8 @@ for (const u of urls) {
   const title = r.text?.match(/<title[^>]*>([\s\S]{0,120}?)<\/title>/i)?.[1]?.replace(/\s+/g, ' ').trim();
   const items = r.text ? (r.text.match(/<item[\s>]|<entry[\s>]/g) || []).length : 0;
   console.log(`\n== ${u}\n   status=${r.status} type=${r.type || '-'} size=${r.size ?? '-'} final=${r.final || '-'}\n   title=${title || '-'} feedItems=${items}`);
+  if (/xml/.test(r.type || '') && /<urlset|<sitemapindex/.test(r.text)) { const locs = [...r.text.matchAll(/<loc>([^<]+)<\/loc>/g)].map(m => m[1]); console.log(`   sitemap: ${locs.length} urls`); console.log(locs.filter(l => !/\.(jpg|png|webp)$/.test(l)).slice(0, 120).map(l => '     ' + l).join('\n')); }
+  if (process.env.SHOW_TEXT && r.text && /html/.test(r.type || '')) console.log('   text:', r.text.replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/g, ' ').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 3000));
   if (r.type === 'application/json') console.log('   json:', r.text.slice(0, 300).replace(/\s+/g, ' '));
   const origin = new URL(r.final || u).origin;
   if (typeof r.status === 'number' && !seenRobots.has(origin)) {
