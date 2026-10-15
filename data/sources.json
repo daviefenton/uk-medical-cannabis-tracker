@@ -1,0 +1,11 @@
+{
+  "_about": "Add one entry per public source. 'kind' picks an adapter in scripts/adapters/. Only sources you are allowed to read (public pages, open feeds, APIs, or data you have permission to use) should be listed. Check each site's terms and robots.txt.",
+  "ntfyTopic": null,
+  "sources": [
+    { "id": "example-feed", "kind": "json", "enabled": false, "url": "https://example.com/products.json",
+      "label": "Example pharmacy feed", "pharmacy": "Example Pharmacy", "itemsPath": "products",
+      "map": { "id": "sku", "name": "title", "producer": "brand", "thc": "thc_pct", "cbd": "cbd_pct", "pricePerGram": "price_per_g", "stock": "availability", "irradiated": "irradiated", "url": "url" } },
+    { "id": "news-cantourage", "kind": "rss", "enabled": false, "url": "https://example.com/news.rss", "label": "Importer news",
+      "keywords": ["launch", "new strain", "now available", "flower"] }
+  ]
+}

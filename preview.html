@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f1a17" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5f7f4" media="(prefers-color-scheme: light)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Leafwatch UK">
+<meta name="description" content="Track new UK medical cannabis releases, restocks and price changes. Independent, source-linked, and clear about what is confirmed.">
+<title>Leafwatch UK</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231f8a70'/%3E%3Cpath d='M16 6c5 4 7 9 0 20C9 15 11 10 16 6z' fill='white'/%3E%3C/svg%3E">
+<style>:root{--bg:#f5f7f4;--surface:#fff;--surface2:#eef2ee;--text:#14201c;--muted:#5b6b64;--line:#dbe3dd;--accent:#1f8a70;--accent-ink:#fff;
+--ok:#1f8a4c;--warn:#b7791f;--bad:#c0392b;--info:#2b6cb0;--rumour:#7b4bb7;--citrus:#c98a00;--diesel:#4a5568;
+--r:16px;--shadow:0 1px 2px rgba(0,0,0,.04),0 6px 20px rgba(20,32,28,.06);--tab:64px}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1a17;--surface:#16241f;--surface2:#1d2f29;--text:#e8f0ec;--muted:#93a89f;--line:#274038;--accent:#3ec9a0;--accent-ink:#06231a;--ok:#4cd07d;--warn:#e8b04a;--bad:#ff7a6b;--info:#7fb4ff;--rumour:#b99af0;--citrus:#f2c14e;--diesel:#9fb0c3;--shadow:none}}
+:root[data-theme=dark]{--bg:#0f1a17;--surface:#16241f;--surface2:#1d2f29;--text:#e8f0ec;--muted:#93a89f;--line:#274038;--accent:#3ec9a0;--accent-ink:#06231a;--ok:#4cd07d;--warn:#e8b04a;--bad:#ff7a6b;--info:#7fb4ff;--rumour:#b99af0;--citrus:#f2c14e;--diesel:#9fb0c3;--shadow:none}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"SF Pro Text",Segoe UI,Roboto,sans-serif;padding-bottom:calc(var(--tab) + env(safe-area-inset-bottom))}
+a{color:var(--accent)}h1,h2,h3{line-height:1.2;margin:0}h1{font-size:1.6rem}h2{font-size:1.15rem}h3{font-size:1rem}
+.top{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:12px;padding:calc(10px + env(safe-area-inset-top)) max(16px,env(safe-area-inset-right)) 10px max(16px,env(safe-area-inset-left));background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;color:var(--text);margin-right:auto}.brand b{color:var(--accent)}
+.logo{width:26px;height:26px;border-radius:8px;background:var(--accent);position:relative}.logo::after{content:"";position:absolute;inset:5px 8px;background:var(--accent-ink);border-radius:60% 60% 60% 60%/80% 80% 40% 40%}
+.icon-btn{border:1px solid var(--line);background:var(--surface);color:var(--text);width:40px;height:40px;border-radius:12px;font-size:1.1rem}
+.side{display:none}
+main{max-width:1000px;margin:0 auto;padding:16px max(16px,env(safe-area-inset-right)) 24px max(16px,env(safe-area-inset-left));outline:none}
+.tabbar{position:fixed;bottom:0;left:0;right:0;z-index:30;display:grid;grid-template-columns:repeat(5,1fr);padding-bottom:env(safe-area-inset-bottom);background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid var(--line)}
+.tabbar a,.side a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;height:var(--tab);font-size:.7rem;text-decoration:none;color:var(--muted);position:relative}
+.tabbar a svg{width:22px;height:22px}.tabbar a[aria-current=page]{color:var(--accent);font-weight:600}
+.badge-dot{position:absolute;top:8px;left:calc(50% + 6px);min-width:16px;height:16px;border-radius:8px;background:var(--bad);color:#fff;font-size:.65rem;display:grid;place-items:center;padding:0 4px}
+.disclaimer{background:color-mix(in srgb,var(--warn) 16%,var(--surface));border-bottom:1px solid var(--line);padding:8px 16px;font-size:.82rem;text-align:center}
+.hero{padding:18px;border-radius:22px;background:linear-gradient(135deg,var(--accent),color-mix(in srgb,var(--accent) 45%,#0b3b5a));color:var(--accent-ink);margin-bottom:16px}
+.hero p{margin:6px 0 0;opacity:.9}.hero h1{color:inherit}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.stat{background:rgba(255,255,255,.18);border-radius:12px;padding:8px 10px}.stat b{display:block;font-size:1.3rem}.stat span{font-size:.72rem;opacity:.9}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 0 8px;scrollbar-width:none;margin:0 -16px;padding-inline:16px}.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:999px;padding:8px 14px;font:inherit;font-size:.9rem;min-height:40px;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+.chip[aria-pressed=true],.chip.on{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.sec{margin:22px 0 10px;display:flex;align-items:baseline;justify-content:space-between;gap:8px}.sec a{font-size:.9rem}
+.sub{color:var(--muted);font-size:.88rem;margin:2px 0 10px}
+.grid{display:grid;gap:12px;grid-template-columns:1fr}
+@media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:8px;position:relative;color:inherit;text-decoration:none}
+a.card:active{transform:scale(.99)}
+.card h3 a{color:inherit;text-decoration:none}.card h3 a::after{content:"";position:absolute;inset:0}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.between{justify-content:space-between}
+.muted{color:var(--muted);font-size:.85rem}
+.tag{display:inline-flex;align-items:center;gap:4px;border-radius:999px;padding:2px 9px;font-size:.74rem;font-weight:600;border:1px solid transparent;white-space:nowrap}
+.t-confirmed{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
+.t-announced{background:color-mix(in srgb,var(--info) 15%,transparent);color:var(--info)}
+.t-rumour{background:color-mix(in srgb,var(--rumour) 16%,transparent);color:var(--rumour);border:1px dashed var(--rumour)}
+.t-new{background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--accent)}
+.t-restock{background:color-mix(in srgb,var(--ok) 15%,transparent);color:var(--ok)}
+.t-price{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.t-out,.t-disc{background:color-mix(in srgb,var(--bad) 14%,transparent);color:var(--bad)}
+.t-low{background:color-mix(in srgb,var(--warn) 18%,transparent);color:var(--warn)}
+.t-neutral{background:var(--surface2);color:var(--muted)}
+.t-citrus{background:color-mix(in srgb,var(--citrus) 20%,transparent);color:var(--citrus)}
+.t-diesel{background:color-mix(in srgb,var(--diesel) 22%,transparent);color:var(--diesel)}
+.t-sample{background:transparent;border:1px dashed var(--muted);color:var(--muted)}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.metric{background:var(--surface2);border-radius:10px;padding:6px 8px}.metric b{display:block;font-size:1rem}.metric span{font-size:.7rem;color:var(--muted)}
+.heart{position:relative;z-index:2;border:1px solid var(--line);background:var(--surface);color:var(--muted);border-radius:12px;width:40px;height:40px;font-size:1.1rem;flex:none}
+.heart[aria-pressed=true]{color:#e0457b;border-color:#e0457b}
+.toolbar{display:flex;gap:8px;position:sticky;top:calc(61px + env(safe-area-inset-top));z-index:10;background:var(--bg);padding:8px 0}
+input,select{font:inherit;color:var(--text);background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-height:44px;width:100%}
+input[type=range]{padding:0;min-height:32px;accent-color:var(--accent)}
+.btn{font:inherit;border:1px solid var(--line);background:var(--surface);color:var(--text);border-radius:12px;padding:10px 14px;min-height:44px;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);font-weight:600}
+.sheet-bg{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:50;display:flex;align-items:flex-end;justify-content:center}
+.sheet{background:var(--bg);width:100%;max-width:560px;max-height:88dvh;overflow:auto;border-radius:22px 22px 0 0;padding:16px 16px calc(16px + env(safe-area-inset-bottom));animation:up .22s ease-out}
+@keyframes up{from{transform:translateY(30px);opacity:0}}
+@media(min-width:700px){.sheet-bg{align-items:center}.sheet{border-radius:22px}}
+.field{margin:14px 0}.field>label,.field>.lbl{display:block;font-weight:600;font-size:.9rem;margin-bottom:6px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.seg{display:flex;background:var(--surface2);border-radius:12px;padding:3px;gap:2px;overflow-x:auto}
+.seg button{flex:1;border:0;background:transparent;color:var(--muted);font:inherit;font-size:.88rem;padding:9px 10px;border-radius:10px;min-height:40px;white-space:nowrap}
+.seg button[aria-pressed=true]{background:var(--surface);color:var(--text);font-weight:600;box-shadow:var(--shadow)}
+.timeline{display:flex;flex-direction:column;gap:0}.ev{display:flex;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);text-decoration:none;color:inherit}
+.ev time{flex:none;width:52px;font-size:.78rem;color:var(--muted)}.ev .b{flex:1}
+.ev.unread .b strong::before{content:"● ";color:var(--accent)}
+.cmp{overflow-x:auto;margin:0 -16px;padding:0 16px}
+table{border-collapse:separate;border-spacing:0;width:100%;min-width:520px}
+th,td{padding:10px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top;font-size:.92rem}
+th[scope=row]{position:sticky;left:0;background:var(--bg);color:var(--muted);font-weight:500;min-width:96px;z-index:1}
+.best{color:var(--ok);font-weight:700}
+.bar{height:6px;border-radius:3px;background:var(--surface2);margin-top:4px;overflow:hidden}.bar i{display:block;height:100%;background:var(--accent)}
+.kv{display:grid;grid-template-columns:auto 1fr;gap:8px 14px;margin:0}.kv dt{color:var(--muted);font-size:.88rem}.kv dd{margin:0;font-weight:500}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;margin:12px 0}
+.callout{border-left:4px solid var(--rumour);background:var(--surface2);padding:10px 12px;border-radius:0 12px 12px 0;margin:12px 0;font-size:.92rem}
+.callout.ok{border-color:var(--ok)}.callout.info{border-color:var(--info)}.callout.warn{border-color:var(--warn)}
+.switch{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line);min-height:52px}
+.switch input{width:48px;height:28px;min-height:0;accent-color:var(--accent)}
+.empty{text-align:center;padding:36px 16px;color:var(--muted)}
+.back{display:inline-flex;margin-bottom:8px;text-decoration:none;min-height:44px;align-items:center}
+.legend{display:grid;gap:8px;font-size:.88rem}
+#toast{position:fixed;left:50%;bottom:calc(var(--tab) + 18px + env(safe-area-inset-bottom));transform:translate(-50%,20px);background:var(--text);color:var(--bg);padding:10px 16px;border-radius:12px;opacity:0;pointer-events:none;transition:.2s;z-index:80;max-width:90vw}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+@media(min-width:820px){
+ body{padding-bottom:0}.tabbar{display:none}
+ .side{display:flex;gap:4px}.side a{flex-direction:row;height:40px;padding:0 14px;border-radius:12px;font-size:.92rem}.side a svg{display:none}.side a[aria-current=page]{background:var(--surface2);color:var(--accent);font-weight:600}
+ .side .badge-dot{position:static;margin-left:6px}#toast{bottom:24px}.toolbar{top:62px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.head{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}.head>div{flex:1;min-width:0}
+</style>
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/"><span class="logo" aria-hidden="true"></span>Leafwatch <b>UK</b></a>
+  <nav class="side" aria-label="Main"></nav>
+  <button class="icon-btn" id="theme" aria-label="Toggle theme">◐</button>
+</header>
+<div class="disclaimer" id="demo-banner" hidden></div>
+<main id="app" tabindex="-1"></main>
+<nav class="tabbar" aria-label="Main"></nav>
+<div id="sheet-root"></div>
+<div id="toast" role="status" aria-live="polite"></div>
+<script>window.__DATA__={"products":{"generatedAt":"2026-10-15T13:40:16.062Z","products":[{"id":"isando-medcan","name":"Isando (South African-grown flower)","producer":"MedCan","form":"flower","genetics":null,"thc":16.1,"cbd":null,"pricePerGram":null,"irradiated":"no","irradiationNote":"Producer says growing methods avoid irradiation","terpenes":[],"aroma":[],"origin":"South Africa","status":"released","confidence":"confirmed","stock":"unknown","releaseDate":null,"firstSeen":"2026-10-15","pharmacies":[],"sources":[{"label":"Business of Cannabis","url":"https://businessofcannabis.com/?p=1494"}],"lastVerified":"2026-10-15","record":"announcement"},{"id":"cannfx-nz","name":"CannFx dried flower (New Zealand)","producer":"CannFx","form":"flower","genetics":null,"thc":null,"cbd":null,"pricePerGram":null,"irradiated":"unknown","terpenes":[],"aroma":[],"origin":"New Zealand","status":"released","confidence":"confirmed","stock":"unknown","releaseDate":null,"firstSeen":"2026-10-15","pharmacies":[],"importer":"Cantourage UK","sources":[{"label":"Business of Cannabis","url":"https://businessofcannabis.com/cantourage-uk-and-cannfx-make-history-by-delivering-the-first-ever-medical-cannabis-flower-from-new-zealand-to-the-uk/"}],"lastVerified":"2026-10-15","record":"announcement"},{"id":"together-uganda","name":"Together Pharma flower (Uganda)","producer":"Together Pharma","form":"flower","genetics":null,"thc":null,"cbd":null,"pricePerGram":null,"irradiated":"no","irradiationNote":"Described as non-irradiated in coverage","terpenes":[],"aroma":[],"origin":"Uganda","status":"released","confidence":"confirmed","stock":"unknown","releaseDate":null,"firstSeen":"2026-10-15","pharmacies":[],"importer":"Cantourage UK","notes":"Further cultivars were promised \"over the next few months\".","sources":[{"label":"PR Newswire","url":"https://www.prnewswire.com/il/news-releases/cantourage-uk-brings-together-pharma-s-uganda-grown-medical-cannabis-to-the-united-kingdom-801225875.html"}],"lastVerified":"2026-10-15","record":"announcement"},{"id":"ceres-craft","name":"Plantations Cérès craft flower","producer":"Plantations Cérès","form":"flower","genetics":null,"thc":null,"cbd":null,"pricePerGram":null,"irradiated":"no","irradiationNote":"Partnership announced as non-irradiated craft flower","terpenes":[],"aroma":[],"origin":"Canada (Quebec)","status":"released","confidence":"confirmed","stock":"unknown","releaseDate":null,"firstSeen":"2026-10-15","pharmacies":[],"importer":"Cantourage UK","sources":[{"label":"PR Newswire UK","url":"https://prnewswire.co.uk/news-releases/cantourage-uk-leading-medical-cannabis-company-forms-partnership-with-premier-craft-cannabis-cultivator-plantations-ceres-pioneering-access-to-premium-medical-cannabis-flowers-for-uk-patients-301852590.html"}],"lastVerified":"2026-10-15","record":"announcement"},{"id":"glass-pharms-uk","name":"Glass Pharms UK-grown flower","producer":"Glass Pharms","form":"flower","genetics":null,"thc":null,"cbd":null,"pricePerGram":null,"irradiated":"unknown","terpenes":[],"aroma":[],"origin":"United Kingdom","status":"upcoming","confidence":"announced","stock":"unknown","releaseDate":null,"firstSeen":"2026-10-15","pharmacies":[],"notes":"Releaf announced it would be first clinic to offer it. No date confirmed.","sources":[{"label":"Farming News","url":"https://farming.co.uk/news/uk-patients-now-prescribed-first-domestically-grown-medical-cannabis-"}],"lastVerified":"2026-10-15","record":"announcement"},{"id":"mamedica-own-brand","name":"Mamedica own-brand THC-dominant strains","producer":"Cantourage (Canada)","form":"flower","genetics":null,"thc":null,"cbd":null,"pricePerGram":null,"irradiated":"unknown","terpenes":[],"aroma":[],"origin":"Canada","status":"released","confidence":"confirmed","stock":"unknown","releaseDate":null,"firstSeen":"2026-10-15","pharmacies":[],"sources":[{"label":"Business of Cannabis","url":"https://businessofcannabis.com/mamedica-launches-first-own-brand-strains-of-canadian-thc-dominant-cannabis-in-the-uk-with-cantourage/"}],"lastVerified":"2026-10-15","record":"announcement"},{"id":"s-citrus-meridian","name":"Citrus Meridian","producer":"Harbourfield Botanics (sample)","form":"flower","genetics":"Lemon Haze × Tangie","thc":24,"cbd":0.5,"pricePerGram":8.5,"irradiated":"no","terpenes":[{"name":"Limonene","pct":1.1},{"name":"Terpinolene","pct":0.6},{"name":"Myrcene","pct":0.4}],"aroma":["citrus"],"origin":"Canada","status":"released","confidence":"confirmed","stock":"in_stock","releaseDate":"2026-10-12","firstSeen":"2026-10-12","pharmacies":["Northgate Pharmacy","Riverside Dispensary"],"sources":[],"lastVerified":"2026-10-15","record":"sample"},{"id":"s-diesel-dawn","name":"Dawn Diesel","producer":"Calder & Moss (sample)","form":"flower","genetics":"Sour Diesel × OG Kush","thc":27,"cbd":0.3,"pricePerGram":9.2,"irradiated":"no","terpenes":[{"name":"Caryophyllene","pct":0.9},{"name":"Limonene","pct":0.7},{"name":"Myrcene","pct":0.5}],"aroma":["diesel","citrus"],"origin":"Portugal","status":"released","confidence":"confirmed","stock":"low","releaseDate":"2026-10-09","firstSeen":"2026-10-09","pharmacies":["Northgate Pharmacy"],"sources":[],"lastVerified":"2026-10-14","record":"sample"},{"id":"s-gas-lantern","name":"Gas Lantern","producer":"Calder & Moss (sample)","form":"flower","genetics":"GMO × Gelato","thc":29,"cbd":0.2,"pricePerGram":10.5,"irradiated":"yes","terpenes":[{"name":"Caryophyllene","pct":1.2},{"name":"Limonene","pct":0.5},{"name":"Humulene","pct":0.3}],"aroma":["diesel"],"origin":"Portugal","status":"released","confidence":"confirmed","stock":"in_stock","releaseDate":"2026-09-20","firstSeen":"2026-09-20","lastRestock":"2026-10-13","pharmacies":["Riverside Dispensary","Eastbank Pharmacy"],"sources":[],"lastVerified":"2026-10-14","record":"sample"},{"id":"s-tangerine-fold","name":"Tangerine Fold","producer":"Westmarch Growers (sample)","form":"flower","genetics":"Tangie × Cookies","thc":21,"cbd":1,"pricePerGram":7.4,"irradiated":"no","terpenes":[{"name":"Limonene","pct":1.4},{"name":"Ocimene","pct":0.4},{"name":"Linalool","pct":0.3}],"aroma":["citrus"],"origin":"Netherlands","status":"released","confidence":"confirmed","stock":"out","releaseDate":"2026-08-30","firstSeen":"2026-08-30","pharmacies":["Eastbank Pharmacy"],"sources":[],"lastVerified":"2026-10-13","record":"sample"},{"id":"s-nightfall-fuel","name":"Nightfall Fuel","producer":"Westmarch Growers (sample)","form":"flower","genetics":"Chemdawg × Purple Punch","thc":25,"cbd":0.4,"pricePerGram":8.8,"irradiated":"yes","terpenes":[{"name":"Myrcene","pct":1},{"name":"Caryophyllene","pct":0.8},{"name":"Linalool","pct":0.4}],"aroma":["diesel"],"origin":"Netherlands","status":"released","confidence":"confirmed","stock":"in_stock","releaseDate":"2026-07-02","firstSeen":"2026-07-02","previousPricePerGram":9.8,"priceChangedOn":"2026-10-11","pharmacies":["Northgate Pharmacy","Eastbank Pharmacy"],"sources":[],"lastVerified":"2026-10-14","record":"sample"},{"id":"s-lemon-ledger","name":"Lemon Ledger","producer":"Harbourfield Botanics (sample)","form":"flower","genetics":"Super Lemon Haze","thc":19,"cbd":0.6,"pricePerGram":6.9,"irradiated":"no","terpenes":[{"name":"Terpinolene","pct":1},{"name":"Limonene","pct":0.9}],"aroma":["citrus"],"origin":"Canada","status":"released","confidence":"confirmed","stock":"in_stock","releaseDate":"2026-06-10","firstSeen":"2026-06-10","lastRestock":"2026-10-14","pharmacies":["Riverside Dispensary"],"sources":[],"lastVerified":"2026-10-14","record":"sample"},{"id":"s-old-reliable","name":"Old Reliable 18","producer":"Calder & Moss (sample)","form":"flower","genetics":"Hybrid","thc":18,"cbd":0.1,"pricePerGram":5.9,"irradiated":"yes","terpenes":[{"name":"Myrcene","pct":0.8}],"aroma":[],"origin":"Portugal","status":"discontinued","confidence":"confirmed","stock":"discontinued","releaseDate":"2025-02-01","firstSeen":"2025-02-01","discontinuedOn":"2026-10-05","pharmacies":[],"sources":[],"lastVerified":"2026-10-10","record":"sample"},{"id":"s-balanced-oil","name":"Balanced 10:10 Oil","producer":"Westmarch Growers (sample)","form":"oil","genetics":null,"thc":10,"cbd":10,"pricePerGram":null,"pricePerMl":48,"irradiated":"unknown","terpenes":[],"aroma":[],"origin":"Netherlands","status":"released","confidence":"confirmed","stock":"in_stock","releaseDate":"2026-03-01","firstSeen":"2026-03-01","pharmacies":["Northgate Pharmacy"],"sources":[],"lastVerified":"2026-10-12","record":"sample"},{"id":"s-pomelo-pending","name":"Pomelo Pending","producer":"Harbourfield Botanics (sample)","form":"flower","genetics":"Grapefruit × Zkittlez","thc":26,"cbd":0.3,"pricePerGram":null,"irradiated":"no","terpenes":[{"name":"Limonene","pct":1.2}],"aroma":["citrus"],"origin":"Canada","status":"upcoming","confidence":"announced","stock":"unknown","releaseDate":"2026-10-28","firstSeen":"2026-10-10","pharmacies":[],"notes":"Producer-announced; UK date from importer notice.","sources":[],"lastVerified":"2026-10-14","record":"sample"},{"id":"s-diesel-whisper","name":"Diesel Whisper","producer":"Calder & Moss (sample)","form":"flower","genetics":null,"thc":null,"cbd":null,"pricePerGram":null,"irradiated":"unknown","terpenes":[],"aroma":["diesel"],"origin":"Portugal","status":"upcoming","confidence":"rumour","stock":"unknown","releaseDate":null,"firstSeen":"2026-10-13","pharmacies":[],"notes":"Unconfirmed community chatter. No producer or pharmacy source yet.","sources":[],"lastVerified":"2026-10-13","record":"sample"}]},"events":{"events":[{"id":"e0","ts":"2026-10-14T09:00:00Z","type":"restock","productId":"s-lemon-ledger","detail":{}},{"id":"e1","ts":"2026-10-13T16:30:00Z","type":"restock","productId":"s-gas-lantern","detail":{}},{"id":"e2","ts":"2026-10-13T08:00:00Z","type":"rumour","productId":"s-diesel-whisper","detail":{}},{"id":"e3","ts":"2026-10-12T10:00:00Z","type":"new_listing","productId":"s-citrus-meridian","detail":{}},{"id":"e4","ts":"2026-10-11T07:00:00Z","type":"price_change","productId":"s-nightfall-fuel","detail":{"from":9.8,"to":8.8}},{"id":"e5","ts":"2026-10-10T12:00:00Z","type":"announced","productId":"s-pomelo-pending","detail":{}},{"id":"e6","ts":"2026-10-09T11:00:00Z","type":"new_listing","productId":"s-diesel-dawn","detail":{}},{"id":"e7","ts":"2026-10-05T10:00:00Z","type":"discontinued","productId":"s-old-reliable","detail":{}}]}}</script><script type="module">// Leafwatch UK — dependency-free single-page app. Data: ./data/products.json + ./data/events.json
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const TODAY = () => new Date(window.__TODAY__ || Date.now());
+const store = {
+  get(k, d) { try { const v = localStorage.getItem('lw:' + k); return v ? JSON.parse(v) : d; } catch { return d; } },
+  set(k, v) { try { localStorage.setItem('lw:' + k, JSON.stringify(v)); } catch {} }
+};
+const state = {
+  products: [], events: [], meta: {},
+  watch: new Set(store.get('watch', [])),
+  follow: store.get('follow', []),               // saved searches: aroma / producer / "non-irradiated"
+  compare: store.get('compare', []),
+  rules: store.get('rules', { new_listing: true, restock: true, price_change: true, announced: true, rumour: false, discontinued: true, scope: 'watch+follow' }),
+  seen: store.get('seen', null),
+  filters: { q: '', form: '', thcMin: 0, thcMax: 40, cbdMax: 30, priceMax: 20, strain: '', producer: [], terpene: [], aroma: [], irr: '', pharmacy: [], stock: '', conf: '', sort: 'new' }
+};
+
+const ICON = {
+  home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9l-4.7 1.8L12 15.5l-1.8-4.7L5.5 9l4.7-1.3z"/><path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8z"/></svg>',
+  browse: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>',
+  stock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>',
+  compare: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 4v16M17 4v16M3 8h8M13 16h8"/></svg>',
+  watch: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.5A4 4 0 0119 10c0 5.6-7 10-7 10z"/></svg>',
+  alerts: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17V11a6 6 0 1112 0v6l1.5 2h-15z"/><path d="M10 21h4"/></svg>'
+};
+const NAV = [['/', 'New', 'home'], ['/browse', 'Browse', 'browse'], ['/stock', 'Stock', 'stock'], ['/compare', 'Compare', 'compare'], ['/watch', 'Watchlist', 'watch'], ['/alerts', 'Alerts', 'alerts']];
+const TABS = NAV.filter(n => n[0] !== '/stock'); // 5 tabs on phone; Stock lives on the dashboard + desktop nav
+const EV_LABEL = { new_listing: 'New listing', restock: 'Restocked', price_change: 'Price change', announced: 'Announced', rumour: 'Rumour', discontinued: 'Discontinued' };
+const EV_CLASS = { new_listing: 't-new', restock: 't-restock', price_change: 't-price', announced: 't-announced', rumour: 't-rumour', discontinued: 't-disc' };
+
+// ---------- helpers
+const byId = id => state.products.find(p => p.id === id);
+const daysAgo = d => d ? Math.floor((TODAY() - new Date(d)) / 864e5) : null;
+const fmtDate = d => d ? new Date(d).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Date not confirmed';
+const rel = d => { const n = daysAgo(d); return n == null ? '' : n <= 0 ? 'today' : n === 1 ? 'yesterday' : n < 30 ? n + 'd ago' : fmtDate(d); };
+const money = n => n == null ? '—' : '£' + Number(n).toFixed(2);
+const pct = n => n == null ? '—' : n + '%';
+const uniq = (arr) => [...new Set(arr)].filter(Boolean).sort();
+const toast = m => { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2200); };
+const save = () => { store.set('watch', [...state.watch]); store.set('follow', state.follow); store.set('compare', state.compare); store.set('rules', state.rules); };
+const isSample = p => p.record === 'sample';
+const confTag = p => p.status === 'discontinued' ? '<span class="tag t-disc">Discontinued</span>' :
+  p.confidence === 'rumour' ? '<span class="tag t-rumour">Rumour · unconfirmed</span>' :
+  p.confidence === 'announced' ? '<span class="tag t-announced">Announced</span>' : '<span class="tag t-confirmed">✓ Confirmed</span>';
+const stockTag = p => ({ in_stock: '<span class="tag t-restock">In stock</span>', low: '<span class="tag t-low">Low stock</span>', out: '<span class="tag t-out">Out of stock</span>', discontinued: '<span class="tag t-disc">Discontinued</span>', unknown: '<span class="tag t-neutral">Stock unknown</span>' }[p.stock]);
+const irrTag = p => p.irradiated === 'no' ? '<span class="tag t-confirmed">Non-irradiated</span>' : p.irradiated === 'yes' ? '<span class="tag t-neutral">Irradiated</span>' : '<span class="tag t-neutral">Irradiation unknown</span>';
+const aromaTags = p => (p.aroma || []).map(a => `<span class="tag t-${a}">${a === 'citrus' ? '🍋 Citrus' : '⛽ Diesel'}</span>`).join('');
+const sampleTag = p => isSample(p) ? '<span class="tag t-sample" title="Illustrative record, not real product data">Sample</span>' : '';
+const eventsFor = id => state.events.filter(e => e.productId === id);
+const isFollowed = p => state.watch.has(p.id) || state.follow.some(f => matchFollow(f, p));
+function matchFollow(f, p) {
+  if (f.kind === 'aroma') return (p.aroma || []).includes(f.value);
+  if (f.kind === 'producer') return p.producer === f.value;
+  if (f.kind === 'irr') return p.irradiated === 'no';
+  if (f.kind === 'strain') return (p.genetics || p.name || '').toLowerCase().includes(f.value.toLowerCase());
+  return false;
+}
+const followLabel = f => f.kind === 'aroma' ? (f.value === 'citrus' ? '🍋 Citrus profiles' : '⛽ Diesel profiles') : f.kind === 'irr' ? 'Non-irradiated flower' : f.kind === 'producer' ? f.value : 'Strain: ' + f.value;
+
+function card(p, extra = '') {
+  const price = p.pricePerGram != null ? `${money(p.pricePerGram)}<small>/g</small>` : p.pricePerMl != null ? `${money(p.pricePerMl)}<small>/ml</small>` : '—';
+  return `<article class="card">
+    <div class="head"><div><h3><a href="#/p/${p.id}">${esc(p.name)}</a></h3><div class="muted">${esc(p.producer)}${p.origin ? ' · ' + esc(p.origin) : ''}</div></div>
+    <button class="heart" data-watch="${p.id}" aria-pressed="${state.watch.has(p.id)}" aria-label="Watch ${esc(p.name)}">${state.watch.has(p.id) ? '♥' : '♡'}</button></div>
+    <div class="row">${confTag(p)}${p.status !== 'discontinued' && p.confidence !== 'rumour' ? stockTag(p) : ''}${sampleTag(p)}</div>
+    <div class="metrics"><div class="metric"><b>${pct(p.thc)}</b><span>THC</span></div><div class="metric"><b>${pct(p.cbd)}</b><span>CBD</span></div><div class="metric"><b>${price}</b><span>Price</span></div></div>
+    <div class="row">${p.form === 'flower' ? irrTag(p) : ''}${aromaTags(p)}</div>${extra}</article>`;
+}
+const grid = (list, fn = card) => list.length ? `<div class="grid">${list.map(p => fn(p)).join('')}</div>` : '<div class="empty">Nothing here yet.</div>';
+
+// ---------- views
+function viewHome() {
+  const P = state.products;
+  const upcoming = P.filter(p => p.status === 'upcoming').sort((a, b) => (a.releaseDate || '9') < (b.releaseDate || '9') ? -1 : 1);
+  const confirmedUp = upcoming.filter(p => p.confidence === 'announced');
+  const rumours = upcoming.filter(p => p.confidence === 'rumour');
+  const recentNew = state.events.filter(e => e.type === 'new_listing' && daysAgo(e.ts) <= 21).map(e => byId(e.productId)).filter(Boolean);
+  const restocks = state.events.filter(e => e.type === 'restock' && daysAgo(e.ts) <= 14).map(e => byId(e.productId)).filter(Boolean);
+  const prices = state.events.filter(e => e.type === 'price_change' && daysAgo(e.ts) <= 21);
+  const spot = {
+    irr: P.filter(p => p.irradiated === 'no' && p.status !== 'discontinued').sort((a, b) => (b.record === 'sample') - (a.record === 'sample') || (b.firstSeen || '').localeCompare(a.firstSeen || '')),
+    citrus: P.filter(p => (p.aroma || []).includes('citrus') && p.status !== 'discontinued'),
+    diesel: P.filter(p => (p.aroma || []).includes('diesel') && p.status !== 'discontinued')
+  };
+  const sp = state.homeSpot || 'irr';
+  return `
+  <section class="hero"><h1>What's new in UK medical cannabis</h1>
+   <p>New listings, restocks and launches, with every item labelled confirmed, announced or rumour.</p>
+   <div class="stats"><div class="stat"><b>${recentNew.length}</b><span>new listings (21d)</span></div><div class="stat"><b>${restocks.length}</b><span>restocks (14d)</span></div><div class="stat"><b>${upcoming.length}</b><span>upcoming / rumoured</span></div></div></section>
+
+  <div class="sec"><h2>Spotlight</h2></div>
+  <div class="chips" role="group" aria-label="Spotlight">
+   ${[['irr', 'Non-irradiated'], ['citrus', '🍋 Citrus'], ['diesel', '⛽ Diesel']].map(([k, l]) => `<button class="chip" data-spot="${k}" aria-pressed="${sp === k}">${l} <span class="muted" style="color:inherit;opacity:.75">${spot[k].length}</span></button>`).join('')}
+  </div>
+  ${grid(spot[sp].slice(0, 6))}
+  <p><a href="#/browse?${sp === 'irr' ? 'irr=no' : 'aroma=' + sp}">See all →</a></p>
+
+  <div class="sec"><h2>Upcoming launches</h2><a href="#/legend">What do the labels mean?</a></div>
+  <p class="sub">Announced = a producer, importer or pharmacy has said so. Dates can move.</p>
+  ${grid(confirmedUp, p => card(p, `<div class="muted">📅 Expected ${esc(fmtDate(p.releaseDate))}</div>`))}
+  <div class="callout"><strong>Rumours</strong> — unverified. Treat as a lead, never as a release.</div>
+  ${grid(rumours, p => card(p, `<div class="muted">First heard ${rel(p.firstSeen)}. ${esc(p.notes || '')}</div>`))}
+
+  <div class="sec"><h2>Newly listed</h2><a href="#/alerts">Activity feed</a></div>
+  ${grid(recentNew, p => card(p, `<div class="muted">Listed ${rel(p.firstSeen)}</div>`))}
+
+  <div class="sec"><h2>Restocks</h2><a href="#/stock">Stock tracker</a></div>
+  ${grid(restocks, p => card(p, `<div class="muted">Restocked ${rel(state.events.find(e => e.type === 'restock' && e.productId === p.id).ts)}</div>`))}
+
+  ${prices.length ? `<div class="sec"><h2>Price changes</h2></div><div class="timeline">${prices.map(evRow).join('')}</div>` : ''}
+  <div class="sec"><h2>Recently added to the tracker</h2></div>
+  <div class="timeline">${P.filter(p => p.record === 'announcement').map(p => `<a class="ev" href="#/p/${p.id}"><time>${rel(p.firstSeen)}</time><div class="b"><strong>${esc(p.name)}</strong><div class="muted">${esc(p.producer)} · from public announcement</div></div></a>`).join('')}</div>`;
+}
+function evRow(e, unread) {
+  const p = byId(e.productId); if (!p) return '';
+  const d = e.type === 'price_change' ? `${money(e.detail.from)} → ${money(e.detail.to)} /g` : '';
+  return `<a class="ev${unread ? ' unread' : ''}" href="#/p/${p.id}"><time>${rel(e.ts)}</time><div class="b"><strong>${esc(p.name)}</strong> <span class="tag ${EV_CLASS[e.type]}">${EV_LABEL[e.type]}</span><div class="muted">${esc(p.producer)} ${d ? '· ' + d : ''}</div></div></a>`;
+}
+
+function applyFilters(list) {
+  const f = state.filters, q = f.q.trim().toLowerCase();
+  let r = list.filter(p => {
+    if (q && !(`${p.name} ${p.producer} ${p.genetics || ''} ${p.origin || ''}`.toLowerCase().includes(q))) return false;
+    if (f.form && p.form !== f.form) return false;
+    if (p.thc != null && (p.thc < f.thcMin || p.thc > f.thcMax)) return false;
+    if (p.thc == null && (f.thcMin > 0 || f.thcMax < 40)) return false;
+    if (p.cbd != null && p.cbd > f.cbdMax) return false;
+    if (p.pricePerGram != null && p.pricePerGram > f.priceMax) return false;
+    if (p.pricePerGram == null && f.priceMax < 20) return false;
+    if (f.strain && !(p.genetics || '').toLowerCase().includes(f.strain.toLowerCase())) return false;
+    if (f.producer.length && !f.producer.includes(p.producer)) return false;
+    if (f.terpene.length && !f.terpene.every(t => (p.terpenes || []).some(x => x.name === t))) return false;
+    if (f.aroma.length && !f.aroma.every(a => (p.aroma || []).includes(a))) return false;
+    if (f.irr && p.irradiated !== f.irr) return false;
+    if (f.pharmacy.length && !f.pharmacy.some(x => (p.pharmacies || []).includes(x))) return false;
+    if (f.stock && p.stock !== f.stock) return false;
+    if (f.conf && (f.conf === 'released' ? !(p.status === 'released' && p.confidence === 'confirmed') : p.confidence !== f.conf)) return false;
+    return true;
+  });
+  const s = f.sort;
+  r.sort((a, b) => s === 'thc' ? (b.thc ?? -1) - (a.thc ?? -1) : s === 'price' ? (a.pricePerGram ?? 999) - (b.pricePerGram ?? 999) :
+    s === 'ppg' ? ((a.pricePerGram ?? 999) / Math.max(a.thc || 1, 1)) - ((b.pricePerGram ?? 999) / Math.max(b.thc || 1, 1)) :
+    (b.firstSeen || '').localeCompare(a.firstSeen || ''));
+  return r;
+}
+const activeCount = () => { const f = state.filters; let n = 0; if (f.form) n++; if (f.thcMin > 0 || f.thcMax < 40) n++; if (f.cbdMax < 30) n++; if (f.priceMax < 20) n++; if (f.strain) n++; n += f.producer.length + f.terpene.length + f.aroma.length + f.pharmacy.length; if (f.irr) n++; if (f.stock) n++; if (f.conf) n++; return n; };
+function viewBrowse() {
+  const list = applyFilters(state.products), n = activeCount();
+  return `<div class="toolbar"><input type="search" id="q" placeholder="Search strain, producer, genetics" value="${esc(state.filters.q)}" aria-label="Search"><button class="btn" id="open-filters">Filters${n ? ` (${n})` : ''}</button></div>
+  <div class="chips">
+   <button class="chip" data-quick="irr" aria-pressed="${state.filters.irr === 'no'}">Non-irradiated</button>
+   <button class="chip" data-quick="citrus" aria-pressed="${state.filters.aroma.includes('citrus')}">🍋 Citrus</button>
+   <button class="chip" data-quick="diesel" aria-pressed="${state.filters.aroma.includes('diesel')}">⛽ Diesel</button>
+   <button class="chip" data-quick="stock" aria-pressed="${state.filters.stock === 'in_stock'}">In stock</button>
+   ${n ? '<button class="chip" data-quick="clear">Clear all</button>' : ''}</div>
+  <div class="row between"><span class="muted">${list.length} of ${state.products.length} products</span>
+   <select id="sort" style="width:auto" aria-label="Sort">${[['new', 'Newest'], ['thc', 'Highest THC'], ['price', 'Lowest £/g'], ['ppg', 'Best £ per THC %']].map(([v, l]) => `<option value="${v}" ${state.filters.sort === v ? 'selected' : ''}>${l}</option>`).join('')}</select></div>
+  <div style="height:10px"></div>
+  ${grid(list)}${n && !list.length ? '<div class="empty">No matches. Try widening the filters.</div>' : ''}
+  ${n ? `<p><button class="btn" id="follow-this">♡ Follow this search</button></p>` : ''}`;
+}
+function openFilters() {
+  const P = state.products, f = state.filters;
+  const producers = uniq(P.map(p => p.producer)), terps = uniq(P.flatMap(p => (p.terpenes || []).map(t => t.name))), pharm = uniq(P.flatMap(p => p.pharmacies || []));
+  const multi = (name, arr, sel) => `<div class="chips" style="flex-wrap:wrap;overflow:visible;margin:0;padding:0">${arr.map(v => `<button class="chip" data-m="${name}" data-v="${esc(v)}" aria-pressed="${sel.includes(v)}">${esc(v)}</button>`).join('')}</div>`;
+  const seg = (name, opts, cur) => `<div class="seg">${opts.map(([v, l]) => `<button data-s="${name}" data-v="${v}" aria-pressed="${cur === v}">${l}</button>`).join('')}</div>`;
+  openSheet(`<div class="row between"><h2>Filters</h2><button class="btn" data-close>Done</button></div>
+   <div class="field"><span class="lbl">Type</span>${seg('form', [['', 'All'], ['flower', 'Flower'], ['oil', 'Oil'], ['vape', 'Vape']], f.form)}</div>
+   <div class="field"><span class="lbl">Irradiation</span>${seg('irr', [['', 'Any'], ['no', 'Non-irradiated'], ['yes', 'Irradiated']], f.irr)}</div>
+   <div class="field"><span class="lbl">Status</span>${seg('conf', [['', 'All'], ['released', 'Confirmed'], ['announced', 'Announced'], ['rumour', 'Rumours']], f.conf)}</div>
+   <div class="field"><span class="lbl">Stock</span>${seg('stock', [['', 'Any'], ['in_stock', 'In'], ['low', 'Low'], ['out', 'Out']], f.stock)}</div>
+   <div class="field"><label>THC ${f.thcMin}–${f.thcMax}%</label><div class="two"><input type="range" min="0" max="40" value="${f.thcMin}" data-r="thcMin" aria-label="Minimum THC"><input type="range" min="0" max="40" value="${f.thcMax}" data-r="thcMax" aria-label="Maximum THC"></div></div>
+   <div class="field"><label>CBD up to ${f.cbdMax}%</label><input type="range" min="0" max="30" value="${f.cbdMax}" data-r="cbdMax"></div>
+   <div class="field"><label>Price up to ${f.priceMax >= 20 ? 'any' : '£' + f.priceMax + '/g'}</label><input type="range" min="3" max="20" step="0.5" value="${f.priceMax}" data-r="priceMax"></div>
+   <div class="field"><span class="lbl">Aroma family</span>${multi('aroma', ['citrus', 'diesel'], f.aroma)}</div>
+   <div class="field"><span class="lbl">Terpenes (must contain)</span>${multi('terpene', terps, f.terpene)}</div>
+   <div class="field"><label for="strain">Strain / genetics contains</label><input id="strain" value="${esc(f.strain)}" placeholder="e.g. Haze"></div>
+   <div class="field"><span class="lbl">Producer</span>${multi('producer', producers, f.producer)}</div>
+   <div class="field"><span class="lbl">Pharmacy</span>${multi('pharmacy', pharm, f.pharmacy)}</div>
+   <div class="row"><button class="btn" id="reset-f">Reset</button><button class="btn primary" data-close style="flex:1">Show results</button></div>`);
+}
+function openSheet(html) {
+  const root = $('#sheet-root');
+  root.innerHTML = `<div class="sheet-bg" data-bg><div class="sheet" role="dialog" aria-modal="true">${html}</div></div>`;
+  document.body.style.overflow = 'hidden';
+}
+function closeSheet() { $('#sheet-root').innerHTML = ''; document.body.style.overflow = ''; render(); }
+
+function viewStock() {
+  const P = state.products.filter(p => p.confidence !== 'rumour' && p.status !== 'upcoming');
+  const groups = [['restocked', 'Recently restocked', P.filter(p => p.lastRestock && daysAgo(p.lastRestock) <= 14)], ['in_stock', 'In stock', P.filter(p => p.stock === 'in_stock')], ['low', 'Low stock', P.filter(p => p.stock === 'low')], ['out', 'Out of stock', P.filter(p => p.stock === 'out')], ['discontinued', 'Discontinued', P.filter(p => p.stock === 'discontinued')], ['unknown', 'Stock not yet tracked', P.filter(p => p.stock === 'unknown')]];
+  const cur = state.stockTab || 'restocked';
+  const g = groups.find(x => x[0] === cur);
+  return `<h1>Stock tracker</h1><p class="sub">Availability as last seen at listed pharmacies. Stock changes fast — confirm with your clinic or pharmacy.</p>
+   <div class="chips">${groups.map(([k, l, a]) => `<button class="chip" data-stab="${k}" aria-pressed="${cur === k}">${l} <span style="opacity:.7">${a.length}</span></button>`).join('')}</div>
+   ${grid(g[2], p => card(p, `<div class="muted">${cur === 'restocked' ? 'Restocked ' + rel(p.lastRestock) : cur === 'discontinued' ? 'Discontinued ' + fmtDate(p.discontinuedOn) : 'Last checked ' + rel(p.lastVerified)}${p.pharmacies?.length ? ' · ' + esc(p.pharmacies.join(', ')) : ''}</div>`))}`;
+}
+
+function viewCompare() {
+  const items = state.compare.map(byId).filter(Boolean);
+  const picker = `<div class="field"><label for="cmp-add">Add a product (up to 4)</label><select id="cmp-add"><option value="">Choose…</option>${state.products.filter(p => !state.compare.includes(p.id)).map(p => `<option value="${p.id}">${esc(p.name)}</option>`).join('')}</select></div>`;
+  if (items.length < 1) return `<h1>Compare</h1><p class="sub">Side-by-side THC, price per gram, genetics and terpenes.</p>${picker}<div class="empty">Pick two to four products, or tap “Compare” on any product page.</div>`;
+  const best = (fn, dir) => { const v = items.map(fn).filter(x => x != null); return v.length > 1 ? (dir === 'max' ? Math.max(...v) : Math.min(...v)) : null; };
+  const bThc = best(p => p.thc, 'max'), bPrice = best(p => p.pricePerGram, 'min'), bPpt = best(p => p.pricePerGram && p.thc ? p.pricePerGram / p.thc : null, 'min');
+  const allT = uniq(items.flatMap(p => (p.terpenes || []).map(t => t.name))), maxT = Math.max(1.5, ...items.flatMap(p => (p.terpenes || []).map(t => t.pct)));
+  const cell = (p, fn) => `<td>${fn(p)}</td>`;
+  const rows = [
+    ['', p => `<a href="#/p/${p.id}"><strong>${esc(p.name)}</strong></a><div class="muted">${esc(p.producer)}</div><button class="btn" style="min-height:36px;padding:4px 10px;margin-top:6px" data-cmp-rm="${p.id}">Remove</button>`],
+    ['Status', p => confTag(p)], ['Stock', p => stockTag(p)],
+    ['THC', p => `<span class="${p.thc != null && p.thc === bThc ? 'best' : ''}">${pct(p.thc)}</span>`], ['CBD', p => pct(p.cbd)],
+    ['Price / g', p => `<span class="${p.pricePerGram != null && p.pricePerGram === bPrice ? 'best' : ''}">${money(p.pricePerGram)}</span>`],
+    ['£ per THC %', p => { const v = p.pricePerGram && p.thc ? p.pricePerGram / p.thc : null; return `<span class="${v != null && v === bPpt ? 'best' : ''}">${v ? '£' + v.toFixed(2) : '—'}</span>`; }],
+    ['Genetics', p => esc(p.genetics || 'Not stated')], ['Irradiation', p => irrTag(p)], ['Aroma', p => aromaTags(p) || '—'], ['Origin', p => esc(p.origin || '—')],
+    ...allT.map(t => [t, p => { const x = (p.terpenes || []).find(y => y.name === t); return x ? `${x.pct}%<div class="bar"><i style="width:${Math.min(100, x.pct / maxT * 100)}%"></i></div>` : '<span class="muted">—</span>'; }]),
+    ['Last verified', p => fmtDate(p.lastVerified)]
+  ];
+  return `<h1>Compare</h1><p class="sub">Green marks the best value in each row. “£ per THC %” is a rough value guide, not a quality score.</p>${items.length < 4 ? picker : ''}
+   <div class="cmp"><table><tbody>${rows.map(([l, fn]) => `<tr><th scope="row">${l}</th>${items.map(p => cell(p, fn)).join('')}</tr>`).join('')}</tbody></table></div>`;
+}
+
+function viewWatch() {
+  const items = [...state.watch].map(byId).filter(Boolean);
+  const matched = state.products.filter(p => !state.watch.has(p.id) && state.follow.some(f => matchFollow(f, p)));
+  return `<h1>Watchlist</h1><p class="sub">Saved on this device only. No account needed.</p>
+  <div class="sec"><h2>Followed searches</h2></div>
+  <div class="chips" style="flex-wrap:wrap;overflow:visible;margin:0;padding:0">
+   ${state.follow.map((f, i) => `<button class="chip on" data-unfollow="${i}">${esc(followLabel(f))} ✕</button>`).join('') || '<span class="muted">None yet.</span>'}</div>
+  <div class="chips" style="margin-top:8px"><span class="muted" style="align-self:center">Quick add:</span>
+   <button class="chip" data-follow="irr">Non-irradiated</button><button class="chip" data-follow="citrus">🍋 Citrus</button><button class="chip" data-follow="diesel">⛽ Diesel</button></div>
+  <div class="sec"><h2>Saved products (${items.length})</h2></div>
+  ${items.length ? grid(items) : '<div class="empty">Tap ♡ on any product to save it here.</div>'}
+  ${matched.length ? `<div class="sec"><h2>Matching your followed searches</h2></div>${grid(matched)}` : ''}`;
+}
+
+function relevantEvents() {
+  const r = state.rules;
+  return state.events.filter(e => {
+    if (!r[e.type]) return false;
+    const p = byId(e.productId); if (!p) return false;
+    return r.scope === 'all' || isFollowed(p);
+  }).sort((a, b) => b.ts.localeCompare(a.ts));
+}
+const unreadCount = () => { const s = state.seen; return relevantEvents().filter(e => !s || e.ts > s).length; };
+function viewAlerts() {
+  const r = state.rules, evs = relevantEvents(), seen = state.seen;
+  const sw = (k, l, d) => `<label class="switch"><span><strong>${l}</strong><div class="muted">${d}</div></span><input type="checkbox" role="switch" data-rule="${k}" ${r[k] ? 'checked' : ''}></label>`;
+  const perm = 'Notification' in window ? Notification.permission : 'unsupported';
+  return `<h1>Alerts</h1><p class="sub">Choose what matters. Alerts are matched against your watchlist and followed searches.</p>
+  <div class="panel">${sw('new_listing', 'New releases & listings', 'A product appears for the first time')}${sw('announced', 'Announced launches', 'Confirmed upcoming dates')}${sw('restock', 'Restocks', 'Back in stock')}${sw('price_change', 'Price changes', 'Per-gram price moves')}${sw('discontinued', 'Discontinued', 'Product withdrawn')}${sw('rumour', 'Rumours', 'Unconfirmed leads — noisy, off by default')}
+   <div class="field"><span class="lbl">Apply to</span><div class="seg"><button data-scope="watch+follow" aria-pressed="${r.scope !== 'all'}">Watchlist & follows</button><button data-scope="all" aria-pressed="${r.scope === 'all'}">Everything</button></div></div></div>
+  <div class="panel"><h3>Phone notifications</h3>
+   <p class="muted">Free option: install the <a href="https://ntfy.sh" target="_blank" rel="noopener">ntfy</a> app and subscribe to your topic. The daily data job publishes every event there.</p>
+   <div class="field"><label for="ntfy">ntfy topic (set by the site owner)</label><input id="ntfy" value="${esc(state.meta.ntfyTopic || '')}" readonly placeholder="Not configured"></div>
+   ${state.meta.ntfyTopic ? `<a class="btn primary" href="https://ntfy.sh/${encodeURIComponent(state.meta.ntfyTopic)}" target="_blank" rel="noopener">Open topic</a>` : ''}
+   <p class="muted" style="margin-top:12px">In-browser: ${perm === 'unsupported' ? 'not supported here' : perm === 'granted' ? 'enabled' : perm === 'denied' ? 'blocked in browser settings' : 'off'}. On iPhone, add this site to your Home Screen first (Share → Add to Home Screen).</p>
+   ${perm === 'default' ? '<button class="btn" id="ask-notif">Enable browser notifications</button>' : ''}</div>
+  <div class="sec"><h2>Your feed</h2><button class="btn" id="mark-read">Mark all read</button></div>
+  <div class="timeline">${evs.map(e => evRow(e, !seen || e.ts > seen)).join('') || '<div class="empty">No matching activity. Follow something on the Watchlist, or switch “Apply to” to Everything.</div>'}</div>`;
+}
+
+function viewProduct(id) {
+  const p = byId(id); if (!p) return `<a class="back" href="#/">← Back</a><div class="empty">Product not found.</div>`;
+  const ev = eventsFor(id).sort((a, b) => b.ts.localeCompare(a.ts));
+  const stale = daysAgo(p.lastVerified) > 14;
+  const maxT = Math.max(1.5, ...(p.terpenes || []).map(t => t.pct));
+  return `<a class="back" href="javascript:history.back()">← Back</a>
+  <div class="head"><div><h1>${esc(p.name)}</h1><div class="muted">${esc(p.producer)}${p.importer ? ' · imported by ' + esc(p.importer) : ''}</div></div>
+   <button class="heart" data-watch="${p.id}" aria-pressed="${state.watch.has(p.id)}" aria-label="Watch">${state.watch.has(p.id) ? '♥' : '♡'}</button></div>
+  <div class="row" style="margin:10px 0">${confTag(p)}${p.confidence !== 'rumour' ? stockTag(p) : ''}${p.form === 'flower' ? irrTag(p) : ''}${aromaTags(p)}${sampleTag(p)}</div>
+  ${p.confidence === 'rumour' ? '<div class="callout"><strong>Unconfirmed.</strong> This is a rumour with no producer, importer or pharmacy source. It may never launch.</div>' : ''}
+  ${p.confidence === 'announced' ? `<div class="callout info"><strong>Announced, not yet on sale.</strong> Expected ${esc(fmtDate(p.releaseDate))}. Dates can change.</div>` : ''}
+  ${isSample(p) ? '<div class="callout warn"><strong>Sample record.</strong> Fictional demo data to show how a full entry looks. It is replaced by real listings once the data updater is connected to sources.</div>' : ''}
+  ${p.record === 'announcement' ? '<div class="callout ok"><strong>From a public announcement.</strong> Only details stated in the source are shown; unknown fields are left blank rather than guessed.</div>' : ''}
+  <div class="metrics" style="margin:12px 0"><div class="metric"><b>${pct(p.thc)}</b><span>THC</span></div><div class="metric"><b>${pct(p.cbd)}</b><span>CBD</span></div><div class="metric"><b>${p.pricePerGram != null ? money(p.pricePerGram) + '/g' : p.pricePerMl != null ? money(p.pricePerMl) + '/ml' : '—'}</b><span>Price</span></div></div>
+  <div class="panel"><dl class="kv">
+   <dt>Type</dt><dd>${esc(p.form)}</dd><dt>Genetics</dt><dd>${esc(p.genetics || 'Not stated')}</dd><dt>Origin</dt><dd>${esc(p.origin || '—')}</dd>
+   <dt>Irradiation</dt><dd>${p.irradiated === 'no' ? 'Non-irradiated' : p.irradiated === 'yes' ? 'Irradiated' : 'Unknown'}${p.irradiationNote ? `<div class="muted">${esc(p.irradiationNote)}</div>` : ''}</dd>
+   <dt>Release</dt><dd>${esc(fmtDate(p.releaseDate))}</dd><dt>First tracked</dt><dd>${esc(fmtDate(p.firstSeen))}</dd>
+   ${p.lastRestock ? `<dt>Last restock</dt><dd>${esc(fmtDate(p.lastRestock))}</dd>` : ''}${p.previousPricePerGram ? `<dt>Price change</dt><dd>${money(p.previousPricePerGram)} → ${money(p.pricePerGram)} on ${esc(fmtDate(p.priceChangedOn))}</dd>` : ''}
+   <dt>Available at</dt><dd>${p.pharmacies?.length ? esc(p.pharmacies.join(', ')) : 'No pharmacy listings tracked yet'}</dd></dl></div>
+  ${p.terpenes?.length ? `<div class="panel"><h3>Terpene profile</h3>${p.terpenes.map(t => `<div style="margin-top:8px"><div class="row between"><span>${esc(t.name)}</span><span>${t.pct}%</span></div><div class="bar"><i style="width:${Math.min(100, t.pct / maxT * 100)}%"></i></div></div>`).join('')}<p class="muted">Terpene levels vary by batch. Check the certificate of analysis for your batch.</p></div>` : '<div class="panel muted">No terpene data published yet.</div>'}
+  ${p.notes ? `<div class="panel">${esc(p.notes)}</div>` : ''}
+  <div class="panel"><h3>Sources & verification</h3>
+   <p class="${stale ? 'muted' : ''}">Last verified <strong>${esc(fmtDate(p.lastVerified))}</strong> (${rel(p.lastVerified)})${stale ? ' — may be out of date' : ''}.</p>
+   ${p.sources?.length ? `<ul>${p.sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)} ↗</a></li>`).join('')}</ul>` : '<p class="muted">No public source linked — treat as unverified.</p>'}</div>
+  ${ev.length ? `<div class="sec"><h2>History</h2></div><div class="timeline">${ev.map(e => evRow(e)).join('')}</div>` : ''}
+  <div class="row" style="margin-top:16px"><button class="btn primary" data-cmp-add="${p.id}">Compare</button><a class="btn" href="#/browse">Browse more</a></div>
+  <p class="muted">Information only — not medical advice. Prescribing decisions are for your clinician.</p>`;
+}
+
+function viewLegend() {
+  return `<a class="back" href="javascript:history.back()">← Back</a><h1>How labels work</h1>
+  <div class="panel legend"><div><span class="tag t-confirmed">✓ Confirmed</span> Listed or released, with a public source.</div>
+  <div><span class="tag t-announced">Announced</span> A producer, importer or pharmacy has stated a launch. Not yet purchasable.</div>
+  <div><span class="tag t-rumour">Rumour</span> Unverified chatter. Never counted as a release.</div>
+  <div><span class="tag t-new">New listing</span> First time we saw it on a tracked source.</div>
+  <div><span class="tag t-restock">Restocked</span> Returned to availability after being out.</div>
+  <div><span class="tag t-sample">Sample</span> Fictional demo record.</div></div>
+  <h2>Data and method</h2>
+  <p>Facts come from producer and importer announcements, pharmacy and clinic listings, and certificates of analysis. Anything we cannot source is left blank. Every product shows its source links and a last-verified date.</p>
+  <p class="muted">Dataset generated ${esc(fmtDate(state.meta.generatedAt))}. Independent; not affiliated with any producer, clinic or pharmacy. Not medical advice. UK medical cannabis is available only on prescription from a specialist clinician.</p>`;
+}
+
+// ---------- router / render
+function parse() {
+  const h = location.hash.slice(1) || '/'; const [path, qs] = h.split('?');
+  return { path, params: new URLSearchParams(qs || '') };
+}
+function render() {
+  const { path, params } = parse();
+  let html;
+  if (path.startsWith('/p/')) html = viewProduct(decodeURIComponent(path.slice(3)));
+  else if (path === '/browse') {
+    if (params.has('irr')) state.filters.irr = params.get('irr');
+    if (params.has('aroma')) state.filters.aroma = [params.get('aroma')];
+    if (params.has('irr') || params.has('aroma')) history.replaceState(null, '', '#/browse');
+    html = viewBrowse();
+  } else html = { '/': viewHome, '/stock': viewStock, '/compare': viewCompare, '/watch': viewWatch, '/alerts': viewAlerts, '/legend': viewLegend }[path]?.() || viewHome();
+  const keepScroll = render.last === path ? scrollY : 0;
+  $('#app').innerHTML = html;
+  if (render.last !== path) scrollTo(0, 0); else scrollTo(0, keepScroll);
+  render.last = path;
+  const cur = path === '/' ? '/' : '/' + path.split('/')[1];
+  const link = ([h, l, i], tab) => `<a href="#${h}" ${cur === h ? 'aria-current="page"' : ''}>${tab ? ICON[i] : ''}<span>${l}</span>${h === '/alerts' && unreadCount() ? `<span class="badge-dot">${unreadCount()}</span>` : ''}</a>`;
+  $('.tabbar').innerHTML = TABS.map(n => link(n, true)).join('');
+  $('.side').innerHTML = NAV.map(n => link(n, false)).join('');
+  document.title = path.startsWith('/p/') ? (byId(path.slice(3))?.name || 'Product') + ' · Leafwatch UK' : 'Leafwatch UK';
+  const demo = state.products.some(isSample);
+  const b = $('#demo-banner'); b.hidden = !demo; if (demo) b.innerHTML = 'Preview data: records marked <b>Sample</b> are fictional. <a href="#/legend">How data works</a>';
+}
+
+// ---------- events
+document.addEventListener('click', e => {
+  const t = e.target.closest('button,[data-bg]'); if (!t) return;
+  const d = t.dataset;
+  if (t.matches('[data-bg]') && e.target === t) return closeSheet();
+  if ('close' in d) return closeSheet();
+  if (d.watch) { const id = d.watch; state.watch.has(id) ? state.watch.delete(id) : (state.watch.add(id), toast('Added to watchlist')); save(); return render(); }
+  if (d.spot) { state.homeSpot = d.spot; return render(); }
+  if (d.stab) { state.stockTab = d.stab; return render(); }
+  if (d.quick) {
+    const f = state.filters;
+    if (d.quick === 'irr') f.irr = f.irr === 'no' ? '' : 'no';
+    if (d.quick === 'citrus' || d.quick === 'diesel') f.aroma = f.aroma.includes(d.quick) ? f.aroma.filter(x => x !== d.quick) : [...f.aroma, d.quick];
+    if (d.quick === 'stock') f.stock = f.stock === 'in_stock' ? '' : 'in_stock';
+    if (d.quick === 'clear') Object.assign(state.filters, { q: '', form: '', thcMin: 0, thcMax: 40, cbdMax: 30, priceMax: 20, strain: '', producer: [], terpene: [], aroma: [], irr: '', pharmacy: [], stock: '', conf: '' });
+    return render();
+  }
+  if (t.id === 'open-filters') return openFilters();
+  if (t.id === 'reset-f') { Object.assign(state.filters, { form: '', thcMin: 0, thcMax: 40, cbdMax: 30, priceMax: 20, strain: '', producer: [], terpene: [], aroma: [], irr: '', pharmacy: [], stock: '', conf: '' }); return openFilters(); }
+  if (d.m) { const a = state.filters[d.m], i = a.indexOf(d.v); i < 0 ? a.push(d.v) : a.splice(i, 1); const y = $('.sheet').scrollTop; openFilters(); $('.sheet').scrollTop = y; return; }
+  if (d.s) { state.filters[d.s] = d.v; const y = $('.sheet').scrollTop; openFilters(); $('.sheet').scrollTop = y; return; }
+  if (t.id === 'follow-this') {
+    const f = state.filters; let n = 0;
+    if (f.irr === 'no') { state.follow.push({ kind: 'irr' }); n++; }
+    f.aroma.forEach(a => { state.follow.push({ kind: 'aroma', value: a }); n++; });
+    f.producer.forEach(v => { state.follow.push({ kind: 'producer', value: v }); n++; });
+    if (f.strain) { state.follow.push({ kind: 'strain', value: f.strain }); n++; }
+    state.follow = state.follow.filter((x, i, a) => a.findIndex(y => JSON.stringify(y) === JSON.stringify(x)) === i);
+    save(); return toast(n ? 'Following. See Watchlist' : 'Pick irradiation, aroma, producer or strain first');
+  }
+  if (d.follow) { state.follow.push(d.follow === 'irr' ? { kind: 'irr' } : { kind: 'aroma', value: d.follow }); state.follow = state.follow.filter((x, i, a) => a.findIndex(y => JSON.stringify(y) === JSON.stringify(x)) === i); save(); return render(); }
+  if (d.unfollow) { state.follow.splice(+d.unfollow, 1); save(); return render(); }
+  if (d.cmpAdd) { if (!state.compare.includes(d.cmpAdd)) { if (state.compare.length >= 4) return toast('Compare holds up to 4'); state.compare.push(d.cmpAdd); save(); } location.hash = '#/compare'; return; }
+  if (d.cmpRm) { state.compare = state.compare.filter(x => x !== d.cmpRm); save(); return render(); }
+  if (d.scope) { state.rules.scope = d.scope; save(); return render(); }
+  if (t.id === 'mark-read') { state.seen = new Date(TODAY()).toISOString(); store.set('seen', state.seen); return render(); }
+  if (t.id === 'ask-notif') { Notification.requestPermission().then(render); }
+});
+document.addEventListener('input', e => {
+  const t = e.target;
+  if (t.id === 'q') { state.filters.q = t.value; const pos = t.selectionStart; render(); const q = $('#q'); q.focus(); q.setSelectionRange(pos, pos); }
+  if (t.dataset.r) { state.filters[t.dataset.r] = +t.value; if (state.filters.thcMin > state.filters.thcMax) state.filters[t.dataset.r === 'thcMin' ? 'thcMax' : 'thcMin'] = +t.value; }
+  if (t.id === 'strain') state.filters.strain = t.value;
+});
+document.addEventListener('change', e => {
+  const t = e.target;
+  if (t.id === 'sort') { state.filters.sort = t.value; render(); }
+  if (t.id === 'cmp-add' && t.value) { if (state.compare.length < 4) { state.compare.push(t.value); save(); } render(); }
+  if (t.dataset.rule) { state.rules[t.dataset.rule] = t.checked; save(); }
+  if (t.dataset.r) { const y = $('.sheet').scrollTop; openFilters(); $('.sheet').scrollTop = y; }
+});
+addEventListener('hashchange', render);
+addEventListener('keydown', e => { if (e.key === 'Escape' && $('.sheet')) closeSheet(); });
+$('#theme').addEventListener('click', () => {
+  const dark = document.documentElement.dataset.theme === 'dark' || (!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme:dark)').matches);
+  document.documentElement.dataset.theme = dark ? 'light' : 'dark'; store.set('theme', dark ? 'light' : 'dark');
+});
+{ const t = store.get('theme'); if (t) document.documentElement.dataset.theme = t; }
+
+// ---------- boot
+async function boot() {
+  try {
+    const inline = window.__DATA__;
+    const [p, ev] = inline ? [inline.products, inline.events] : await Promise.all([fetch('data/products.json').then(r => r.json()), fetch('data/events.json').then(r => r.json())]);
+    state.products = p.products; state.meta = { generatedAt: p.generatedAt, ntfyTopic: p.ntfyTopic }; state.events = ev.events;
+    if (!state.seen) { state.seen = new Date(TODAY() - 3 * 864e5).toISOString(); }
+    render();
+    if ('Notification' in window && Notification.permission === 'granted' && unreadCount()) { try { new Notification('Leafwatch UK', { body: unreadCount() + ' new update(s) match your alerts' }); } catch {} }
+  } catch (err) {
+    $('#app').innerHTML = `<div class="empty"><h2>Couldn't load data</h2><p>${esc(err.message)}</p></div>`;
+  }
+}
+boot();
+</script>
+</body>
+</html>

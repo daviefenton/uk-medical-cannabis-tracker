@@ -1,0 +1,5 @@
+{"products":[
+ {"sku":"s-lemon-ledger","title":"Lemon Ledger","brand":"Harbourfield Botanics (sample)","thc_pct":19,"cbd_pct":0.6,"price_per_g":6.4,"availability":"in_stock","irradiated":"no","url":"https://example.com/p/1"},
+ {"sku":"new-1","title":"Fixture Fuel","brand":"Test Co","thc_pct":22,"cbd_pct":0.2,"price_per_g":7.5,"availability":"in_stock","irradiated":"no","url":"https://example.com/p/2"},
+ {"sku":"s-tangerine-fold","title":"Tangerine Fold","brand":"Westmarch Growers (sample)","thc_pct":21,"cbd_pct":1,"price_per_g":7.4,"availability":"in_stock","irradiated":"no","url":"https://example.com/p/3"}
+]}
