@@ -93,3 +93,8 @@ th[scope=row]{position:sticky;left:0;background:var(--bg);color:var(--muted);fon
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 :focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .head{display:flex;gap:10px;align-items:flex-start;justify-content:space-between}.head>div{flex:1;min-width:0}
+.t-cup{background:color-mix(in srgb,#d4a017 20%,transparent);color:#a77b00}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .t-cup{color:#f2c94c}}
+:root[data-theme=dark] .t-cup{color:#f2c94c}
+.t-mine{background:color-mix(in srgb,var(--info) 15%,transparent);color:var(--info)}
+.ev>span[aria-hidden]{align-self:center;color:var(--muted);font-size:1.3rem}

@@ -1,0 +1,260 @@
+{
+ "reviewed": "2026-10-15",
+ "note": "Plain-English summaries compiled from public sources. Laws change: always check the official source before acting, especially before travelling with medication.",
+ "countries": [
+  {
+   "country": "United Kingdom",
+   "region": "Europe",
+   "medical": "limited",
+   "adult": "illegal",
+   "summary": "Cannabis-based products for medicinal use (CBPMs) can be prescribed by specialist doctors since November 2018, mostly through private clinics. Recreational cannabis is a Class B drug.",
+   "source": "https://www.nhs.uk/conditions/medical-cannabis/",
+   "focus": true
+  },
+  {
+   "country": "Jersey",
+   "region": "Crown Dependencies",
+   "medical": "legal",
+   "adult": "illegal",
+   "summary": "Medicinal cannabis has been prescribable since 2019, and the island licenses local cultivation. Recreational use is illegal.",
+   "source": "https://www.gov.je/",
+   "focus": true
+  },
+  {
+   "country": "Guernsey",
+   "region": "Crown Dependencies",
+   "medical": "legal",
+   "adult": "illegal",
+   "summary": "Medicinal cannabis can be prescribed. Recreational use is illegal.",
+   "source": "https://www.gov.gg/",
+   "focus": true
+  },
+  {
+   "country": "Isle of Man",
+   "region": "Crown Dependencies",
+   "medical": "legal",
+   "adult": "illegal",
+   "summary": "Medicinal cannabis prescribing and licensed cultivation are permitted. Recreational use is illegal.",
+   "source": "https://www.gov.im/",
+   "focus": true
+  },
+  {
+   "country": "Ireland",
+   "region": "Europe",
+   "medical": "limited",
+   "adult": "illegal",
+   "summary": "Medical Cannabis Access Programme (from 2019) covers a short list of conditions; other access needs a ministerial licence.",
+   "source": "https://www.hpra.ie/"
+  },
+  {
+   "country": "Germany",
+   "region": "Europe",
+   "medical": "legal",
+   "adult": "legal",
+   "summary": "Medical cannabis since 2017, taken out of narcotics law in April 2024 (MedCanG). Adults may possess limited amounts, grow at home and join non-profit cultivation clubs; no commercial shops.",
+   "source": "https://www.bfarm.de/",
+   "supplier": true
+  },
+  {
+   "country": "Netherlands",
+   "region": "Europe",
+   "medical": "legal",
+   "adult": "tolerated",
+   "summary": "Medical cannabis via the Office of Medicinal Cannabis since 2003. Coffeeshop sales are tolerated; a regulated supply trial is running.",
+   "source": "https://www.cannabisbureau.nl/",
+   "supplier": true
+  },
+  {
+   "country": "Portugal",
+   "region": "Europe",
+   "medical": "legal",
+   "adult": "decriminalised",
+   "summary": "Medical cannabis legal since 2018 and a major exporter to the UK. Personal possession of all drugs is decriminalised (2001).",
+   "source": "https://www.infarmed.pt/",
+   "supplier": true
+  },
+  {
+   "country": "Spain",
+   "region": "Europe",
+   "medical": "limited",
+   "adult": "decriminalised",
+   "summary": "A narrow medical framework for standardised preparations was approved in 2025. Private personal use is not a criminal offence; public use is fined.",
+   "source": "https://www.aemps.gob.es/"
+  },
+  {
+   "country": "Malta",
+   "region": "Europe",
+   "medical": "legal",
+   "adult": "legal",
+   "summary": "Medical cannabis since 2018. In 2021 Malta became the first EU country to legalise adult home growing and non-profit associations.",
+   "source": "https://arucc.gov.mt/"
+  },
+  {
+   "country": "Luxembourg",
+   "region": "Europe",
+   "medical": "legal",
+   "adult": "legal",
+   "summary": "Medical cannabis since 2019. Adults may grow up to four plants at home since 2023; public use remains restricted.",
+   "source": "https://sante.public.lu/"
+  },
+  {
+   "country": "Switzerland",
+   "region": "Europe",
+   "medical": "legal",
+   "adult": "decriminalised",
+   "summary": "Doctors can prescribe medical cannabis without special permission since 2022. City-run adult-use pilot trials operate; minor possession is fined.",
+   "source": "https://www.bag.admin.ch/"
+  },
+  {
+   "country": "Czechia",
+   "region": "Europe",
+   "medical": "legal",
+   "adult": "decriminalised",
+   "summary": "Medical cannabis available since 2013. Small-quantity possession is an administrative offence; further reform has been debated.",
+   "source": "https://www.sukl.cz/"
+  },
+  {
+   "country": "France",
+   "region": "Europe",
+   "medical": "pilot",
+   "adult": "illegal",
+   "summary": "A state medical cannabis pilot has run since 2021 while a permanent framework is finalised.",
+   "source": "https://ansm.sante.fr/"
+  },
+  {
+   "country": "Italy",
+   "region": "Europe",
+   "medical": "limited",
+   "adult": "illegal",
+   "summary": "Medical cannabis since 2007, largely supplied by the state pharmaceutical institute and imports. Personal use is an administrative offence.",
+   "source": "https://www.salute.gov.it/"
+  },
+  {
+   "country": "Denmark",
+   "region": "Europe",
+   "medical": "pilot",
+   "adult": "illegal",
+   "summary": "Medical cannabis pilot programme since 2018.",
+   "source": "https://laegemiddelstyrelsen.dk/",
+   "supplier": true
+  },
+  {
+   "country": "Poland",
+   "region": "Europe",
+   "medical": "legal",
+   "adult": "illegal",
+   "summary": "Pharmacy-dispensed medical cannabis since 2017.",
+   "source": "https://www.urpl.gov.pl/"
+  },
+  {
+   "country": "Canada",
+   "region": "Americas",
+   "medical": "legal",
+   "adult": "legal",
+   "summary": "Medical access since 2001; adult-use legal nationally since 2018. A leading source of flower imported to the UK.",
+   "source": "https://www.canada.ca/en/health-canada/services/drugs-medication/cannabis.html",
+   "supplier": true
+  },
+  {
+   "country": "United States",
+   "region": "Americas",
+   "medical": "limited",
+   "adult": "illegal",
+   "summary": "Federally controlled (rescheduling has been under review). Most states run medical programmes and about half allow adult use under state law.",
+   "source": "https://www.ncsl.org/health/state-medical-cannabis-laws"
+  },
+  {
+   "country": "Uruguay",
+   "region": "Americas",
+   "medical": "legal",
+   "adult": "legal",
+   "summary": "First country to legalise adult use nationally (2013), via pharmacies, clubs and home growing.",
+   "source": "https://www.ircca.gub.uy/"
+  },
+  {
+   "country": "Colombia",
+   "region": "Americas",
+   "medical": "legal",
+   "adult": "decriminalised",
+   "summary": "Medical licensing since 2016 with a large export industry; a small personal dose is decriminalised.",
+   "source": "https://www.minjusticia.gov.co/",
+   "supplier": true
+  },
+  {
+   "country": "Australia",
+   "region": "Oceania",
+   "medical": "legal",
+   "adult": "illegal",
+   "summary": "Medical cannabis via TGA prescribing pathways since 2016. The ACT decriminalised small personal amounts.",
+   "source": "https://www.tga.gov.au/",
+   "supplier": true
+  },
+  {
+   "country": "New Zealand",
+   "region": "Oceania",
+   "medical": "legal",
+   "adult": "illegal",
+   "summary": "Medicinal Cannabis Scheme since 2020; a 2020 referendum rejected adult-use legalisation. NZ flower now reaches the UK.",
+   "source": "https://www.health.govt.nz/",
+   "supplier": true
+  },
+  {
+   "country": "South Africa",
+   "region": "Africa",
+   "medical": "legal",
+   "adult": "decriminalised",
+   "summary": "Private adult use and growing decriminalised (2018 ruling; Cannabis for Private Purposes Act 2024). Medical products regulated by SAHPRA.",
+   "source": "https://www.sahpra.org.za/",
+   "supplier": true
+  },
+  {
+   "country": "Uganda",
+   "region": "Africa",
+   "medical": "limited",
+   "adult": "illegal",
+   "summary": "Licensed cultivation for export; domestic use remains illegal. Ugandan flower reaches the UK via importers.",
+   "source": null,
+   "supplier": true
+  },
+  {
+   "country": "Israel",
+   "region": "Middle East",
+   "medical": "legal",
+   "adult": "decriminalised",
+   "summary": "Long-running national medical programme; personal use decriminalised.",
+   "source": "https://www.health.gov.il/"
+  },
+  {
+   "country": "Thailand",
+   "region": "Asia",
+   "medical": "legal",
+   "adult": "illegal",
+   "summary": "Delisted as a narcotic in 2022, then restricted in 2025 so that buying requires a prescription.",
+   "source": "https://www.fda.moph.go.th/"
+  },
+  {
+   "country": "Japan",
+   "region": "Asia",
+   "medical": "limited",
+   "adult": "illegal",
+   "summary": "A 2024 law change allows approved cannabis-derived medicines; use is a criminal offence.",
+   "source": null
+  },
+  {
+   "country": "United Arab Emirates",
+   "region": "Middle East",
+   "medical": "none",
+   "adult": "illegal",
+   "summary": "Strictly illegal, including prescribed cannabis from abroad. Check before travelling with a UK prescription.",
+   "source": null
+  },
+  {
+   "country": "Singapore",
+   "region": "Asia",
+   "medical": "none",
+   "adult": "illegal",
+   "summary": "Strictly illegal with severe penalties, including for residents using it abroad.",
+   "source": null
+  }
+ ]
+}

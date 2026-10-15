@@ -1,7 +1,8 @@
 // Daily updater: fetch sources -> normalise -> diff against data/products.json -> write products/events -> optional ntfy push.
 // Usage: node scripts/update.mjs [--dry] [--sources path] [--now ISO]
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { adapters } from './adapters.mjs';
+import { createHash } from 'node:crypto';
 
 const arg = (k, d) => { const i = process.argv.indexOf(k); return i > -1 ? process.argv[i + 1] : d; };
 const dry = process.argv.includes('--dry');
@@ -13,6 +14,18 @@ const byId = new Map(db.products.map(p => [p.id, p]));
 const newEvents = [];
 const emit = (type, p, detail = {}) => newEvents.push({ id: `${now.slice(0, 10)}-${type}-${p.id}`, ts: now, type, productId: p.id, detail });
 const day = now.slice(0, 10);
+const newsDb = existsSync('data/news.json') ? JSON.parse(readFileSync('data/news.json', 'utf8')) : { items: [] };
+const newsSeen = new Set(newsDb.items.map(n => n.url));
+const freshNews = [];
+// keyword tags drive the News filters and the "UK launch" alert
+const TAGS = {
+  uk: /\b(UK|U\.K\.|Britain|British|England|Scotland|Wales|NHS|MHRA|Home Office|Jersey|Guernsey|Isle of Man)\b/i,
+  launch: /\b(launch\w*|new (strain|cultivar|product|flower)s?|now available|debut\w*|arriv\w+|introduc\w+|releases?d?)\b/i,
+  regulation: /\b(law|legal\w*|regulat\w*|legislat\w*|reform|reschedul\w*|decriminali[sz]\w*|ban(ned|s)?|licen[cs]\w*|government|parliament|minister|bill)\b/i,
+  cup: /\b(cannabis cup|emerald cup|cup winners?|awards?|champion\w*)\b/i,
+  medical: /\b(medical|medicinal|patients?|prescri\w+|clinic\w*|pharmac\w+)\b/i
+};
+const tagsFor = (t, region) => [...Object.entries(TAGS).filter(([, re]) => re.test(t)).map(([k]) => k), ...(region === 'uk' ? ['uk'] : [])].filter((v, i, a) => a.indexOf(v) === i);
 
 for (const src of cfg.sources.filter(s => s.enabled)) {
   const adapter = adapters[src.kind];
@@ -20,6 +33,12 @@ for (const src of cfg.sources.filter(s => s.enabled)) {
   let items;
   try { items = await adapter(src); } catch (e) { console.warn(`[${src.id}] failed: ${e.message}`); continue; }  // a failing source never deletes data
   for (const it of items) {
+    if (it.kind === 'news') {
+      if (newsSeen.has(it.url)) continue;
+      newsSeen.add(it.url);
+      const n = { id: 'n-' + createHash('sha1').update(it.url).digest('hex').slice(0, 12), title: it.title, url: it.url, source: it.source, published: it.published || now, firstSeen: now, summary: it.summary, tags: tagsFor(`${it.title} ${it.summary}`, it.region) };
+      freshNews.push(n); continue;
+    }
     const src1 = { label: src.label, url: it.url || src.url };
     const cur = byId.get(it.id);
     if (it.kind === 'lead') {                       // news item: goes in as an unconfirmed lead, never as a release
@@ -48,15 +67,21 @@ for (const src of cfg.sources.filter(s => s.enabled)) {
 // de-dupe events by id so reruns on the same day are idempotent
 const have = new Set(evDb.events.map(e => e.id));
 const fresh = newEvents.filter(e => !have.has(e.id));
-const touched = fresh.length || cfg.sources.some(s => s.enabled);
-if (touched) db.generatedAt = now;
+const touched = fresh.length || freshNews.length || cfg.sources.some(s => s.enabled && s.kind !== 'news');
+if (fresh.length || cfg.sources.some(s => s.enabled && s.kind !== 'news')) db.generatedAt = now;  // product data refreshed
 if (cfg.ntfyTopic) db.ntfyTopic = cfg.ntfyTopic;
+console.log(`${freshNews.length} new news items`);
 console.log(`${fresh.length} new events`, fresh.map(e => `${e.type}:${e.productId}`).join(', '));
 if (dry || !touched) process.exit(0);
 evDb.events = [...fresh, ...evDb.events].slice(0, 500);
 writeFileSync('data/products.json', JSON.stringify(db, null, 1));
 writeFileSync('data/events.json', JSON.stringify(evDb, null, 1));
-if (cfg.ntfyTopic && fresh.length) {
-  const text = fresh.map(e => `${e.type.replace('_', ' ')}: ${byId.get(e.productId)?.name}`).join('\n');
+if (freshNews.length) {
+  newsDb.items = [...freshNews, ...newsDb.items].sort((a, b) => (b.published || '').localeCompare(a.published || '')).slice(0, 400);
+  writeFileSync('data/news.json', JSON.stringify(newsDb, null, 1));
+}
+const ukLaunches = freshNews.filter(n => n.tags.includes('uk') && n.tags.includes('launch'));
+if (cfg.ntfyTopic && (fresh.length || ukLaunches.length)) {
+  const text = [...fresh.map(e => `${e.type.replace('_', ' ')}: ${byId.get(e.productId)?.name}`), ...ukLaunches.map(n => `UK launch news: ${n.title}`)].join('\n');
   await fetch(`https://ntfy.sh/${cfg.ntfyTopic}`, { method: 'POST', body: text, headers: { Title: 'Leafwatch UK update' } }).catch(e => console.warn('ntfy failed', e.message));
 }

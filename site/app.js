@@ -7,11 +7,13 @@ const store = {
   set(k, v) { try { localStorage.setItem('lw:' + k, JSON.stringify(v)); } catch {} }
 };
 const state = {
-  products: [], events: [], meta: {},
+  products: [], events: [], meta: {}, news: [], cups: { results: [] }, laws: { countries: [] },
+  pharmacy: store.get('pharmacy', 'Medicann'),
+  newsTag: 'all', lawQ: '',
   watch: new Set(store.get('watch', [])),
   follow: store.get('follow', []),               // saved searches: aroma / producer / "non-irradiated"
   compare: store.get('compare', []),
-  rules: store.get('rules', { new_listing: true, restock: true, price_change: true, announced: true, rumour: false, discontinued: true, scope: 'watch+follow' }),
+  rules: { new_listing: true, restock: true, price_change: true, announced: true, rumour: false, discontinued: true, news_uk_launch: true, scope: 'watch+follow', ...store.get('rules', {}) },
   seen: store.get('seen', null),
   filters: { q: '', form: '', thcMin: 0, thcMax: 40, cbdMax: 30, priceMax: 20, strain: '', producer: [], terpene: [], aroma: [], irr: '', pharmacy: [], stock: '', conf: '', sort: 'new' }
 };
@@ -22,10 +24,13 @@ const ICON = {
   stock: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l9-5 9 5v8l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v8"/></svg>',
   compare: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 4v16M17 4v16M3 8h8M13 16h8"/></svg>',
   watch: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.5A4 4 0 0119 10c0 5.6-7 10-7 10z"/></svg>',
+  more: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="5" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="19" cy="12" r="1.6"/></svg>',
   alerts: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 17V11a6 6 0 1112 0v6l1.5 2h-15z"/><path d="M10 21h4"/></svg>'
 };
-const NAV = [['/', 'New', 'home'], ['/browse', 'Browse', 'browse'], ['/stock', 'Stock', 'stock'], ['/compare', 'Compare', 'compare'], ['/watch', 'Watchlist', 'watch'], ['/alerts', 'Alerts', 'alerts']];
-const TABS = NAV.filter(n => n[0] !== '/stock'); // 5 tabs on phone; Stock lives on the dashboard + desktop nav
+const NAV = [['/', 'New', 'home'], ['/browse', 'Browse', 'browse'], ['/stock', 'Stock', 'stock'], ['/compare', 'Compare', 'compare'], ['/news', 'News', 'more'], ['/cups', 'Cups', 'more'], ['/laws', 'Laws', 'more'], ['/watch', 'Watchlist', 'watch'], ['/alerts', 'Alerts', 'alerts']];
+// phone tab bar: 5 slots; everything else lives under More
+const TABS = [['/', 'New', 'home'], ['/browse', 'Browse', 'browse'], ['/watch', 'Watchlist', 'watch'], ['/alerts', 'Alerts', 'alerts'], ['/more', 'More', 'more']];
+const MORE_PATHS = ['/more', '/stock', '/compare', '/news', '/cups', '/laws', '/legend'];
 const EV_LABEL = { new_listing: 'New listing', restock: 'Restocked', price_change: 'Price change', announced: 'Announced', rumour: 'Rumour', discontinued: 'Discontinued' };
 const EV_CLASS = { new_listing: 't-new', restock: 't-restock', price_change: 't-price', announced: 't-announced', rumour: 't-rumour', discontinued: 't-disc' };
 
@@ -40,6 +45,12 @@ const uniq = (arr) => [...new Set(arr)].filter(Boolean).sort();
 const toast = m => { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2200); };
 const save = () => { store.set('watch', [...state.watch]); store.set('follow', state.follow); store.set('compare', state.compare); store.set('rules', state.rules); };
 const isSample = p => p.record === 'sample';
+const atMyPharmacy = p => !!state.pharmacy && (p.pharmacies || []).some(x => x.toLowerCase().includes(state.pharmacy.toLowerCase()));
+// cup match: a winning strain name appears as a whole phrase in the product's own name (not its parents);
+// very short one-word names ("Black") are skipped to avoid false matches
+const cupMatches = p => { const hay = ` ${p.name || ''} `.toLowerCase(); return (state.cups.results || []).filter(c => (c.strain.includes(' ') || c.strain.length >= 6) && new RegExp(`[^a-z0-9]${c.strain.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}[^a-z0-9]`).test(hay)); };
+const cupTag = p => cupMatches(p).length ? '<span class="tag t-cup" title="Shares a name with a cup-winning strain">🏆 Cup genetics</span>' : '';
+const pharmTag = p => atMyPharmacy(p) ? `<span class="tag t-mine">At ${esc(state.pharmacy)}</span>` : '';
 const confTag = p => p.status === 'discontinued' ? '<span class="tag t-disc">Discontinued</span>' :
   p.confidence === 'rumour' ? '<span class="tag t-rumour">Rumour · unconfirmed</span>' :
   p.confidence === 'announced' ? '<span class="tag t-announced">Announced</span>' : '<span class="tag t-confirmed">✓ Confirmed</span>';
@@ -65,7 +76,7 @@ function card(p, extra = '') {
     <button class="heart" data-watch="${p.id}" aria-pressed="${state.watch.has(p.id)}" aria-label="Watch ${esc(p.name)}">${state.watch.has(p.id) ? '♥' : '♡'}</button></div>
     <div class="row">${confTag(p)}${p.status !== 'discontinued' && p.confidence !== 'rumour' ? stockTag(p) : ''}${sampleTag(p)}</div>
     <div class="metrics"><div class="metric"><b>${pct(p.thc)}</b><span>THC</span></div><div class="metric"><b>${pct(p.cbd)}</b><span>CBD</span></div><div class="metric"><b>${price}</b><span>Price</span></div></div>
-    <div class="row">${p.form === 'flower' ? irrTag(p) : ''}${aromaTags(p)}</div>${extra}</article>`;
+    <div class="row">${p.form === 'flower' ? irrTag(p) : ''}${aromaTags(p)}${cupTag(p)}${pharmTag(p)}</div>${extra}</article>`;
 }
 const grid = (list, fn = card) => list.length ? `<div class="grid">${list.map(p => fn(p)).join('')}</div>` : '<div class="empty">Nothing here yet.</div>';
 
@@ -135,6 +146,8 @@ function applyFilters(list) {
     if (f.irr && p.irradiated !== f.irr) return false;
     if (f.pharmacy.length && !f.pharmacy.some(x => (p.pharmacies || []).includes(x))) return false;
     if (f.stock && p.stock !== f.stock) return false;
+    if (f.mine && !atMyPharmacy(p)) return false;
+    if (f.cup && !cupMatches(p).length) return false;
     if (f.conf && (f.conf === 'released' ? !(p.status === 'released' && p.confidence === 'confirmed') : p.confidence !== f.conf)) return false;
     return true;
   });
@@ -144,7 +157,7 @@ function applyFilters(list) {
     (b.firstSeen || '').localeCompare(a.firstSeen || ''));
   return r;
 }
-const activeCount = () => { const f = state.filters; let n = 0; if (f.form) n++; if (f.thcMin > 0 || f.thcMax < 40) n++; if (f.cbdMax < 30) n++; if (f.priceMax < 20) n++; if (f.strain) n++; n += f.producer.length + f.terpene.length + f.aroma.length + f.pharmacy.length; if (f.irr) n++; if (f.stock) n++; if (f.conf) n++; return n; };
+const activeCount = () => { const f = state.filters; let n = 0; if (f.form) n++; if (f.thcMin > 0 || f.thcMax < 40) n++; if (f.cbdMax < 30) n++; if (f.priceMax < 20) n++; if (f.strain) n++; n += f.producer.length + f.terpene.length + f.aroma.length + f.pharmacy.length; if (f.irr) n++; if (f.mine) n++; if (f.cup) n++; if (f.stock) n++; if (f.conf) n++; return n; };
 function viewBrowse() {
   const list = applyFilters(state.products), n = activeCount();
   return `<div class="toolbar"><input type="search" id="q" placeholder="Search strain, producer, genetics" value="${esc(state.filters.q)}" aria-label="Search"><button class="btn" id="open-filters">Filters${n ? ` (${n})` : ''}</button></div>
@@ -153,6 +166,8 @@ function viewBrowse() {
    <button class="chip" data-quick="citrus" aria-pressed="${state.filters.aroma.includes('citrus')}">🍋 Citrus</button>
    <button class="chip" data-quick="diesel" aria-pressed="${state.filters.aroma.includes('diesel')}">⛽ Diesel</button>
    <button class="chip" data-quick="stock" aria-pressed="${state.filters.stock === 'in_stock'}">In stock</button>
+   ${state.pharmacy ? `<button class="chip" data-quick="mine" aria-pressed="${!!state.filters.mine}">At ${esc(state.pharmacy)}</button>` : ''}
+   <button class="chip" data-quick="cup" aria-pressed="${!!state.filters.cup}">🏆 Cup genetics</button>
    ${n ? '<button class="chip" data-quick="clear">Clear all</button>' : ''}</div>
   <div class="row between"><span class="muted">${list.length} of ${state.products.length} products</span>
    <select id="sort" style="width:auto" aria-label="Sort">${[['new', 'Newest'], ['thc', 'Highest THC'], ['price', 'Lowest £/g'], ['ppg', 'Best £ per THC %']].map(([v, l]) => `<option value="${v}" ${state.filters.sort === v ? 'selected' : ''}>${l}</option>`).join('')}</select></div>
@@ -241,13 +256,14 @@ function relevantEvents() {
     return r.scope === 'all' || isFollowed(p);
   }).sort((a, b) => b.ts.localeCompare(a.ts));
 }
-const unreadCount = () => { const s = state.seen; return relevantEvents().filter(e => !s || e.ts > s).length; };
+const launchNews = () => state.rules.news_uk_launch ? state.news.filter(n => (n.tags || []).includes('uk') && (n.tags || []).includes('launch')) : [];
+const unreadCount = () => { const s = state.seen; return relevantEvents().filter(e => !s || e.ts > s).length + launchNews().filter(n => !s || n.firstSeen > s).length; };
 function viewAlerts() {
   const r = state.rules, evs = relevantEvents(), seen = state.seen;
   const sw = (k, l, d) => `<label class="switch"><span><strong>${l}</strong><div class="muted">${d}</div></span><input type="checkbox" role="switch" data-rule="${k}" ${r[k] ? 'checked' : ''}></label>`;
   const perm = 'Notification' in window ? Notification.permission : 'unsupported';
   return `<h1>Alerts</h1><p class="sub">Choose what matters. Alerts are matched against your watchlist and followed searches.</p>
-  <div class="panel">${sw('new_listing', 'New releases & listings', 'A product appears for the first time')}${sw('announced', 'Announced launches', 'Confirmed upcoming dates')}${sw('restock', 'Restocks', 'Back in stock')}${sw('price_change', 'Price changes', 'Per-gram price moves')}${sw('discontinued', 'Discontinued', 'Product withdrawn')}${sw('rumour', 'Rumours', 'Unconfirmed leads — noisy, off by default')}
+  <div class="panel">${sw('new_listing', 'New releases & listings', 'A product appears for the first time')}${sw('announced', 'Announced launches', 'Confirmed upcoming dates')}${sw('restock', 'Restocks', 'Back in stock')}${sw('price_change', 'Price changes', 'Per-gram price moves')}${sw('discontinued', 'Discontinued', 'Product withdrawn')}${sw('rumour', 'Rumours', 'Unconfirmed leads — noisy, off by default')}${sw('news_uk_launch', 'UK launch news', 'News stories mentioning UK launches')}
    <div class="field"><span class="lbl">Apply to</span><div class="seg"><button data-scope="watch+follow" aria-pressed="${r.scope !== 'all'}">Watchlist & follows</button><button data-scope="all" aria-pressed="${r.scope === 'all'}">Everything</button></div></div></div>
   <div class="panel"><h3>Phone notifications</h3>
    <p class="muted">Free option: install the <a href="https://ntfy.sh" target="_blank" rel="noopener">ntfy</a> app and subscribe to your topic. The daily data job publishes every event there.</p>
@@ -256,6 +272,7 @@ function viewAlerts() {
    <p class="muted" style="margin-top:12px">In-browser: ${perm === 'unsupported' ? 'not supported here' : perm === 'granted' ? 'enabled' : perm === 'denied' ? 'blocked in browser settings' : 'off'}. On iPhone, add this site to your Home Screen first (Share → Add to Home Screen).</p>
    ${perm === 'default' ? '<button class="btn" id="ask-notif">Enable browser notifications</button>' : ''}</div>
   <div class="sec"><h2>Your feed</h2><button class="btn" id="mark-read">Mark all read</button></div>
+  ${launchNews().length ? `<div class="timeline">${launchNews().slice(0, 15).map(n => `<a class="ev${!seen || n.firstSeen > seen ? ' unread' : ''}" href="${esc(n.url)}" target="_blank" rel="noopener noreferrer"><time>${rel(n.published)}</time><div class="b"><strong>${esc(n.title)}</strong> <span class="tag t-new">UK launch news</span><div class="muted">${esc(n.source)}</div></div></a>`).join('')}</div>` : ''}
   <div class="timeline">${evs.map(e => evRow(e, !seen || e.ts > seen)).join('') || '<div class="empty">No matching activity. Follow something on the Watchlist, or switch “Apply to” to Everything.</div>'}</div>`;
 }
 
@@ -281,9 +298,11 @@ function viewProduct(id) {
    <dt>Available at</dt><dd>${p.pharmacies?.length ? esc(p.pharmacies.join(', ')) : 'No pharmacy listings tracked yet'}</dd></dl></div>
   ${p.terpenes?.length ? `<div class="panel"><h3>Terpene profile</h3>${p.terpenes.map(t => `<div style="margin-top:8px"><div class="row between"><span>${esc(t.name)}</span><span>${t.pct}%</span></div><div class="bar"><i style="width:${Math.min(100, t.pct / maxT * 100)}%"></i></div></div>`).join('')}<p class="muted">Terpene levels vary by batch. Check the certificate of analysis for your batch.</p></div>` : '<div class="panel muted">No terpene data published yet.</div>'}
   ${p.notes ? `<div class="panel">${esc(p.notes)}</div>` : ''}
+  ${cupMatches(p).length ? `<div class="panel"><h3>🏆 Cup-winning genetics</h3><p class="muted">A strain with this name has won a cup. Cup wins belong to a specific grower and batch, so this product is not the same plant.</p><ul>${cupMatches(p).map(c => `<li>${esc(c.strain)}: ${ordinal(c.place)}, ${esc(c.category)}, ${esc(c.cup)} ${esc(c.edition)} ${c.year} (${esc(c.entrant)})${c.source ? ` <a href="${esc(c.source)}" target="_blank" rel="noopener noreferrer">source ↗</a>` : ''}</li>`).join('')}</ul></div>` : ''}
   <div class="panel"><h3>Sources & verification</h3>
    <p class="${stale ? 'muted' : ''}">Last verified <strong>${esc(fmtDate(p.lastVerified))}</strong> (${rel(p.lastVerified)})${stale ? ' — may be out of date' : ''}.</p>
-   ${p.sources?.length ? `<ul>${p.sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)} ↗</a></li>`).join('')}</ul>` : '<p class="muted">No public source linked — treat as unverified.</p>'}</div>
+   ${p.sources?.length ? `<ul>${p.sources.map(s => `<li><a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.label)} ↗</a></li>`).join('')}</ul>` : '<p class="muted">No public source linked — treat as unverified.</p>'}
+   <p class="muted">Cross-check: <a href="https://medbud.wiki/" target="_blank" rel="noopener noreferrer">MedBud Wiki ↗</a>${state.pharmacy ? ` · ask ${esc(state.pharmacy)} about current stock` : ''}</p></div>
   ${ev.length ? `<div class="sec"><h2>History</h2></div><div class="timeline">${ev.map(e => evRow(e)).join('')}</div>` : ''}
   <div class="row" style="margin-top:16px"><button class="btn primary" data-cmp-add="${p.id}">Compare</button><a class="btn" href="#/browse">Browse more</a></div>
   <p class="muted">Information only — not medical advice. Prescribing decisions are for your clinician.</p>`;
@@ -298,8 +317,64 @@ function viewLegend() {
   <div><span class="tag t-restock">Restocked</span> Returned to availability after being out.</div>
   <div><span class="tag t-sample">Sample</span> Fictional demo record.</div></div>
   <h2>Data and method</h2>
+  <p><strong>Automatic sources</strong> (checked every 6 hours): Medicann articles, Cannabis Health News, Leafie, Cannabis Industry Council, Business of Cannabis, High Times, MJBizDaily, Cannabis Business Times and Newsweed. News only ever creates leads; products are confirmed from producer, importer or pharmacy sources.</p>
+  <p><strong>Not scraped:</strong> MedBud Wiki and Reddit block automated access, and Instagram, X, TikTok and Facebook have no free public feed. Product pages link out to MedBud Wiki for cross-checking instead.</p>
   <p>Facts come from producer and importer announcements, pharmacy and clinic listings, and certificates of analysis. Anything we cannot source is left blank. Every product shows its source links and a last-verified date.</p>
   <p class="muted">Dataset generated ${esc(fmtDate(state.meta.generatedAt))}. Independent; not affiliated with any producer, clinic or pharmacy. Not medical advice. UK medical cannabis is available only on prescription from a specialist clinician.</p>`;
+}
+
+const ordinal = n => n + (['th', 'st', 'nd', 'rd'][(n % 100 > 10 && n % 100 < 14) ? 0 : n % 10] || 'th');
+
+function viewMore() {
+  const item = (h, t, d) => `<a class="ev" href="#${h}"><div class="b"><strong>${t}</strong><div class="muted">${d}</div></div><span aria-hidden="true">›</span></a>`;
+  return `<h1>More</h1>
+  <div class="panel timeline" style="padding-top:0;padding-bottom:0">
+   ${item('/stock', 'Stock tracker', 'In stock, low, restocked, discontinued')}
+   ${item('/compare', 'Compare', `Side by side · ${state.compare.length} selected`)}
+   ${item('/news', 'News', `${state.news.length} stories from UK and international cannabis news`)}
+   ${item('/cups', 'Cannabis Cup winners', 'Award-winning strains, matched to UK products')}
+   ${item('/laws', 'World laws', `Medical and adult-use status in ${state.laws.countries.length} countries`)}
+   ${item('/legend', 'How the data works', 'Labels, sources and verification')}</div>
+  <div class="panel"><h3>My pharmacy</h3><p class="muted">Highlights products listed at your pharmacy and adds an “At my pharmacy” filter. Saved on this device.</p>
+   <div class="field"><label for="pharm">Pharmacy</label><input id="pharm" value="${esc(state.pharmacy)}" placeholder="e.g. Medicann" list="pharm-list"><datalist id="pharm-list">${uniq(state.products.flatMap(p => p.pharmacies || [])).map(x => `<option value="${esc(x)}">`).join('')}</datalist></div>
+   ${/medicann/i.test(state.pharmacy) ? '<p class="muted">Medicann shows its products to patients inside the Medicann app, not on its public website, so stock for Medicann can’t be tracked automatically yet. Medicann news is included in the News feed.</p>' : ''}</div>`;
+}
+
+const NEWS_TAGS = [['all', 'All'], ['uk', '🇬🇧 UK'], ['launch', 'Launches'], ['regulation', 'Laws'], ['cup', 'Cups'], ['medical', 'Medical']];
+function viewNews() {
+  const t = state.newsTag, list = state.news.filter(n => t === 'all' || (n.tags || []).includes(t)).slice(0, 120);
+  return `<h1>News</h1><p class="sub">Headlines from cannabis news sites, refreshed every few hours. Tap through to read the full story on the publisher's site.</p>
+  <div class="chips">${NEWS_TAGS.map(([k, l]) => `<button class="chip" data-ntag="${k}" aria-pressed="${t === k}">${l}</button>`).join('')}</div>
+  <div class="timeline">${list.map(n => `<a class="ev" href="${esc(n.url)}" target="_blank" rel="noopener noreferrer"><time>${rel(n.published)}</time><div class="b"><strong>${esc(n.title)}</strong><div class="muted">${esc(n.source)}${(n.tags || []).includes('launch') && (n.tags || []).includes('uk') ? ' · <span class="tag t-new">UK launch?</span>' : ''}</div>${n.summary ? `<div class="muted" style="margin-top:4px">${esc(n.summary.slice(0, 160))}${n.summary.length > 160 ? '…' : ''}</div>` : ''}</div></a>`).join('') || '<div class="empty">No stories yet. They appear after the next automatic update.</div>'}</div>
+  <p class="muted">News items are leads, not confirmed releases. A product only shows as Confirmed once it has a pharmacy or producer source.</p>`;
+}
+
+function viewCups() {
+  const R = state.cups.results || [];
+  const groups = {}; R.forEach(c => { (groups[`${c.cup} · ${c.edition} ${c.year}`] ||= []).push(c); });
+  const keys = Object.keys(groups).sort((a, b) => groups[b][0].year - groups[a][0].year);
+  const matched = state.products.filter(p => cupMatches(p).length);
+  return `<h1>Cannabis Cup winners</h1><p class="sub">Flower results from major cups. 🏆 marks UK products that share a winning strain name.</p>
+  ${matched.length ? `<div class="sec"><h2>In the UK tracker</h2></div>${grid(matched)}` : '<div class="callout info">No tracked UK product currently shares a name with a listed winner.</div>'}
+  ${keys.map(k => `<div class="sec"><h2>${esc(k)}</h2></div><div class="panel" style="padding-top:4px;padding-bottom:4px">${groups[k].sort((a, b) => a.category.localeCompare(b.category) || a.place - b.place).map(c => `<div class="switch" style="min-height:0"><span><strong>${c.place === 1 ? '🥇' : c.place === 2 ? '🥈' : c.place === 3 ? '🥉' : ordinal(c.place)} ${esc(c.strain)}</strong><div class="muted">${esc(c.category)} · ${esc(c.entrant)}</div></span>${c.source ? `<a href="${esc(c.source)}" target="_blank" rel="noopener noreferrer" class="muted">source ↗</a>` : ''}</div>`).join('')}</div>`).join('')}
+  <p class="muted">${esc(state.cups.note || '')} Reviewed ${esc(fmtDate(state.cups.reviewed))}.</p>`;
+}
+
+const MED = { legal: ['Medical: legal', 't-confirmed'], limited: ['Medical: limited', 't-announced'], pilot: ['Medical: pilot', 't-low'], none: ['Medical: none', 't-out'] };
+const ADULT = { legal: ['Adult use: legal', 't-confirmed'], decriminalised: ['Adult: decriminalised', 't-announced'], tolerated: ['Adult: tolerated', 't-low'], illegal: ['Adult use: illegal', 't-neutral'] };
+function viewLaws() {
+  const q = state.lawQ.trim().toLowerCase(), C = state.laws.countries || [];
+  const list = C.filter(c => !q || `${c.country} ${c.region}`.toLowerCase().includes(q));
+  const row = c => `<article class="card"><div class="head"><div><h3>${esc(c.country)}</h3><div class="muted">${esc(c.region)}${c.supplier ? ' · supplies UK patients' : ''}</div></div></div>
+   <div class="row"><span class="tag ${MED[c.medical][1]}">${MED[c.medical][0]}</span><span class="tag ${ADULT[c.adult][1]}">${ADULT[c.adult][0]}</span></div>
+   <p style="margin:0">${esc(c.summary)}</p>${c.source ? `<a class="muted" href="${esc(c.source)}" target="_blank" rel="noopener noreferrer">Official source ↗</a>` : '<span class="muted">Check official government guidance.</span>'}</article>`;
+  const focus = list.filter(c => c.focus), rest = list.filter(c => !c.focus);
+  return `<h1>World laws</h1><p class="sub">Medical and adult-use status at a glance. Reviewed ${esc(fmtDate(state.laws.reviewed))}.</p>
+  <div class="toolbar"><input type="search" id="lawq" placeholder="Search country or region" value="${esc(state.lawQ)}" aria-label="Search countries"></div>
+  <div class="callout warn">${esc(state.laws.note || '')}</div>
+  ${focus.length ? `<div class="sec"><h2>UK & Crown Dependencies</h2></div><div class="grid">${focus.map(row).join('')}</div>` : ''}
+  ${rest.length ? `<div class="sec"><h2>Worldwide</h2></div><div class="grid">${rest.map(row).join('')}</div>` : ''}
+  <p class="muted">Not legal advice. Law changes are also picked up in News under “Laws”.</p>`;
 }
 
 // ---------- router / render
@@ -316,14 +391,14 @@ function render() {
     if (params.has('aroma')) state.filters.aroma = [params.get('aroma')];
     if (params.has('irr') || params.has('aroma')) history.replaceState(null, '', '#/browse');
     html = viewBrowse();
-  } else html = { '/': viewHome, '/stock': viewStock, '/compare': viewCompare, '/watch': viewWatch, '/alerts': viewAlerts, '/legend': viewLegend }[path]?.() || viewHome();
+  } else html = { '/': viewHome, '/stock': viewStock, '/compare': viewCompare, '/watch': viewWatch, '/alerts': viewAlerts, '/legend': viewLegend, '/more': viewMore, '/news': viewNews, '/cups': viewCups, '/laws': viewLaws }[path]?.() || viewHome();
   const keepScroll = render.last === path ? scrollY : 0;
   $('#app').innerHTML = html;
   if (render.last !== path) scrollTo(0, 0); else scrollTo(0, keepScroll);
   render.last = path;
   const cur = path === '/' ? '/' : '/' + path.split('/')[1];
   const link = ([h, l, i], tab) => `<a href="#${h}" ${cur === h ? 'aria-current="page"' : ''}>${tab ? ICON[i] : ''}<span>${l}</span>${h === '/alerts' && unreadCount() ? `<span class="badge-dot">${unreadCount()}</span>` : ''}</a>`;
-  $('.tabbar').innerHTML = TABS.map(n => link(n, true)).join('');
+  $('.tabbar').innerHTML = TABS.map(n => link(n, true)).join('').replace('href="#/more"', MORE_PATHS.includes(cur) && cur !== '/more' ? 'href="#/more" aria-current="page"' : 'href="#/more"');
   $('.side').innerHTML = NAV.map(n => link(n, false)).join('');
   document.title = path.startsWith('/p/') ? (byId(path.slice(3))?.name || 'Product') + ' · Leafwatch UK' : 'Leafwatch UK';
   const demo = state.products.some(isSample);
@@ -338,13 +413,16 @@ document.addEventListener('click', e => {
   if ('close' in d) return closeSheet();
   if (d.watch) { const id = d.watch; state.watch.has(id) ? state.watch.delete(id) : (state.watch.add(id), toast('Added to watchlist')); save(); return render(); }
   if (d.spot) { state.homeSpot = d.spot; return render(); }
+  if (d.ntag) { state.newsTag = d.ntag; return render(); }
   if (d.stab) { state.stockTab = d.stab; return render(); }
   if (d.quick) {
     const f = state.filters;
     if (d.quick === 'irr') f.irr = f.irr === 'no' ? '' : 'no';
     if (d.quick === 'citrus' || d.quick === 'diesel') f.aroma = f.aroma.includes(d.quick) ? f.aroma.filter(x => x !== d.quick) : [...f.aroma, d.quick];
     if (d.quick === 'stock') f.stock = f.stock === 'in_stock' ? '' : 'in_stock';
-    if (d.quick === 'clear') Object.assign(state.filters, { q: '', form: '', thcMin: 0, thcMax: 40, cbdMax: 30, priceMax: 20, strain: '', producer: [], terpene: [], aroma: [], irr: '', pharmacy: [], stock: '', conf: '' });
+    if (d.quick === 'mine') f.mine = !f.mine;
+    if (d.quick === 'cup') f.cup = !f.cup;
+    if (d.quick === 'clear') Object.assign(state.filters, { mine: false, cup: false, q: '', form: '', thcMin: 0, thcMax: 40, cbdMax: 30, priceMax: 20, strain: '', producer: [], terpene: [], aroma: [], irr: '', pharmacy: [], stock: '', conf: '' });
     return render();
   }
   if (t.id === 'open-filters') return openFilters();
@@ -373,12 +451,14 @@ document.addEventListener('input', e => {
   if (t.id === 'q') { state.filters.q = t.value; const pos = t.selectionStart; render(); const q = $('#q'); q.focus(); q.setSelectionRange(pos, pos); }
   if (t.dataset.r) { state.filters[t.dataset.r] = +t.value; if (state.filters.thcMin > state.filters.thcMax) state.filters[t.dataset.r === 'thcMin' ? 'thcMax' : 'thcMin'] = +t.value; }
   if (t.id === 'strain') state.filters.strain = t.value;
+  if (t.id === 'lawq') { state.lawQ = t.value; const pos = t.selectionStart; render(); const q = $('#lawq'); q.focus(); q.setSelectionRange(pos, pos); }
 });
 document.addEventListener('change', e => {
   const t = e.target;
   if (t.id === 'sort') { state.filters.sort = t.value; render(); }
   if (t.id === 'cmp-add' && t.value) { if (state.compare.length < 4) { state.compare.push(t.value); save(); } render(); }
   if (t.dataset.rule) { state.rules[t.dataset.rule] = t.checked; save(); }
+  if (t.id === 'pharm') { state.pharmacy = t.value.trim(); store.set('pharmacy', state.pharmacy); render(); }
   if (t.dataset.r) { const y = $('.sheet').scrollTop; openFilters(); $('.sheet').scrollTop = y; }
 });
 addEventListener('hashchange', render);
@@ -393,7 +473,9 @@ $('#theme').addEventListener('click', () => {
 async function boot() {
   try {
     const inline = window.__DATA__;
-    const [p, ev] = inline ? [inline.products, inline.events] : await Promise.all([fetch('data/products.json').then(r => r.json()), fetch('data/events.json').then(r => r.json())]);
+    const opt = f => fetch(f).then(r => r.ok ? r.json() : null).catch(() => null);
+    const [p, ev, news, cups, laws] = inline ? [inline.products, inline.events, inline.news, inline.cups, inline.laws] : await Promise.all([fetch('data/products.json').then(r => r.json()), fetch('data/events.json').then(r => r.json()), opt('data/news.json'), opt('data/cups.json'), opt('data/regulations.json')]);
+    state.news = news?.items || []; if (cups) state.cups = cups; if (laws) state.laws = laws;
     state.products = p.products; state.meta = { generatedAt: p.generatedAt, ntfyTopic: p.ntfyTopic }; state.events = ev.events;
     if (!state.seen) { state.seen = new Date(TODAY() - 3 * 864e5).toISOString(); }
     render();

@@ -1,11 +1,18 @@
 {
-  "_about": "Add one entry per public source. 'kind' picks an adapter in scripts/adapters/. Only sources you are allowed to read (public pages, open feeds, APIs, or data you have permission to use) should be listed. Check each site's terms and robots.txt.",
+  "_about": "One entry per public source. 'kind' picks an adapter in scripts/adapters.mjs: news (RSS/Atom), sitemap (article list), json (product feed). Only list sources you may read: check terms and robots.txt. MedBud Wiki and Reddit are deliberately not here (they block automated access).",
   "ntfyTopic": null,
   "sources": [
-    { "id": "example-feed", "kind": "json", "enabled": false, "url": "https://example.com/products.json",
+    { "id": "medicann-articles", "kind": "sitemap", "enabled": true, "url": "https://www.medicann.co.uk/sitemap-news.xml", "pathPrefix": "/article/", "max": 20, "label": "Medicann", "region": "uk" },
+    { "id": "cannabis-health-news", "kind": "news", "enabled": true, "url": "https://cannabishealthnews.co.uk/feed/", "label": "Cannabis Health News", "region": "uk" },
+    { "id": "business-of-cannabis", "kind": "news", "enabled": true, "url": "https://businessofcannabis.com/feed/", "label": "Business of Cannabis" },
+    { "id": "leafie", "kind": "news", "enabled": true, "url": "https://leafie.co.uk/feed/", "label": "Leafie", "region": "uk" },
+    { "id": "cannabis-industry-council", "kind": "news", "enabled": true, "url": "https://www.cicouncil.org.uk/feed/", "label": "Cannabis Industry Council", "region": "uk" },
+    { "id": "high-times", "kind": "news", "enabled": true, "url": "https://hightimes.com/feed/", "label": "High Times" },
+    { "id": "mjbizdaily", "kind": "news", "enabled": true, "url": "https://mjbizdaily.com/feed/", "label": "MJBizDaily" },
+    { "id": "cannabis-business-times", "kind": "news", "enabled": true, "url": "https://www.cannabisbusinesstimes.com/rss/", "label": "Cannabis Business Times" },
+    { "id": "newsweed", "kind": "news", "enabled": true, "url": "https://www.newsweed.fr/en/feed/", "label": "Newsweed (Europe)" },
+    { "id": "example-pharmacy-feed", "kind": "json", "enabled": false, "url": "https://example.com/products.json",
       "label": "Example pharmacy feed", "pharmacy": "Example Pharmacy", "itemsPath": "products",
-      "map": { "id": "sku", "name": "title", "producer": "brand", "thc": "thc_pct", "cbd": "cbd_pct", "pricePerGram": "price_per_g", "stock": "availability", "irradiated": "irradiated", "url": "url" } },
-    { "id": "news-cantourage", "kind": "rss", "enabled": false, "url": "https://example.com/news.rss", "label": "Importer news",
-      "keywords": ["launch", "new strain", "now available", "flower"] }
+      "map": { "id": "sku", "name": "title", "producer": "brand", "thc": "thc_pct", "cbd": "cbd_pct", "pricePerGram": "price_per_g", "stock": "availability", "irradiated": "irradiated", "url": "url" } }
   ]
 }
