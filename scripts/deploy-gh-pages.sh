@@ -3,7 +3,7 @@
 set -euo pipefail
 node scripts/build.mjs
 touch dist/.nojekyll
-url=$(git remote get-url origin)
+if [ -n "${GH_TOKEN:-}" ]; then url="https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"; else url=$(git remote get-url origin); fi
 cd dist
 git init -q -b gh-pages
 git add -A
