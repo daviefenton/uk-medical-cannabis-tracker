@@ -48,9 +48,11 @@ for (const src of cfg.sources.filter(s => s.enabled)) {
 // de-dupe events by id so reruns on the same day are idempotent
 const have = new Set(evDb.events.map(e => e.id));
 const fresh = newEvents.filter(e => !have.has(e.id));
-db.generatedAt = now; if (cfg.ntfyTopic) db.ntfyTopic = cfg.ntfyTopic;
+const touched = fresh.length || cfg.sources.some(s => s.enabled);
+if (touched) db.generatedAt = now;
+if (cfg.ntfyTopic) db.ntfyTopic = cfg.ntfyTopic;
 console.log(`${fresh.length} new events`, fresh.map(e => `${e.type}:${e.productId}`).join(', '));
-if (dry) process.exit(0);
+if (dry || !touched) process.exit(0);
 evDb.events = [...fresh, ...evDb.events].slice(0, 500);
 writeFileSync('data/products.json', JSON.stringify(db, null, 1));
 writeFileSync('data/events.json', JSON.stringify(evDb, null, 1));

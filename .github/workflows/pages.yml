@@ -2,7 +2,7 @@ name: Deploy site
 on:
   push: { branches: [main], paths: ['site/**', 'data/**', 'scripts/**'] }
   workflow_dispatch:
-permissions: { contents: write }
+permissions: { contents: write, pages: write }
 concurrency: { group: pages, cancel-in-progress: true }
 jobs:
   deploy:
