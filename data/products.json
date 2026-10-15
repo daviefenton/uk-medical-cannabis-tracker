@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-10-15T13:55:55.590Z",
+ "generatedAt": "2026-10-15T12:00:00Z",
  "products": [
   {
    "id": "isando-medcan",
@@ -118,7 +118,8 @@
     }
    ],
    "lastVerified": "2026-10-15",
-   "record": "announcement"
+   "record": "announcement",
+   "notes": "Plantations Cérès Cap Junky is on Medicann's product list (15 Oct 2026)."
   },
   {
    "id": "glass-pharms-uk",
@@ -133,13 +134,13 @@
    "terpenes": [],
    "aroma": [],
    "origin": "United Kingdom",
-   "status": "upcoming",
-   "confidence": "announced",
+   "status": "released",
+   "confidence": "confirmed",
    "stock": "unknown",
    "releaseDate": null,
    "firstSeen": "2026-10-15",
    "pharmacies": [],
-   "notes": "Releaf announced it would be first clinic to offer it. No date confirmed.",
+   "notes": "Glass Pharms flower is now on Medicann's product list (e.g. Lemon Diesel, Tangerine Boost, First Class Funk).",
    "sources": [
     {
      "label": "Farming News",
@@ -178,360 +179,6790 @@
    "record": "announcement"
   },
   {
-   "id": "s-citrus-meridian",
-   "name": "Citrus Meridian",
-   "producer": "Harbourfield Botanics (sample)",
+   "id": "medicann-f403",
+   "code": "F403",
+   "name": "Chemango Kush",
+   "producer": "Pedanios",
    "form": "flower",
-   "genetics": "Lemon Haze × Tangie",
-   "thc": 24,
-   "cbd": 0.5,
-   "pricePerGram": 8.5,
-   "irradiated": "no",
-   "terpenes": [
-    {
-     "name": "Limonene",
-     "pct": 1.1
-    },
-    {
-     "name": "Terpinolene",
-     "pct": 0.6
-    },
-    {
-     "name": "Myrcene",
-     "pct": 0.4
-    }
-   ],
-   "aroma": [
-    "citrus"
-   ],
-   "origin": "Canada",
-   "status": "released",
-   "confidence": "confirmed",
-   "stock": "in_stock",
-   "releaseDate": "2026-10-12",
-   "firstSeen": "2026-10-12",
-   "pharmacies": [
-    "Northgate Pharmacy",
-    "Riverside Dispensary"
-   ],
-   "sources": [],
-   "lastVerified": "2026-10-15",
-   "record": "sample"
-  },
-  {
-   "id": "s-diesel-dawn",
-   "name": "Dawn Diesel",
-   "producer": "Calder & Moss (sample)",
-   "form": "flower",
-   "genetics": "Sour Diesel × OG Kush",
-   "thc": 27,
-   "cbd": 0.3,
-   "pricePerGram": 9.2,
-   "irradiated": "no",
-   "terpenes": [
-    {
-     "name": "Caryophyllene",
-     "pct": 0.9
-    },
-    {
-     "name": "Limonene",
-     "pct": 0.7
-    },
-    {
-     "name": "Myrcene",
-     "pct": 0.5
-    }
-   ],
-   "aroma": [
-    "diesel",
-    "citrus"
-   ],
-   "origin": "Portugal",
-   "status": "released",
-   "confidence": "confirmed",
-   "stock": "low",
-   "releaseDate": "2026-10-09",
-   "firstSeen": "2026-10-09",
-   "pharmacies": [
-    "Northgate Pharmacy"
-   ],
-   "sources": [],
-   "lastVerified": "2026-10-14",
-   "record": "sample"
-  },
-  {
-   "id": "s-gas-lantern",
-   "name": "Gas Lantern",
-   "producer": "Calder & Moss (sample)",
-   "form": "flower",
-   "genetics": "GMO × Gelato",
-   "thc": 29,
-   "cbd": 0.2,
-   "pricePerGram": 10.5,
-   "irradiated": "yes",
-   "terpenes": [
-    {
-     "name": "Caryophyllene",
-     "pct": 1.2
-    },
-    {
-     "name": "Limonene",
-     "pct": 0.5
-    },
-    {
-     "name": "Humulene",
-     "pct": 0.3
-    }
-   ],
-   "aroma": [
-    "diesel"
-   ],
-   "origin": "Portugal",
-   "status": "released",
-   "confidence": "confirmed",
-   "stock": "in_stock",
-   "releaseDate": "2026-09-20",
-   "firstSeen": "2026-09-20",
-   "lastRestock": "2026-10-13",
-   "pharmacies": [
-    "Riverside Dispensary",
-    "Eastbank Pharmacy"
-   ],
-   "sources": [],
-   "lastVerified": "2026-10-14",
-   "record": "sample"
-  },
-  {
-   "id": "s-tangerine-fold",
-   "name": "Tangerine Fold",
-   "producer": "Westmarch Growers (sample)",
-   "form": "flower",
-   "genetics": "Tangie × Cookies",
-   "thc": 21,
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
    "cbd": 1,
-   "pricePerGram": 7.4,
-   "irradiated": "no",
-   "terpenes": [
-    {
-     "name": "Limonene",
-     "pct": 1.4
-    },
-    {
-     "name": "Ocimene",
-     "pct": 0.4
-    },
-    {
-     "name": "Linalool",
-     "pct": 0.3
-    }
-   ],
-   "aroma": [
-    "citrus"
-   ],
-   "origin": "Netherlands",
-   "status": "released",
-   "confidence": "confirmed",
-   "stock": "out",
-   "releaseDate": "2026-08-30",
-   "firstSeen": "2026-08-30",
-   "pharmacies": [
-    "Eastbank Pharmacy"
-   ],
-   "sources": [],
-   "lastVerified": "2026-10-13",
-   "record": "sample"
-  },
-  {
-   "id": "s-nightfall-fuel",
-   "name": "Nightfall Fuel",
-   "producer": "Westmarch Growers (sample)",
-   "form": "flower",
-   "genetics": "Chemdawg × Purple Punch",
-   "thc": 25,
-   "cbd": 0.4,
-   "pricePerGram": 8.8,
-   "irradiated": "yes",
-   "terpenes": [
-    {
-     "name": "Myrcene",
-     "pct": 1
-    },
-    {
-     "name": "Caryophyllene",
-     "pct": 0.8
-    },
-    {
-     "name": "Linalool",
-     "pct": 0.4
-    }
-   ],
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
    "aroma": [
     "diesel"
    ],
-   "origin": "Netherlands",
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
    "status": "released",
    "confidence": "confirmed",
    "stock": "in_stock",
-   "releaseDate": "2026-07-02",
-   "firstSeen": "2026-07-02",
-   "previousPricePerGram": 9.8,
-   "priceChangedOn": "2026-10-11",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
    "pharmacies": [
-    "Northgate Pharmacy",
-    "Eastbank Pharmacy"
+    "Medicann"
    ],
-   "sources": [],
-   "lastVerified": "2026-10-14",
-   "record": "sample"
-  },
-  {
-   "id": "s-lemon-ledger",
-   "name": "Lemon Ledger",
-   "producer": "Harbourfield Botanics (sample)",
-   "form": "flower",
-   "genetics": "Super Lemon Haze",
-   "thc": 19,
-   "cbd": 0.6,
-   "pricePerGram": 6.9,
-   "irradiated": "no",
-   "terpenes": [
+   "sources": [
     {
-     "name": "Terpinolene",
-     "pct": 1
-    },
-    {
-     "name": "Limonene",
-     "pct": 0.9
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
     }
    ],
+   "listing": "Pedanios CMK-CA 28% THC <1% CBD Flos (10g) - Chemango Kush (F403)"
+  },
+  {
+   "id": "medicann-f4",
+   "code": "F4",
+   "name": "Gary Busey",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS GBU 30% THC <1% CBD Flos (10g) - Gary Busey (F4)"
+  },
+  {
+   "id": "medicann-f8",
+   "code": "F8",
+   "name": "Khalifa Mints",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 24,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS KM 24% THC <1% CBD Flos (10g) - Khalifa Mints (F8)"
+  },
+  {
+   "id": "medicann-f185",
+   "code": "F185",
+   "name": "Gelato Cheesecake",
+   "producer": "Superseed",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 100,
+   "pricePerGram": 10,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "SUPERSEED GLT CCK 28% THC <1% CBD Flos (10g) - Gelato Cheesecake (F185)"
+  },
+  {
+   "id": "medicann-f181",
+   "code": "F181",
+   "name": "Grape Cookies",
+   "producer": "Superseed",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 100,
+   "pricePerGram": 10,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "SUPERSEED GRP CKS 27% THC <1% CBD Flos (10g) - Grape Cookies (F181)"
+  },
+  {
+   "id": "medicann-f334",
+   "code": "F334",
+   "name": "Donkey Butter",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 31,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS DBT 31% THC <1% CBD Flos (10g) - Donkey Butter (F334)"
+  },
+  {
+   "id": "medicann-f284",
+   "code": "F284",
+   "name": "First Class Funk",
+   "producer": "Glass Pharms",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 26,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Glass Pharms FCF 26% THC <1% CBD Flos (10g) - First Class Funk (F284)"
+  },
+  {
+   "id": "medicann-f69",
+   "code": "F69",
+   "name": "Tangerine Boost",
+   "producer": "Glass Pharms",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 23,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 80,
+   "pricePerGram": 8,
    "aroma": [
     "citrus"
    ],
-   "origin": "Canada",
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
    "status": "released",
    "confidence": "confirmed",
    "stock": "in_stock",
-   "releaseDate": "2026-06-10",
-   "firstSeen": "2026-06-10",
-   "lastRestock": "2026-10-14",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
    "pharmacies": [
-    "Riverside Dispensary"
+    "Medicann"
    ],
-   "sources": [],
-   "lastVerified": "2026-10-14",
-   "record": "sample"
-  },
-  {
-   "id": "s-old-reliable",
-   "name": "Old Reliable 18",
-   "producer": "Calder & Moss (sample)",
-   "form": "flower",
-   "genetics": "Hybrid",
-   "thc": 18,
-   "cbd": 0.1,
-   "pricePerGram": 5.9,
-   "irradiated": "yes",
-   "terpenes": [
+   "sources": [
     {
-     "name": "Myrcene",
-     "pct": 0.8
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
     }
    ],
-   "aroma": [],
-   "origin": "Portugal",
-   "status": "discontinued",
-   "confidence": "confirmed",
-   "stock": "discontinued",
-   "releaseDate": "2025-02-01",
-   "firstSeen": "2025-02-01",
-   "discontinuedOn": "2026-10-05",
-   "pharmacies": [],
-   "sources": [],
-   "lastVerified": "2026-10-10",
-   "record": "sample"
+   "listing": "Glass Pharms TB 23% THC <1% CBD Flos (10g) - Tangerine Boost (F69)"
   },
   {
-   "id": "s-balanced-oil",
-   "name": "Balanced 10:10 Oil",
-   "producer": "Westmarch Growers (sample)",
+   "id": "medicann-f47",
+   "code": "F47",
+   "name": "High Society (Oracle)",
+   "producer": "Dalgety",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Dalgety HSOR 25% THC <1% CBD Flos (10g) - High Society (Oracle) (F47)"
+  },
+  {
+   "id": "medicann-f100",
+   "code": "F100",
+   "name": "Halle Berry",
+   "producer": "Kasa Verde",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Kasa Verde HBE 25% THC <1% CBD Flos (10g) - Halle Berry (F100)"
+  },
+  {
+   "id": "medicann-f172",
+   "code": "F172",
+   "name": "Alien Jelly",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS ALJ 27% THC <1% CBD Flos (10g) - Alien Jelly (F172)"
+  },
+  {
+   "id": "medicann-circle-balance-t25-c25-thc-25mg-ml-cbd-25mg-ml-cannabis-sublingual-oil-30ml",
+   "code": null,
+   "name": "Circle Balance T25:C25 THC 25mg/Ml CBD 25mg/Ml Cannabis Sublingual Oil 30ml",
+   "producer": "Circle",
    "form": "oil",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "thcUnit": "mg/ml",
+   "cbd": 25,
+   "cbdUnit": "mg/ml",
+   "size": 30,
+   "sizeUnit": "ml",
+   "price": 95,
+   "pricePerGram": null,
+   "maxPerOrder": 3,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "CIRCLE BALANCE T25:C25 THC 25MG/ML CBD 25MG/ML CANNABIS SUBLINGUAL OIL 30ML"
+  },
+  {
+   "id": "medicann-f67",
+   "code": "F67",
+   "name": "Kush Mintz",
+   "producer": "Glass Pharms",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Glass Pharms KM 27% THC <1% CBD Flos (10g) - Kush Mintz (F67)"
+  },
+  {
+   "id": "medicann-v18",
+   "code": "V18",
+   "name": "Tiger blood",
+   "producer": "4C Labs",
+   "form": "vape",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/g",
+   "cbd": 10,
+   "cbdUnit": "mg/g",
+   "cbdLt": true,
+   "size": 0.95,
+   "sizeUnit": "g",
+   "price": 45,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C Labs TBV (THC 850MG/G CBD ≤ 10MG/G) VAPE CARTRIDGE 0.95g - Tiger blood (V18)"
+  },
+  {
+   "id": "medicann-v4",
+   "code": "V4",
+   "name": "Cookie Pie",
+   "producer": "Clearleaf",
+   "form": "vape",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 750,
+   "thcUnit": "mg/ml",
+   "cbd": 50,
+   "cbdUnit": "mg/ml",
+   "cbdLt": true,
+   "size": 1,
+   "sizeUnit": "ml",
+   "price": 80,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Clearleaf CPI ROSIN (THC 750MG/ML CBD ≤ 50MG/ML) VAPE CARTRIDGE 1ML - Cookie Pie (V4)"
+  },
+  {
+   "id": "medicann-f7",
+   "code": "F7",
+   "name": "A&B Jealousy",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS JAB 30% THC <1% CBD Flos (10g) - A&B Jealousy (F7)"
+  },
+  {
+   "id": "medicann-v28",
+   "code": "V28",
+   "name": "Watermelon Splash",
+   "producer": "4C Labs",
+   "form": "vape",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/g",
+   "cbd": 10,
+   "cbdUnit": "mg/g",
+   "cbdLt": true,
+   "size": 0.95,
+   "sizeUnit": "g",
+   "price": 45,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS WSV 85/1 WATERMELON SPLASH THC 850MG/G CBD <10MG/G VAPE CARTRIDGE 0.95G (V28)"
+  },
+  {
+   "id": "medicann-v3",
+   "code": "V3",
+   "name": "Black Cherry Punch",
+   "producer": "Clearleaf",
+   "form": "vape",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/ml",
+   "cbd": 50,
+   "cbdUnit": "mg/ml",
+   "cbdLt": true,
+   "size": 1,
+   "sizeUnit": "ml",
+   "price": 70,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Clearleaf BCP (THC 850MG/ML CBD ≤ 50MG/ML) VAPE CARTRIDGE 1ML - Black Cherry Punch (V3)"
+  },
+  {
+   "id": "medicann-f163",
+   "code": "F163",
+   "name": "Beach Wedding",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS BWD 30% THC <1% CBD Flos (10g) - Beach Wedding (F163)"
+  },
+  {
+   "id": "medicann-f49",
+   "code": "F49",
+   "name": "Marshmellow OG",
+   "producer": "Dalgety",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 24,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 80,
+   "pricePerGram": 8,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Dalgety MOG SL 24% THC <1% CBD Flos (10g) - Marshmellow OG (F49)"
+  },
+  {
+   "id": "medicann-f166",
+   "code": "F166",
+   "name": "Jet Fuel Gelato",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 24,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 55,
+   "pricePerGram": 5.5,
+   "smalls": true,
+   "aroma": [
+    "diesel"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS JFG 24% THC <1% CBD Flos (10g) - Jet Fuel Gelato (Smalls) (F166)"
+  },
+  {
+   "id": "medicann-f473",
+   "code": "F473",
+   "name": "Florida OG",
+   "producer": "LIT",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 55,
+   "pricePerGram": 5.5,
+   "smalls": true,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "LIT FOG (SMALL BUDS) (THC 30% CBD <1%) CANNABIS FLOWER 10G (F473)"
+  },
+  {
+   "id": "medicann-f41",
+   "code": "F41",
+   "name": "Tripoli",
+   "producer": "Cura",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 20,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 59,
+   "pricePerGram": 5.9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Cura-TPI 20% THC <1% CBD Flos (10g) - Tripoli (F41)"
+  },
+  {
+   "id": "medicann-f180",
+   "code": "F180",
+   "name": "Gelatti Pie",
+   "producer": "Superseed",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 100,
+   "pricePerGram": 10,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "SUPERSEED GTI PI 30% THC <1% CBD Flos (10g) - Gelatti Pie (F180)"
+  },
+  {
+   "id": "medicann-f5",
+   "code": "F5",
+   "name": "Grandi Guava",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 59,
+   "pricePerGram": 5.9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS GGU 25% THC <1% CBD Flos (10g) - Grandi Guava (F5)"
+  },
+  {
+   "id": "medicann-f17",
+   "code": "F17",
+   "name": "Zkittlez Fuel",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 26,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 62.5,
+   "pricePerGram": 6.25,
+   "aroma": [
+    "diesel"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS ZKF 26% THC <1% CBD Flos (10g) -Zkittlez Fuel (F17)"
+  },
+  {
+   "id": "medicann-v31",
+   "code": "V31",
+   "name": "Peach Rizz",
+   "producer": "4C Labs",
+   "form": "vape",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/g",
+   "cbd": 10,
+   "cbdUnit": "mg/g",
+   "cbdLt": true,
+   "size": 0.95,
+   "sizeUnit": "g",
+   "price": 45,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C Labs PRV (THC 850MG/G CBD ≤ 10MG/G) VAPE CARTRIDGE 0.95g - Peach Rizz (V31)"
+  },
+  {
+   "id": "medicann-o25",
+   "code": "O25",
+   "name": "Circle Oil 50mg/ml THC <3mg/ml CBD (30ml)",
+   "producer": "Circle",
+   "form": "oil",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 50,
+   "thcUnit": "mg/ml",
+   "cbd": 3,
+   "cbdUnit": "mg/ml",
+   "cbdLt": true,
+   "size": 30,
+   "sizeUnit": "ml",
+   "price": 110,
+   "pricePerGram": null,
+   "maxPerOrder": 3,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Circle Oil 50mg/ml THC <3mg/ml CBD (30ml) (O25)"
+  },
+  {
+   "id": "medicann-f123",
+   "code": "F123",
+   "name": "Cap Junky",
+   "producer": "Plantations Cérès",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Plantations Ceres CJ 27% THC <1% CBD Flos (10g) - Cap Junky (F123)"
+  },
+  {
+   "id": "medicann-p2",
+   "code": "P2",
+   "name": "Curaleaf 10mg THC 10mg CBD Pastilles (Mixed Berries) (14)",
+   "producer": "Curaleaf",
+   "form": "pastille",
+   "type": "Hybrid",
    "genetics": null,
    "thc": 10,
+   "thcUnit": "mg",
    "cbd": 10,
+   "cbdUnit": "mg",
+   "size": 14,
+   "sizeUnit": "pcs",
+   "price": 34.3,
    "pricePerGram": null,
-   "pricePerMl": 48,
+   "aroma": [],
    "irradiated": "unknown",
    "terpenes": [],
-   "aroma": [],
-   "origin": "Netherlands",
+   "origin": null,
    "status": "released",
    "confidence": "confirmed",
    "stock": "in_stock",
-   "releaseDate": "2026-03-01",
-   "firstSeen": "2026-03-01",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
    "pharmacies": [
-    "Northgate Pharmacy"
+    "Medicann"
    ],
-   "sources": [],
-   "lastVerified": "2026-10-12",
-   "record": "sample"
-  },
-  {
-   "id": "s-pomelo-pending",
-   "name": "Pomelo Pending",
-   "producer": "Harbourfield Botanics (sample)",
-   "form": "flower",
-   "genetics": "Grapefruit × Zkittlez",
-   "thc": 26,
-   "cbd": 0.3,
-   "pricePerGram": null,
-   "irradiated": "no",
-   "terpenes": [
+   "sources": [
     {
-     "name": "Limonene",
-     "pct": 1.2
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
     }
    ],
+   "listing": "Curaleaf 10mg THC 10mg CBD Pastilles (Mixed Berries) (14) (P2)"
+  },
+  {
+   "id": "medicann-f40",
+   "code": "F40",
+   "name": "Royal Moby",
+   "producer": "Cura",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 20,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 65,
+   "pricePerGram": 6.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Cura-RMY 20% THC <1% CBD Flos (10g) - Royal Moby (F40)"
+  },
+  {
+   "id": "medicann-v49",
+   "code": "V49",
+   "name": "Kush Mints",
+   "producer": "Upstate",
+   "form": "vape",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 800,
+   "thcUnit": "mg/g",
+   "cbd": 10,
+   "cbdUnit": "mg/g",
+   "cbdLt": true,
+   "size": 1,
+   "sizeUnit": "g",
+   "price": 59,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Upstate KM (THC 800MG/ML CBD ≤8MG/ML) VAPE CARTRIDGE 1g - Kush Mints (V49)"
+  },
+  {
+   "id": "medicann-f323",
+   "code": "F323",
+   "name": "Lemon Diesel",
+   "producer": "Glass Pharms",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 22,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 67.5,
+   "pricePerGram": 6.75,
+   "aroma": [
+    "citrus",
+    "diesel"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Glass Pharms LD 22% THC <1% CBD Flos (10g) - Lemon Diesel (F323)"
+  },
+  {
+   "id": "medicann-f12",
+   "code": "F12",
+   "name": "Platinum Garlic",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 22,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 50,
+   "pricePerGram": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS PGL 22% THC <1% CBD Flos (10g) - Platinum Garlic (F12)"
+  },
+  {
+   "id": "medicann-v1",
+   "code": "V1",
+   "name": "Cherry Lime",
+   "producer": "4C Labs",
+   "form": "vape",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/g",
+   "cbd": 10,
+   "cbdUnit": "mg/g",
+   "cbdLt": true,
+   "size": 0.95,
+   "sizeUnit": "g",
+   "price": 49,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
    "aroma": [
     "citrus"
    ],
-   "origin": "Canada",
-   "status": "upcoming",
-   "confidence": "announced",
-   "stock": "unknown",
-   "releaseDate": "2026-10-28",
-   "firstSeen": "2026-10-10",
-   "pharmacies": [],
-   "notes": "Producer-announced; UK date from importer notice.",
-   "sources": [],
-   "lastVerified": "2026-10-14",
-   "record": "sample"
-  },
-  {
-   "id": "s-diesel-whisper",
-   "name": "Diesel Whisper",
-   "producer": "Calder & Moss (sample)",
-   "form": "flower",
-   "genetics": null,
-   "thc": null,
-   "cbd": null,
-   "pricePerGram": null,
+   "aromaSource": "name",
    "irradiated": "unknown",
    "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C Labs CLV (THC 850MG/G CBD ≤ 10MG/G) VAPE CARTRIDGE 0.95g - Cherry Lime (V1)"
+  },
+  {
+   "id": "medicann-f174",
+   "code": "F174",
+   "name": "GMO MAC",
+   "producer": "Mystery Mountain",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 90,
+   "pricePerGram": 9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "MST MTN GMO MAC 27% THC <1% CBD Flos (10g) - GMO MAC (F174)"
+  },
+  {
+   "id": "medicann-o11",
+   "code": "O11",
+   "name": "Curaleaf Oil 20mg/ml THC <1mg/ml CBD (30ml)",
+   "producer": "Curaleaf",
+   "form": "oil",
+   "type": null,
+   "genetics": null,
+   "thc": 20,
+   "thcUnit": "mg/ml",
+   "cbd": 1,
+   "cbdUnit": "mg/ml",
+   "cbdLt": true,
+   "size": 30,
+   "sizeUnit": "ml",
+   "price": 80,
+   "pricePerGram": null,
+   "maxPerOrder": 3,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Curaleaf Oil 20mg/ml THC <1mg/ml CBD (30ml) (O11)"
+  },
+  {
+   "id": "medicann-f126",
+   "code": "F126",
+   "name": "GMO Cookies",
+   "producer": "PN",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 65,
+   "pricePerGram": 6.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "PN-GMO 30% THC <1% CBD Flos (10g) - GMO Cookies (F126)"
+  },
+  {
+   "id": "medicann-f188",
+   "code": "F188",
+   "name": "White Fire",
+   "producer": "LIT",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 55,
+   "pricePerGram": 5.5,
+   "smalls": true,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "LIT WF (SMALL BUDS) 30% THC <1% CBD Flos (10g) - White Fire (F188)"
+  },
+  {
+   "id": "medicann-v20",
+   "code": "V20",
+   "name": "Blunicorn",
+   "producer": "Clearleaf",
+   "form": "vape",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/ml",
+   "cbd": 50,
+   "cbdUnit": "mg/ml",
+   "cbdLt": true,
+   "size": 1,
+   "sizeUnit": "ml",
+   "price": 70,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Clearleaf BLU (THC 850MG/ML CBD ≤50MG/ML) VAPE CARTRIDGE 1ML - Blunicorn (V20)"
+  },
+  {
+   "id": "medicann-f78",
+   "code": "F78",
+   "name": "Gelato Dream",
+   "producer": "Greyscales",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 26,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Greyscales GD 26% THC <1% CBD Flos (10g) - Gelato Dream (F78)"
+  },
+  {
+   "id": "medicann-f426",
+   "code": "F426",
+   "name": "Chem Cookies #44",
+   "producer": "Mamedica",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
    "aroma": [
     "diesel"
    ],
-   "origin": "Portugal",
-   "status": "upcoming",
-   "confidence": "rumour",
-   "stock": "unknown",
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
    "releaseDate": null,
-   "firstSeen": "2026-10-13",
-   "pharmacies": [],
-   "notes": "Unconfirmed community chatter. No producer or pharmacy source yet.",
-   "sources": [],
-   "lastVerified": "2026-10-13",
-   "record": "sample"
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Mamedica CHC 28% THC <1% CBD Flos (10g) - Chem Cookies #44 (F426)"
+  },
+  {
+   "id": "medicann-f169",
+   "code": "F169",
+   "name": "Pink Kush",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 21,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 60,
+   "pricePerGram": 6,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS PKK 21% THC <1% CBD Flos (10g) - Pink Kush (F169)"
+  },
+  {
+   "id": "medicann-o28",
+   "code": "O28",
+   "name": "Circle Balance Oil 20mg/ml THC 10mg/ml CBD (30ml)",
+   "producer": "Circle",
+   "form": "oil",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 20,
+   "thcUnit": "mg/ml",
+   "cbd": 10,
+   "cbdUnit": "mg/ml",
+   "size": 30,
+   "sizeUnit": "ml",
+   "price": 45,
+   "pricePerGram": null,
+   "maxPerOrder": 3,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Circle Balance Oil 20mg/ml THC 10mg/ml CBD (30ml) (O28)"
+  },
+  {
+   "id": "medicann-f36",
+   "code": "F36",
+   "name": "High Silver",
+   "producer": "Cura",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 21,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 55,
+   "pricePerGram": 5.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Cura-HSR 21% THC <1% CBD Flos (10g) - High Silver (F36)"
+  },
+  {
+   "id": "medicann-f325",
+   "code": "F325",
+   "name": "Blunicorn",
+   "producer": "IPS",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 26,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 59.5,
+   "pricePerGram": 5.95,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "IPS BLU 26% THC <1% CBD Flos (10g) - Blunicorn (F325)"
+  },
+  {
+   "id": "medicann-f472",
+   "code": "F472",
+   "name": "Master Kush",
+   "producer": "LIT",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 55,
+   "pricePerGram": 5.5,
+   "smalls": true,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "LIT MK (SMALL BUDS) THC 30% CBD <1% CANNABIS FLOWER 10G (F472)"
+  },
+  {
+   "id": "medicann-f171",
+   "code": "F171",
+   "name": "Atomic Sour Grapefruit",
+   "producer": "PN",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "PN-ASG 30% THC <1% CBD Flos (10g) - Atomic Sour Grapefruit (F171)"
+  },
+  {
+   "id": "medicann-v17",
+   "code": "V17",
+   "name": "Grapey Grape",
+   "producer": "4C Labs",
+   "form": "vape",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/g",
+   "cbd": 10,
+   "cbdUnit": "mg/g",
+   "cbdLt": true,
+   "size": 0.95,
+   "sizeUnit": "g",
+   "price": 45,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C Labs GGV (THC 850MG/G CBD ≤ 10MG/G) VAPE CARTRIDGE 0.95g - Grapey Grape (V17)"
+  },
+  {
+   "id": "medicann-v8",
+   "code": "V8",
+   "name": "Jack Herer",
+   "producer": "Curaleaf",
+   "form": "vape",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 200,
+   "thcUnit": "mg/g",
+   "cbd": 200,
+   "cbdUnit": "mg/g",
+   "size": 0.5,
+   "sizeUnit": "g",
+   "price": 27.95,
+   "pricePerGram": null,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Curaleaf JHR (THC 200MG/G CBD 200MG/G) QUE Cartridge 0.5g - Jack Herer (V8)"
+  },
+  {
+   "id": "medicann-p3",
+   "code": "P3",
+   "name": "Curaleaf 10mg THC 0mg CBD Pastilles (Orange) (14)",
+   "producer": "Curaleaf",
+   "form": "pastille",
+   "type": null,
+   "genetics": null,
+   "thc": 10,
+   "thcUnit": "mg",
+   "cbd": 0,
+   "cbdUnit": "mg",
+   "size": 14,
+   "sizeUnit": "pcs",
+   "price": 32.5,
+   "pricePerGram": null,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Curaleaf 10mg THC 0mg CBD Pastilles (Orange) (14) (P3)"
+  },
+  {
+   "id": "medicann-o18",
+   "code": "O18",
+   "name": "Curaleaf Oil 50mg/ml THC ≤1mg/ml CBD (10ml)",
+   "producer": "Curaleaf",
+   "form": "oil",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 50,
+   "thcUnit": "mg/ml",
+   "cbd": 1,
+   "cbdUnit": "mg/ml",
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "ml",
+   "price": 50,
+   "pricePerGram": null,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Curaleaf Oil 50mg/ml THC ≤1mg/ml CBD (10ml) (O18)"
+  },
+  {
+   "id": "medicann-p1",
+   "code": "P1",
+   "name": "Curaleaf 20mg THC 0mg CBD Pastilles (Strawberry) (14)",
+   "producer": "Curaleaf",
+   "form": "pastille",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 20,
+   "thcUnit": "mg",
+   "cbd": 0,
+   "cbdUnit": "mg",
+   "size": 14,
+   "sizeUnit": "pcs",
+   "price": 45,
+   "pricePerGram": null,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Curaleaf 20mg THC 0mg CBD Pastilles (Strawberry) (14) (P1)"
+  },
+  {
+   "id": "medicann-f184",
+   "code": "F184",
+   "name": "Ice Cream Mintz",
+   "producer": "Mystery Mountain",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 90,
+   "pricePerGram": 9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "MSTRY MTN ICM MNZ 28% THC <1% CBD Flos (10g) - Ice Cream Mintz (F184)"
+  },
+  {
+   "id": "medicann-f260",
+   "code": "F260",
+   "name": "Cake City",
+   "producer": "Superseed",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 100,
+   "pricePerGram": 10,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "SUPRSD CK CTY 28% THC <1% CBD Flos (10g) - Cake City (F260)"
+  },
+  {
+   "id": "medicann-f175",
+   "code": "F175",
+   "name": "Afghan Layer Cake",
+   "producer": "Mystery Mountain",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 90,
+   "pricePerGram": 9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "MST MTN AGN LCK 30% THC <1% CBD Flos (10g) - Afghan Layer Cake (F175)"
+  },
+  {
+   "id": "medicann-f131",
+   "code": "F131",
+   "name": "Pandalorian",
+   "producer": "Puro",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 24,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 79.5,
+   "pricePerGram": 7.95,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Puro PND 24% THC <1% CBD Flos (10g) - Pandalorian (F131)"
+  },
+  {
+   "id": "medicann-f130",
+   "code": "F130",
+   "name": "Molotov",
+   "producer": "Puro",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 24,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 79.5,
+   "pricePerGram": 7.95,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Puro MLT 24% THC <1% CBD Flos (10g) - Molotov (F130)"
+  },
+  {
+   "id": "medicann-f132",
+   "code": "F132",
+   "name": "Sundae Driver",
+   "producer": "Puro",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 21,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 69.5,
+   "pricePerGram": 6.95,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Puro SDD 21% THC <1% CBD Flos (10g) - Sundae Driver (F132)"
+  },
+  {
+   "id": "medicann-f178",
+   "code": "F178",
+   "name": "Blueberry Purp",
+   "producer": "Superseed",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 100,
+   "pricePerGram": 10,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "SUPRSD BBY PRP 25% THC <1% CBD Flos (10g) - Blueberry Purp (F178)"
+  },
+  {
+   "id": "medicann-f177",
+   "code": "F177",
+   "name": "Super Sherb",
+   "producer": "Tofino Ripper",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 80,
+   "pricePerGram": 8,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "TFN RPR SPR SHB 27% THC <1% CBD Flos (10g) - Super Sherb (F177)"
+  },
+  {
+   "id": "medicann-f6",
+   "code": "F6",
+   "name": "Green Runtz",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 26,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS GRZ 26% THC <1% CBD Flos (10g) - Green Runtz (F6)"
+  },
+  {
+   "id": "medicann-f1",
+   "code": "F1",
+   "name": "Blue Dream",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 20,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 77.5,
+   "pricePerGram": 7.75,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS BDR 20% THC <1% CBD Flos (10g) - Blue Dream (F1)"
+  },
+  {
+   "id": "medicann-f105",
+   "code": "F105",
+   "name": "Cherry Blast",
+   "producer": "Mamedica",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 24,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Mamedica CB 24% THC <1% CBD Flos (10g) - Cherry Blast (F105)"
+  },
+  {
+   "id": "medicann-f471",
+   "code": "F471",
+   "name": "Sour Diesel",
+   "producer": "LIT",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 34,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 69.5,
+   "pricePerGram": 6.95,
+   "smalls": true,
+   "aroma": [
+    "diesel"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "LIT SD -SMALLS THC 34% CBD <1% CANNABIS FLOWER 10G (F471)"
+  },
+  {
+   "id": "medicann-f66",
+   "code": "F66",
+   "name": "Grape Pie",
+   "producer": "Glass Pharms",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Glass Pharms GP 27% THC <1% CBD Flos (10g) - Grape Pie (F66)"
+  },
+  {
+   "id": "medicann-f335",
+   "code": "F335",
+   "name": "Permanent Ink",
+   "producer": "Glass Pharms",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 21,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Glass Pharms PI 21% THC <1% CBD Flos (10g) - Permanent Ink (F335)"
+  },
+  {
+   "id": "medicann-f173",
+   "code": "F173",
+   "name": "Coco Bamba",
+   "producer": "Mystery Mountain",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 26,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 90,
+   "pricePerGram": 9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "MST MTN CCO BMB 26% THC <1% CBD Flos (10g) - Coco Bamba (F173)"
+  },
+  {
+   "id": "medicann-f45",
+   "code": "F45",
+   "name": "Blood Orange Breeze",
+   "producer": "Dalgety",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 18,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Dalgety BOB 18% THC <1% CBD Flos (10g) - Blood Orange Breeze (F45)"
+  },
+  {
+   "id": "medicann-f44",
+   "code": "F44",
+   "name": "Britney's Frozen Lemon",
+   "producer": "Dalgety",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Dalgety BFL 28% THC <1% CBD Flos (10g) - Britney's Frozen Lemon (F44)"
+  },
+  {
+   "id": "medicann-f72",
+   "code": "F72",
+   "name": "Bip City",
+   "producer": "Green Karat",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 90,
+   "pricePerGram": 9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Green Karat BC 27% THC <1% CBD Flos (10g) - Bip City (F72)"
+  },
+  {
+   "id": "medicann-f64",
+   "code": "F64",
+   "name": "Tin Roof",
+   "producer": "FTP",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 22,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "FTP TR 22% THC <1% CBD Flos (10g) - Tin Roof (F64)"
+  },
+  {
+   "id": "medicann-f77",
+   "code": "F77",
+   "name": "White Inferno",
+   "producer": "Green Karat",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 80,
+   "pricePerGram": 8,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Green Karat WI 25% THC <1% CBD Flos (10g) - White Inferno (F77)"
+  },
+  {
+   "id": "medicann-f216",
+   "code": "F216",
+   "name": "Fire Cookies",
+   "producer": "MDCS",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 24,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 55,
+   "pricePerGram": 5.5,
+   "smalls": true,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "MDCS FC-S 24% THC <1% CBD Flos (10g) - Fire Cookies (Smalls) (F216)"
+  },
+  {
+   "id": "medicann-f9",
+   "code": "F9",
+   "name": "Miracle Alien Cookies",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS MCO 25% THC <1% CBD Flos (10g) - Miracle Alien Cookies (F9)"
+  },
+  {
+   "id": "medicann-f227",
+   "code": "F227",
+   "name": "Atomic Apple",
+   "producer": "HighGreens",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "HighGreens AA 27% THC <1% CBD Flos (10g) - Atomic Apple (F227)"
+  },
+  {
+   "id": "medicann-f225",
+   "code": "F225",
+   "name": "Sunset Gas",
+   "producer": "HighGreens",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [
+    "diesel"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "HighGreens SG 28% THC <1% CBD Flos (10g) - Sunset Gas (F225)"
+  },
+  {
+   "id": "medicann-f25",
+   "code": "F25",
+   "name": "Animal Face",
+   "producer": "Carmel",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 24,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Carmel ANF 24% THC <1% CBD Flos (10g) - Animal Face (F25)"
+  },
+  {
+   "id": "medicann-f158",
+   "code": "F158",
+   "name": "Pavé Runtz",
+   "producer": "Vasco",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Vasco PR 25% THC <1% CBD Flos (10g) - Pavé Runtz (F158)"
+  },
+  {
+   "id": "medicann-f117",
+   "code": "F117",
+   "name": "Frosted Fruit Cake",
+   "producer": "Muzo",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 89,
+   "pricePerGram": 8.9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Muzo FFC 28% THC <1% CBD Flos (10g) - Frosted Fruit Cake (F117)"
+  },
+  {
+   "id": "medicann-v16",
+   "code": "V16",
+   "name": "Watermelon Ice",
+   "producer": "EZD",
+   "form": "vape",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 500,
+   "thcUnit": "mg/g",
+   "cbd": 500,
+   "cbdUnit": "mg/g",
+   "size": 1.2,
+   "sizeUnit": "g",
+   "price": 62,
+   "pricePerGram": null,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "EZD-WTM (THC 500MG/ML CBD 500MG/ML) Vape Cartridge (1.2g)- Watermelon Ice (V16)"
+  },
+  {
+   "id": "medicann-f89",
+   "code": "F89",
+   "name": "Banoffee Tart",
+   "producer": "Hilltop Leaf",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Hilltop Leaf BT 30% THC <1% CBD Flos (10g) - Banoffee Tart (F89)"
+  },
+  {
+   "id": "medicann-f90",
+   "code": "F90",
+   "name": "Grape Muffin",
+   "producer": "Hilltop Leaf",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Hilltop Leaf GM 27% THC <1% CBD Flos (10g) - Grape Muffin (F90)"
+  },
+  {
+   "id": "medicann-f138",
+   "code": "F138",
+   "name": "Apples & Bananas",
+   "producer": "Sundaze",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 24,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Sundaze AB 24% THC <1% CBD Flos (10g) - Apples & Bananas (F138)"
+  },
+  {
+   "id": "medicann-f156",
+   "code": "F156",
+   "name": "Sundae Driver",
+   "producer": "Upstate",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 65,
+   "pricePerGram": 6.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Upstate SDD 25% THC <1% CBD Flos (10g) - Sundae Driver (F156)"
+  },
+  {
+   "id": "medicann-f144",
+   "code": "F144",
+   "name": "Pink Drip",
+   "producer": "Topz & Popz",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 22,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 65,
+   "pricePerGram": 6.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Topz & Popz PDRP 22% THC <1% CBD Flos (10g) - Pink Drip (F144)"
+  },
+  {
+   "id": "medicann-f18",
+   "code": "F18",
+   "name": "Frosted Pavé",
+   "producer": "FTP",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 21,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "FTP FP 21% THC <1% CBD Flos (10g) - Frosted Pavé (F18)"
+  },
+  {
+   "id": "medicann-f65",
+   "code": "F65",
+   "name": "Apples N Bananas",
+   "producer": "Glass Pharms",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 21,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Glass Pharms AB 21% THC <1% CBD Flos (10g) - Apples N Bananas (F65)"
+  },
+  {
+   "id": "medicann-f52",
+   "code": "F52",
+   "name": "Blackberry Balanced",
+   "producer": "EcoCann Access",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 6,
+   "cbd": 8,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 50,
+   "pricePerGram": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "EcoCann Access BB 6% THC 8% CBD Flos (10g) - Blackberry Balanced (F52)"
+  },
+  {
+   "id": "medicann-f183",
+   "code": "F183",
+   "name": "Grapefruit Skunk",
+   "producer": "Tofino Ripper",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 80,
+   "pricePerGram": 8,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Tofino Ripper GFT SKK 28% THC <1% CBD Flos (10g) - (F183)"
+  },
+  {
+   "id": "medicann-f197",
+   "code": "F197",
+   "name": "Cake City",
+   "producer": "Superseed",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 26,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 100,
+   "pricePerGram": 10,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Superseed CK CTY 26% THC <1% CBD Flos (10g) - Cake City (F197)"
+  },
+  {
+   "id": "medicann-f199",
+   "code": "F199",
+   "name": "Pennywise",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 7,
+   "cbd": 7,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 62.5,
+   "pricePerGram": 6.25,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C Labs PNW 7% THC 7% CBD Flos (10g) - Pennywise (F199)"
+  },
+  {
+   "id": "medicann-f204",
+   "code": "F204",
+   "name": "OG Kush",
+   "producer": "Kallie",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 29,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Kallie OGK 29% THC <1% CBD Flos (10g) - OG Kush (F204)"
+  },
+  {
+   "id": "medicann-f229",
+   "code": "F229",
+   "name": "Jelly Rancher",
+   "producer": "Roxton Air",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 26,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Roxton Air JR 26% THC <1% CBD Flos (10g) - Jelly Rancher (F229)"
+  },
+  {
+   "id": "medicann-f237",
+   "code": "F237",
+   "name": "Sunset Cookies",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 17,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 62.5,
+   "pricePerGram": 6.25,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C Labs SSC 17% THC <1% CBD Flos (10g) - Sunset Cookies (F237)"
+  },
+  {
+   "id": "medicann-f238",
+   "code": "F238",
+   "name": "Apples & Bananas",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 82.5,
+   "pricePerGram": 8.25,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C Labs ANB 28% THC <1% CBD Flos (10g) - Apples & Bananas (F238)"
+  },
+  {
+   "id": "medicann-f241",
+   "code": "F241",
+   "name": "Human After All",
+   "producer": "Jersey Craft",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": "Chem D x Wolf Eel 10",
+   "thc": 31,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 90,
+   "pricePerGram": 9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Jersey Craft HAA 31% THC <1% CBD Flos (10g) - Human After All (F241)"
+  },
+  {
+   "id": "medicann-f245",
+   "code": "F245",
+   "name": "Serene Reserve",
+   "producer": "Enua",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Enua SR 28% THC <1% CBD Flos (10g) - Serene Reserve (F245)"
+  },
+  {
+   "id": "medicann-f247",
+   "code": "F247",
+   "name": "Solar Charge",
+   "producer": "Enua",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 22,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 60,
+   "pricePerGram": 6,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Enua SC 22% THC <1% CBD Flos (10g) - Solar Charge (F247)"
+  },
+  {
+   "id": "medicann-f252",
+   "code": "F252",
+   "name": "Heavy Gas Hitter",
+   "producer": "BC Green",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 65,
+   "pricePerGram": 6.5,
+   "aroma": [
+    "diesel"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "BC Green HGH 28% THC <1% CBD Flos (10g) - Heavy Gas Hitter (F252)"
+  },
+  {
+   "id": "medicann-f230",
+   "code": "F230",
+   "name": "Flurry Pancakes",
+   "producer": "Roxton Air",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 26,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 65,
+   "pricePerGram": 6.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Roxton Air FP 26% THC <1% CBD Flos (10g) - Flurry Pancakes (F230)"
+  },
+  {
+   "id": "medicann-f321",
+   "code": "F321",
+   "name": "Chemstar",
+   "producer": "Glass Pharms",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 29,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 72.5,
+   "pricePerGram": 7.25,
+   "aroma": [
+    "diesel"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Glass Pharms CS 29% THC <1% CBD Flos (10g) - Chemstar (F321)"
+  },
+  {
+   "id": "medicann-f322",
+   "code": "F322",
+   "name": "Wedding Cake",
+   "producer": "Glass Pharms",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 72.5,
+   "pricePerGram": 7.25,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Glass Pharms WC 25% THC <1% CBD Flos (10g) - Wedding Cake (F322)"
+  },
+  {
+   "id": "medicann-f324",
+   "code": "F324",
+   "name": "Glitterbomb",
+   "producer": "Glass Pharms",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Glass Pharms GB 25% THC <1% CBD Flos (10g) - Glitterbomb (F324)"
+  },
+  {
+   "id": "medicann-v44",
+   "code": "V44",
+   "name": "Mango",
+   "producer": "Phant",
+   "form": "vape",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/g",
+   "cbd": 1,
+   "cbdUnit": "mg/g",
+   "cbdLt": true,
+   "size": 1,
+   "sizeUnit": "g",
+   "price": 60,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Phant MA (THC 850mg/g CBD ≤5mg/g) VAPE CARTRIDGE 1g - Mango (V44)"
+  },
+  {
+   "id": "medicann-v45",
+   "code": "V45",
+   "name": "Orange Cream",
+   "producer": "Phant",
+   "form": "vape",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/g",
+   "cbd": 5,
+   "cbdUnit": "mg/g",
+   "cbdLt": true,
+   "size": 1,
+   "sizeUnit": "g",
+   "price": 60,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Phant OC (THC 850mg/g CBD ≤5mg/g) VAPE CARTRIDGE 1g - Orange Cream (V45)"
+  },
+  {
+   "id": "medicann-f328",
+   "code": "F328",
+   "name": "Cherry Vanilla Balanced",
+   "producer": "Glass Pharms",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 10,
+   "cbd": 11,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 68.5,
+   "pricePerGram": 6.85,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Glass Pharms CVB 10% THC 11% CBD Flos (10g) - Cherry Vanilla Balanced (F328)"
+  },
+  {
+   "id": "medicann-f329",
+   "code": "F329",
+   "name": "GMO Gelato",
+   "producer": "EcoCann Access",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 52.5,
+   "pricePerGram": 5.25,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "EcoCann Access (GMO) BH 25% THC <1% CBD Flos (10g) - GMO Gelato (F329)"
+  },
+  {
+   "id": "medicann-f332",
+   "code": "F332",
+   "name": "African Green Mamba",
+   "producer": "Four",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 40,
+   "pricePerGram": 4,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Four AGM 25% THC <1% CBD Flos (10g) - African Green Mamba (F332)"
+  },
+  {
+   "id": "medicann-f338",
+   "code": "F338",
+   "name": "Morning Sun",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 77.5,
+   "pricePerGram": 7.75,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C LABS MSN 27% THC <1% CBD Flos (10g) - Morning Sun (F338)"
+  },
+  {
+   "id": "medicann-f352",
+   "code": "F352",
+   "name": "Biscotti OG",
+   "producer": "Kallie",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 24,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 67.5,
+   "pricePerGram": 6.75,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Kallie BSI 24% THC <1% CBD Flos (10g) - Biscotti OG (F352)"
+  },
+  {
+   "id": "medicann-f353",
+   "code": "F353",
+   "name": "Killer Cupcakes",
+   "producer": "Kallie",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 22,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 52.5,
+   "pricePerGram": 5.25,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Kallie KCC 22% THC <1% CBD Flos (10g) - Killer Cupcakes (F353)"
+  },
+  {
+   "id": "medicann-f354",
+   "code": "F354",
+   "name": "Neon Icon",
+   "producer": "Kanha",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 67.5,
+   "pricePerGram": 6.75,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Kanha NEOI 27% THC <1% CBD Flos (10g) - Neon Icon (F354)"
+  },
+  {
+   "id": "medicann-f355",
+   "code": "F355",
+   "name": "Zupa",
+   "producer": "Kanha",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 22,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 65,
+   "pricePerGram": 6.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Kanha ZPA 22% THC <1% CBD Flos (10g) - Zupa (F355)"
+  },
+  {
+   "id": "medicann-f356",
+   "code": "F356",
+   "name": "Tropicana Cherry",
+   "producer": "Kanha",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 18,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 60,
+   "pricePerGram": 6,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Kanha TCY 18% THC <1% CBD Flos (10g) - Tropicana Cherry (F356)"
+  },
+  {
+   "id": "medicann-f358",
+   "code": "F358",
+   "name": "Banana Cream Cake",
+   "producer": "SafriCanna",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 23,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 50,
+   "pricePerGram": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "SafriCanna BCC 23% THC <1% CBD Flos (10g) - Banana Cream Cake (F358)"
+  },
+  {
+   "id": "medicann-f359",
+   "code": "F359",
+   "name": "Creamy Kees #5",
+   "producer": "SafriCanna",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 22,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 42.5,
+   "pricePerGram": 4.25,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "SafriCanna CK 22% THC <1% CBD Flos (10g) - Creamy Kees #5 (F359)"
+  },
+  {
+   "id": "medicann-f366",
+   "code": "F366",
+   "name": "Waffle Bites",
+   "producer": "Cake & Caviar",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Cake & Caviar WB-H 30% THC <1% CBD Flos (10g) - Waffle Bites (F366)"
+  },
+  {
+   "id": "medicann-f381",
+   "code": "F381",
+   "name": "Lazer Fuel",
+   "producer": "Kallie",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [
+    "diesel"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Kallie LZF 25% THC <1% CBD Flos (10g) - Lazer Fuel (F381)"
+  },
+  {
+   "id": "medicann-f382",
+   "code": "F382",
+   "name": "Ring of Sour",
+   "producer": "Four",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 18,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 15,
+   "sizeUnit": "g",
+   "price": 60,
+   "pricePerGram": 4,
+   "maxPerOrder": 4,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Four ROS 18% THC <1% CBD Flos (15g) - Ring of Sour (F382)"
+  },
+  {
+   "id": "medicann-f386",
+   "code": "F386",
+   "name": "Human After All",
+   "producer": "Green Britannia",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 90,
+   "pricePerGram": 9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Green Britannia HAA 30% THC <1% CBD Flos (10g) - Human After All (F386)"
+  },
+  {
+   "id": "medicann-f390",
+   "code": "F390",
+   "name": "El Chivo",
+   "producer": "All Nations",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "All Nations ELC 28% THC <1% CBD Flos (10g) - El Chivo (F390)"
+  },
+  {
+   "id": "medicann-f391",
+   "code": "F391",
+   "name": "Topanga Twist",
+   "producer": "TNSC",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 65,
+   "pricePerGram": 6.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "TNSC TT 25% THC <1% CBD Flos (10g) - Topanga Twist (F391)"
+  },
+  {
+   "id": "medicann-f392",
+   "code": "F392",
+   "name": "Jaffa360",
+   "producer": "TNSC",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 65,
+   "pricePerGram": 6.5,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "TNSC JAFA 25% THC <1% CBD Flos (10g) - Jaffa360 (F392)"
+  },
+  {
+   "id": "medicann-f398",
+   "code": "F398",
+   "name": "Marshmallow OG",
+   "producer": "Enua",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 54.5,
+   "pricePerGram": 5.45,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Enua MOG 25% THC <1% CBD Flos (10g) - Marshmallow OG (F398)"
+  },
+  {
+   "id": "medicann-f400",
+   "code": "F400",
+   "name": "Punchsicle",
+   "producer": "Ghost Drops",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 29,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 79,
+   "pricePerGram": 7.9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Ghost Drops MMK 29% THC <1% CBD Flos (10g) - Punchsicle (F400)"
+  },
+  {
+   "id": "medicann-f401",
+   "code": "F401",
+   "name": "Bubble Bath",
+   "producer": "Ghost Drops",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 79,
+   "pricePerGram": 7.9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Ghost Drops BBA 25% THC <1% CBD Flos (10g) - Bubble Bath (F401)"
+  },
+  {
+   "id": "medicann-v48",
+   "code": "V48",
+   "name": "Blueberry Kush",
+   "producer": "Upstate",
+   "form": "vape",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 800,
+   "thcUnit": "mg/g",
+   "cbd": 8,
+   "cbdUnit": "mg/g",
+   "cbdLt": true,
+   "size": 1,
+   "sizeUnit": "g",
+   "price": 59,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Upstate BK (THC 800MG/ML CBD ≤8MG/ML) VAPE CARTRIDGE 1g - Blueberry Kush (V48)"
+  },
+  {
+   "id": "medicann-f412",
+   "code": "F412",
+   "name": "Lemon Cookies",
+   "producer": "Mystery Mountain",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 90,
+   "pricePerGram": 9,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Mystery Mountain SMBCCFT SC 27% THC <1% CBD Flos (10g) - Lemon Cookies (F412)"
+  },
+  {
+   "id": "medicann-f407",
+   "code": "F407",
+   "name": "Wookies",
+   "producer": "Mystery Mountain",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 32,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 90,
+   "pricePerGram": 9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Mystery Mountain WKS 32% THC <1% CBD Flos (10g) - Wookies (F407)"
+  },
+  {
+   "id": "medicann-f408",
+   "code": "F408",
+   "name": "Iced Lemonada",
+   "producer": "Mystery Mountain",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 90,
+   "pricePerGram": 9,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Mystery Mountain ICD LMD 25% THC <1% CBD Flos (10g) - Iced Lemonada (F408)"
+  },
+  {
+   "id": "medicann-f409",
+   "code": "F409",
+   "name": "Crumbled Lime Ten",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 20,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 59,
+   "pricePerGram": 5.9,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C Labs CRL 20% THC <1% CBD Flos (10g) - Crumbled Lime Ten (F409)"
+  },
+  {
+   "id": "medicann-f413",
+   "code": "F413",
+   "name": "Acai Berry",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 21,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 57.5,
+   "pricePerGram": 5.75,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C Labs ACB 21% THC <1% CBD Flos (10g) - Acai Berry (F413)"
+  },
+  {
+   "id": "medicann-f415",
+   "code": "F415",
+   "name": "Dosimendo",
+   "producer": "Find",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 22,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 50,
+   "pricePerGram": 5,
+   "smalls": true,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Find DMO 22% THC <1% CBD Flos (10g) - Dosimendo (Smalls) (F415)"
+  },
+  {
+   "id": "medicann-f419",
+   "code": "F419",
+   "name": "L.A. Kush Cake",
+   "producer": "Petal & Bud",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 36,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 65,
+   "pricePerGram": 6.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Petal & Bud LAKC 36% THC <1% CBD Flos (10g) - L.A. Kush Cake (F419)"
+  },
+  {
+   "id": "medicann-f420",
+   "code": "F420",
+   "name": "Platinum MAC",
+   "producer": "GreenSeal",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 55,
+   "pricePerGram": 5.5,
+   "smalls": true,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "GreenSeal PLMS 28% THC <1% CBD Flos (10g) - Platinum MAC (Smalls) (F420)"
+  },
+  {
+   "id": "medicann-f421",
+   "code": "F421",
+   "name": "Rainbow Guava",
+   "producer": "GreenSeal",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 55,
+   "pricePerGram": 5.5,
+   "smalls": true,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "GreenSeal RGS 27% THC <1% CBD Flos (10g) - Rainbow Guava (Smalls) (F421)"
+  },
+  {
+   "id": "medicann-f422",
+   "code": "F422",
+   "name": "Permanent Marker",
+   "producer": "Dr Watson",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 20,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Dr Watson PM 20% THC <1% CBD Flos (10g) - Permanent Marker (F422)"
+  },
+  {
+   "id": "medicann-f423",
+   "code": "F423",
+   "name": "Blue Skittlez",
+   "producer": "Dr Watson",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 26,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Dr Watson BS 26% THC <1% CBD Flos (10g) - Blue Skittlez (F423)"
+  },
+  {
+   "id": "medicann-f424",
+   "code": "F424",
+   "name": "OZ Kush",
+   "producer": "Dr Watson",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Dr Watson OZK 28% THC <1% CBD Flos (10g) - OZ Kush (F424)"
+  },
+  {
+   "id": "medicann-f425",
+   "code": "F425",
+   "name": "Cap Junky",
+   "producer": "Dr Watson",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Dr Watson CJ 30% THC <1% CBD Flos (10g) - Cap Junky (F425)"
+  },
+  {
+   "id": "medicann-f430",
+   "code": "F430",
+   "name": "El Chivo",
+   "producer": "BXB Genetics",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 69,
+   "pricePerGram": 6.9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "BXB Genetics EC 25% THC <1% CBD Flos (10g) - El Chivo (F430)"
+  },
+  {
+   "id": "medicann-v52",
+   "code": "V52",
+   "name": "Banjo",
+   "producer": "BXB Genetics",
+   "form": "vape",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/g",
+   "cbd": 50,
+   "cbdUnit": "mg/g",
+   "size": null,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "BXB Genetics BJO T850 Banjo Medical Cannabis Cartridge (V52)"
+  },
+  {
+   "id": "medicann-v53",
+   "code": "V53",
+   "name": "Jack Herer",
+   "producer": "BXB Genetics",
+   "form": "vape",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/g",
+   "cbd": 50,
+   "cbdUnit": "mg/g",
+   "size": null,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "BXB Genetics JH T850 Jack Herer Medical Cannabis Cartridge (V53)"
+  },
+  {
+   "id": "medicann-v54",
+   "code": "V54",
+   "name": "White Lemon",
+   "producer": "BXB Genetics",
+   "form": "vape",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/g",
+   "cbd": 50,
+   "cbdUnit": "mg/g",
+   "size": null,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "BXB Genetics WL T850 White Lemon Medical Cannabis Cartridge (V54)"
+  },
+  {
+   "id": "medicann-f433",
+   "code": "F433",
+   "name": "Baby Superman",
+   "producer": "Canopy Growth",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Canopy Growth BBS 28% THC <1% CBD Flos (10g) - Baby Superman (F433)"
+  },
+  {
+   "id": "medicann-f434",
+   "code": "F434",
+   "name": "Jack Frost",
+   "producer": "Canopy Growth",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Canopy Growth JKF 28% THC <1% CBD Flos (10g) - Jack Frost (F434)"
+  },
+  {
+   "id": "medicann-f436",
+   "code": "F436",
+   "name": "Krypton",
+   "producer": "Canopy Growth",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Canopy Growth 91K 27% THC <1% CBD Flos (10g) - Krypton (F436)"
+  },
+  {
+   "id": "medicann-v55",
+   "code": "V55",
+   "name": "Blue Dream",
+   "producer": "4C Labs",
+   "form": "vape",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 800,
+   "thcUnit": "mg/g",
+   "cbd": 10,
+   "cbdUnit": "mg/g",
+   "cbdLt": true,
+   "size": 0.95,
+   "sizeUnit": "g",
+   "price": 60,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C Labs BDR (THC 800MG/G CBD ≤ 10MG/G) VAPE CARTRIDGE 0.95g - Blue Dream (V55)"
+  },
+  {
+   "id": "medicann-f435",
+   "code": "F435",
+   "name": "Ultra Sour",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 19,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 60,
+   "pricePerGram": 6,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C Labs ULS 19% THC <1% CBD Flos (10g) - Ultra Sour (F435)"
+  },
+  {
+   "id": "medicann-f437",
+   "code": "F437",
+   "name": "Gas Face",
+   "producer": "AAAA Lot420",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [
+    "diesel"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "AAAA Lot420 GF 27% THC <1% CBD Flos (10g) - Gas Face (F437)"
+  },
+  {
+   "id": "medicann-f440",
+   "code": "F440",
+   "name": "Double-Baked Cake",
+   "producer": "Jolly Boys",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Jolly Boys DBC 28% THC <1% CBD Flos (10g) - Double-Baked Cake (F440)"
+  },
+  {
+   "id": "medicann-f443",
+   "code": "F443",
+   "name": "Noir Diamant",
+   "producer": "Barongo",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 26,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Barongo ND 26% THC <1% CBD Flos (10g) - Noir Diamant (F443)"
+  },
+  {
+   "id": "medicann-f445",
+   "code": "F445",
+   "name": "Ice Cream Cake",
+   "producer": "BUUO",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 23,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 69,
+   "pricePerGram": 6.9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "BUUO ICC T23 Ice Cream Cake Medical Cannabis Flower 10G (F445)"
+  },
+  {
+   "id": "medicann-f447",
+   "code": "F447",
+   "name": "Platinum Pave",
+   "producer": "Barongo",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Barongo PP T25 Platinum Pave Medical Cannabis Flower 10G (F447)"
+  },
+  {
+   "id": "medicann-f446",
+   "code": "F446",
+   "name": "Way-Up OG",
+   "producer": "Kasa Verde",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 24,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Kasa Verde OG T24 Way-Up OG Medical Cannabis Flower 10G (F446)"
+  },
+  {
+   "id": "medicann-f448",
+   "code": "F448",
+   "name": "Sticky Cake",
+   "producer": "All Nations",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 22,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 70,
+   "pricePerGram": 7,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "All Nations SC T22 Sticky Cake Medical Cannabis Flower 10G (F448)"
+  },
+  {
+   "id": "medicann-f449",
+   "code": "F449",
+   "name": "Bladerunner",
+   "producer": "All Nations",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "All Nations BR T28 Bladerunner Medical Cannabis Flower 10G (F449)"
+  },
+  {
+   "id": "medicann-f452",
+   "code": "F452",
+   "name": "Electric Lemon",
+   "producer": "Tofino Ripper",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 18,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 80,
+   "pricePerGram": 8,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Tofino Ripper SMBCCFT JH 18% THC <1% CBD Flos (10g) - Electric Lemon (F452)"
+  },
+  {
+   "id": "medicann-v57",
+   "code": "V57",
+   "name": "Strawberry Cake",
+   "producer": "Enua",
+   "form": "vape",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 800,
+   "thcUnit": "mg/g",
+   "cbd": 10,
+   "cbdUnit": "mg/g",
+   "size": null,
+   "sizeUnit": "g",
+   "price": 55,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Enua Resin SC T800 Strawberry Cake Medical Cannabis Cartridge (V57)"
+  },
+  {
+   "id": "medicann-v59",
+   "code": "V59",
+   "name": "Enua Resin GB T800 Medical Cannabis Cartridge",
+   "producer": "Enua",
+   "form": "vape",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 800,
+   "thcUnit": "mg/g",
+   "cbd": 10,
+   "cbdUnit": "mg/g",
+   "size": null,
+   "sizeUnit": "g",
+   "price": 55,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Enua Resin GB T800 Medical Cannabis Cartridge (V59)"
+  },
+  {
+   "id": "medicann-v58",
+   "code": "V58",
+   "name": "Pink Lemonade",
+   "producer": "Enua",
+   "form": "vape",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/g",
+   "cbd": 10,
+   "cbdUnit": "mg/g",
+   "size": null,
+   "sizeUnit": "g",
+   "price": 45,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Enua PL T850 Pink Lemonade Medical Cannabis Cartridge (V58)"
+  },
+  {
+   "id": "medicann-v60",
+   "code": "V60",
+   "name": "Very Berry",
+   "producer": "Enua",
+   "form": "vape",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 850,
+   "thcUnit": "mg/g",
+   "cbd": 10,
+   "cbdUnit": "mg/g",
+   "cbdLt": true,
+   "size": null,
+   "sizeUnit": "g",
+   "price": 45,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Enua VB T850 Very Berry Medical Cannabis Cartridge THC 850mg/g CBD <10mg/g (V60)"
+  },
+  {
+   "id": "medicann-f454",
+   "code": "F454",
+   "name": "Cape Cookies",
+   "producer": "Uncle Rooney's",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Uncle Rooney's CPC T28 Cape Cookies Medical Cannabis Flower (F454)"
+  },
+  {
+   "id": "medicann-f455",
+   "code": "F455",
+   "name": "Cape Gelato",
+   "producer": "Uncle Rooney's",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 25,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Uncle Rooney's CAG T25 Cape Gelato Medical Cannabis Flower (F455)"
+  },
+  {
+   "id": "medicann-v61",
+   "code": "V61",
+   "name": "Cheetah P",
+   "producer": "BXB Genetics",
+   "form": "vape",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 750,
+   "thcUnit": "mg/g",
+   "cbd": 50,
+   "cbdUnit": "mg/g",
+   "size": null,
+   "sizeUnit": "g",
+   "price": 80,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "BXB Genetics Hash Rosin T750 Cheetah P Medical Cannabis Cartridge (V61)"
+  },
+  {
+   "id": "medicann-v62",
+   "code": "V62",
+   "name": "Mimosa",
+   "producer": "BXB Genetics",
+   "form": "vape",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 750,
+   "thcUnit": "mg/g",
+   "cbd": 50,
+   "cbdUnit": "mg/g",
+   "size": null,
+   "sizeUnit": "g",
+   "price": 80,
+   "pricePerGram": null,
+   "maxPerOrder": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "BXB Genetics Hash Rosin T750 Mimosa Medical Cannabis Cartridge (V62)"
+  },
+  {
+   "id": "medicann-457",
+   "code": "457",
+   "name": "Kush Mints",
+   "producer": "Canopy Growth",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 29,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Canopy Growth KMI T29 Kush Mints Medical Cannabis Flower 10G (457)"
+  },
+  {
+   "id": "medicann-f460",
+   "code": "F460",
+   "name": "Grapefruit Skunk",
+   "producer": "Tofino Ripper",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 80,
+   "pricePerGram": 8,
+   "aroma": [
+    "citrus"
+   ],
+   "aromaSource": "name",
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Tofino Ripper SMBCCFT WC 30% THC <1% CBD Flos (10g) - Grapefruit Skunk (F460)"
+  },
+  {
+   "id": "medicann-f467",
+   "code": "F467",
+   "name": "Zlushie",
+   "producer": "Mystery Mountain",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 28,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 90,
+   "pricePerGram": 9,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Mystery Mountain SMBCCFT TE 28% THC <1% CBD Flos (10g) - Zlushie (F467)"
+  },
+  {
+   "id": "medicann-f461",
+   "code": "F461",
+   "name": "Coastal Kush",
+   "producer": "Alta Vida",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 32,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 55,
+   "pricePerGram": 5.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Alta Vida CTK T32 Coastal Kush Medical Cannabis Flower 10G (F461)"
+  },
+  {
+   "id": "medicann-f462",
+   "code": "F462",
+   "name": "Green Goblin",
+   "producer": "Alta Vida",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 52.5,
+   "pricePerGram": 5.25,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Alta Vida GRG T27 Green Goblin Medical Cannabis Flower 10G (F462)"
+  },
+  {
+   "id": "medicann-f463",
+   "code": "F463",
+   "name": "Bubblegum Glaze",
+   "producer": "Alta Vida",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 23,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 50,
+   "pricePerGram": 5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Alta Vida BBG T23 Bubblegum Glaze Medical Cannabis Flower 10G (F463)"
+  },
+  {
+   "id": "medicann-f464",
+   "code": "F464",
+   "name": "Minted Berries",
+   "producer": "Alta Vida",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 27,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 52.5,
+   "pricePerGram": 5.25,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Alta Vida MIB T27 Minted Berries Medical Cannabis Flower 10G (F464)"
+  },
+  {
+   "id": "medicann-f466",
+   "code": "F466",
+   "name": "Strain Z",
+   "producer": "4C Labs",
+   "form": "flower",
+   "type": "Sativa",
+   "genetics": null,
+   "thc": 30,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 55,
+   "pricePerGram": 5.5,
+   "smalls": true,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "4C Labs Value STZ-S Smalls T30 Strain Z Medical Cannabis Flower 10G (F466)"
+  },
+  {
+   "id": "medicann-f468",
+   "code": "F468",
+   "name": "Rainbow Runtz",
+   "producer": "IPS",
+   "form": "flower",
+   "type": "Hybrid",
+   "genetics": null,
+   "thc": 34,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "IPS RR T34 Rainbow Runtz Medical Cannabis Flower 10G (F468)"
+  },
+  {
+   "id": "medicann-f469",
+   "code": "F469",
+   "name": "Space Cake",
+   "producer": "Peace Naturals",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 32,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 75,
+   "pricePerGram": 7.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Peace Naturals SC T32 Space Cake Medical Cannabis Flower (F469)"
+  },
+  {
+   "id": "medicann-f470",
+   "code": "F470",
+   "name": "Wedding Cake",
+   "producer": "Peace Naturals",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 32,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 85,
+   "pricePerGram": 8.5,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "Peace Naturals WC T32 Wedding Cake Medical Cannabis Flower 10G (F470)"
+  },
+  {
+   "id": "medicann-f474",
+   "code": "F474",
+   "name": "Snow Lotus",
+   "producer": "LIT",
+   "form": "flower",
+   "type": "Indica",
+   "genetics": null,
+   "thc": 32,
+   "cbd": 1,
+   "cbdLt": true,
+   "size": 10,
+   "sizeUnit": "g",
+   "price": 59.5,
+   "pricePerGram": 5.95,
+   "smalls": true,
+   "aroma": [],
+   "irradiated": "unknown",
+   "terpenes": [],
+   "origin": null,
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "record": "pharmacy-list",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "lastVerified": "2026-10-15",
+   "pharmacies": [
+    "Medicann"
+   ],
+   "sources": [
+    {
+     "label": "Medicann app product list (2026-10-15)",
+     "url": "https://www.medicann.co.uk/"
+    }
+   ],
+   "listing": "LIT SL Smalls T32 Snow Lotus Medical Cannabis Flower (F474)"
   }
  ]
 }

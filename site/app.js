@@ -13,7 +13,7 @@ const state = {
   watch: new Set(store.get('watch', [])),
   follow: store.get('follow', []),               // saved searches: aroma / producer / "non-irradiated"
   compare: store.get('compare', []),
-  rules: { new_listing: true, restock: true, price_change: true, announced: true, rumour: false, discontinued: true, news_uk_launch: true, scope: 'watch+follow', ...store.get('rules', {}) },
+  rules: { new_listing: true, restock: true, price_change: true, announced: true, rumour: false, discontinued: true, out_of_stock: true, news_uk_launch: true, scope: 'watch+follow', ...store.get('rules', {}) },
   seen: store.get('seen', null),
   filters: { q: '', form: '', thcMin: 0, thcMax: 40, cbdMax: 30, priceMax: 20, strain: '', producer: [], terpene: [], aroma: [], irr: '', pharmacy: [], stock: '', conf: '', sort: 'new' }
 };
@@ -31,8 +31,8 @@ const NAV = [['/', 'New', 'home'], ['/browse', 'Browse', 'browse'], ['/stock', '
 // phone tab bar: 5 slots; everything else lives under More
 const TABS = [['/', 'New', 'home'], ['/browse', 'Browse', 'browse'], ['/watch', 'Watchlist', 'watch'], ['/alerts', 'Alerts', 'alerts'], ['/more', 'More', 'more']];
 const MORE_PATHS = ['/more', '/stock', '/compare', '/news', '/cups', '/laws', '/legend'];
-const EV_LABEL = { new_listing: 'New listing', restock: 'Restocked', price_change: 'Price change', announced: 'Announced', rumour: 'Rumour', discontinued: 'Discontinued' };
-const EV_CLASS = { new_listing: 't-new', restock: 't-restock', price_change: 't-price', announced: 't-announced', rumour: 't-rumour', discontinued: 't-disc' };
+const EV_LABEL = { new_listing: 'New listing', restock: 'Restocked', price_change: 'Price change', announced: 'Announced', rumour: 'Rumour', discontinued: 'Discontinued', out_of_stock: 'Out of stock' };
+const EV_CLASS = { new_listing: 't-new', restock: 't-restock', price_change: 't-price', announced: 't-announced', rumour: 't-rumour', discontinued: 't-disc', out_of_stock: 't-out' };
 
 // ---------- helpers
 const byId = id => state.products.find(p => p.id === id);
@@ -41,6 +41,13 @@ const fmtDate = d => d ? new Date(d).toLocaleDateString('en-GB', { day: 'numeric
 const rel = d => { const n = daysAgo(d); return n == null ? '' : n <= 0 ? 'today' : n === 1 ? 'yesterday' : n < 30 ? n + 'd ago' : fmtDate(d); };
 const money = n => n == null ? '—' : '£' + Number(n).toFixed(2);
 const pct = n => n == null ? '—' : n + '%';
+// strength with its unit: flower in %, oils/vapes in mg/ml or mg/g; "≤" when the listing says under that value
+const thcText = p => p.thc == null ? '—' : p.thc + (p.thcUnit || '%');
+const cbdText = p => p.cbd == null ? '—' : (p.cbdLt ? '≤' : '') + p.cbd + (p.cbdUnit || '%');
+const sizeText = p => p.size ? `${p.size}${p.sizeUnit === 'pcs' ? ' pcs' : p.sizeUnit || ''}` : '';
+const priceHTML = p => p.pricePerGram != null ? `${money(p.pricePerGram)}<small>/g</small>` : p.price != null ? `${money(p.price)}<small>${sizeText(p) ? '/' + sizeText(p) : ''}</small>` : p.pricePerMl != null ? `${money(p.pricePerMl)}<small>/ml</small>` : '—';
+const FORM_LABEL = { flower: 'Flower', vape: 'Vape', oil: 'Oil', pastille: 'Pastilles' };
+const typeTag = p => (p.type ? `<span class="tag t-neutral">${esc(p.type)}</span>` : '') + (p.form && p.form !== 'flower' ? `<span class="tag t-announced">${FORM_LABEL[p.form] || esc(p.form)}</span>` : '');
 const uniq = (arr) => [...new Set(arr)].filter(Boolean).sort();
 const toast = m => { const t = $('#toast'); t.textContent = m; t.classList.add('show'); clearTimeout(toast.t); toast.t = setTimeout(() => t.classList.remove('show'), 2200); };
 const save = () => { store.set('watch', [...state.watch]); store.set('follow', state.follow); store.set('compare', state.compare); store.set('rules', state.rules); };
@@ -70,12 +77,12 @@ function matchFollow(f, p) {
 const followLabel = f => f.kind === 'aroma' ? (f.value === 'citrus' ? '🍋 Citrus profiles' : '⛽ Diesel profiles') : f.kind === 'irr' ? 'Non-irradiated flower' : f.kind === 'producer' ? f.value : 'Strain: ' + f.value;
 
 function card(p, extra = '') {
-  const price = p.pricePerGram != null ? `${money(p.pricePerGram)}<small>/g</small>` : p.pricePerMl != null ? `${money(p.pricePerMl)}<small>/ml</small>` : '—';
+  const price = priceHTML(p);
   return `<article class="card">
     <div class="head"><div><h3><a href="#/p/${p.id}">${esc(p.name)}</a></h3><div class="muted">${esc(p.producer)}${p.origin ? ' · ' + esc(p.origin) : ''}</div></div>
     <button class="heart" data-watch="${p.id}" aria-pressed="${state.watch.has(p.id)}" aria-label="Watch ${esc(p.name)}">${state.watch.has(p.id) ? '♥' : '♡'}</button></div>
-    <div class="row">${confTag(p)}${p.status !== 'discontinued' && p.confidence !== 'rumour' ? stockTag(p) : ''}${sampleTag(p)}</div>
-    <div class="metrics"><div class="metric"><b>${pct(p.thc)}</b><span>THC</span></div><div class="metric"><b>${pct(p.cbd)}</b><span>CBD</span></div><div class="metric"><b>${price}</b><span>Price</span></div></div>
+    <div class="row">${confTag(p)}${p.status !== 'discontinued' && p.confidence !== 'rumour' ? stockTag(p) : ''}${typeTag(p)}${sampleTag(p)}</div>
+    <div class="metrics"><div class="metric"><b>${thcText(p)}</b><span>THC</span></div><div class="metric"><b>${cbdText(p)}</b><span>CBD</span></div><div class="metric"><b>${price}</b><span>Price</span></div></div>
     <div class="row">${p.form === 'flower' ? irrTag(p) : ''}${aromaTags(p)}${cupTag(p)}${pharmTag(p)}</div>${extra}</article>`;
 }
 const grid = (list, fn = card) => list.length ? `<div class="grid">${list.map(p => fn(p)).join('')}</div>` : '<div class="empty">Nothing here yet.</div>';
@@ -98,12 +105,13 @@ function viewHome() {
   return `
   <section class="hero"><h1>What's new in UK medical cannabis</h1>
    <p>New listings, restocks and launches, with every item labelled confirmed, announced or rumour.</p>
-   <div class="stats"><div class="stat"><b>${recentNew.length}</b><span>new listings (21d)</span></div><div class="stat"><b>${restocks.length}</b><span>restocks (14d)</span></div><div class="stat"><b>${upcoming.length}</b><span>upcoming / rumoured</span></div></div></section>
+   <div class="stats"><div class="stat"><b>${P.filter(p => p.stock === 'in_stock').length}</b><span>products listed</span></div><div class="stat"><b>${recentNew.length}</b><span>new listings (21d)</span></div><div class="stat"><b>${restocks.length}</b><span>restocks (14d)</span></div></div></section>
 
   <div class="sec"><h2>Spotlight</h2></div>
   <div class="chips" role="group" aria-label="Spotlight">
    ${[['irr', 'Non-irradiated'], ['citrus', '🍋 Citrus'], ['diesel', '⛽ Diesel']].map(([k, l]) => `<button class="chip" data-spot="${k}" aria-pressed="${sp === k}">${l} <span class="muted" style="color:inherit;opacity:.75">${spot[k].length}</span></button>`).join('')}
   </div>
+  ${sp === 'irr' ? '<p class="sub">Irradiation status is only shown when a producer or pharmacy states it. Medicann’s list doesn’t say, so most products show “unknown”.</p>' : '<p class="sub">Aroma family is guessed from the strain name until terpene data is added.</p>'}
   ${grid(spot[sp].slice(0, 6))}
   <p><a href="#/browse?${sp === 'irr' ? 'irr=no' : 'aroma=' + sp}">See all →</a></p>
 
@@ -126,18 +134,19 @@ function viewHome() {
 }
 function evRow(e, unread) {
   const p = byId(e.productId); if (!p) return '';
-  const d = e.type === 'price_change' ? `${money(e.detail.from)} → ${money(e.detail.to)} /g` : '';
+  const d = e.type === 'price_change' ? `${money(e.detail.from)} → ${money(e.detail.to)} ${e.detail.unit === 'pack' ? 'per pack' : '/g'}` : '';
   return `<a class="ev${unread ? ' unread' : ''}" href="#/p/${p.id}"><time>${rel(e.ts)}</time><div class="b"><strong>${esc(p.name)}</strong> <span class="tag ${EV_CLASS[e.type]}">${EV_LABEL[e.type]}</span><div class="muted">${esc(p.producer)} ${d ? '· ' + d : ''}</div></div></a>`;
 }
 
 function applyFilters(list) {
   const f = state.filters, q = f.q.trim().toLowerCase();
   let r = list.filter(p => {
-    if (q && !(`${p.name} ${p.producer} ${p.genetics || ''} ${p.origin || ''}`.toLowerCase().includes(q))) return false;
+    if (q && !(`${p.name} ${p.producer} ${p.genetics || ''} ${p.origin || ''} ${p.type || ''} ${p.code || ''}`.toLowerCase().includes(q))) return false;
     if (f.form && p.form !== f.form) return false;
-    if (p.thc != null && (p.thc < f.thcMin || p.thc > f.thcMax)) return false;
-    if (p.thc == null && (f.thcMin > 0 || f.thcMax < 40)) return false;
-    if (p.cbd != null && p.cbd > f.cbdMax) return false;
+    const thcSet = f.thcMin > 0 || f.thcMax < 40;  // % range only applies to flower-style % values
+    if (thcSet && (p.thc == null || p.thcUnit || p.thc < f.thcMin || p.thc > f.thcMax)) return false;
+    if (f.ptype && p.type !== f.ptype) return false;
+    if (p.cbd != null && !p.cbdUnit && p.cbd > f.cbdMax) return false;
     if (p.pricePerGram != null && p.pricePerGram > f.priceMax) return false;
     if (p.pricePerGram == null && f.priceMax < 20) return false;
     if (f.strain && !(p.genetics || '').toLowerCase().includes(f.strain.toLowerCase())) return false;
@@ -158,7 +167,7 @@ function applyFilters(list) {
     (b.firstSeen || '').localeCompare(a.firstSeen || ''));
   return r;
 }
-const activeCount = () => { const f = state.filters; let n = 0; if (f.form) n++; if (f.thcMin > 0 || f.thcMax < 40) n++; if (f.cbdMax < 30) n++; if (f.priceMax < 20) n++; if (f.strain) n++; n += f.producer.length + f.terpene.length + f.aroma.length + f.pharmacy.length; if (f.irr) n++; if (f.mine) n++; if (f.cup) n++; if (f.stock) n++; if (f.conf) n++; return n; };
+const activeCount = () => { const f = state.filters; let n = 0; if (f.form) n++; if (f.thcMin > 0 || f.thcMax < 40) n++; if (f.cbdMax < 30) n++; if (f.priceMax < 20) n++; if (f.strain) n++; if (f.ptype) n++; n += f.producer.length + f.terpene.length + f.aroma.length + f.pharmacy.length; if (f.irr) n++; if (f.mine) n++; if (f.cup) n++; if (f.stock) n++; if (f.conf) n++; return n; };
 function viewBrowse() {
   const list = applyFilters(state.products), n = activeCount();
   return `<div class="toolbar"><input type="search" id="q" placeholder="Search strain, producer, genetics" value="${esc(state.filters.q)}" aria-label="Search"><button class="btn" id="open-filters">Filters${n ? ` (${n})` : ''}</button></div>
@@ -182,7 +191,8 @@ function openFilters() {
   const multi = (name, arr, sel) => `<div class="chips" style="flex-wrap:wrap;overflow:visible;margin:0;padding:0">${arr.map(v => `<button class="chip" data-m="${name}" data-v="${esc(v)}" aria-pressed="${sel.includes(v)}">${esc(v)}</button>`).join('')}</div>`;
   const seg = (name, opts, cur) => `<div class="seg">${opts.map(([v, l]) => `<button data-s="${name}" data-v="${v}" aria-pressed="${cur === v}">${l}</button>`).join('')}</div>`;
   openSheet(`<div class="row between"><h2>Filters</h2><button class="btn" data-close>Done</button></div>
-   <div class="field"><span class="lbl">Type</span>${seg('form', [['', 'All'], ['flower', 'Flower'], ['oil', 'Oil'], ['vape', 'Vape']], f.form)}</div>
+   <div class="field"><span class="lbl">Type</span>${seg('form', [['', 'All'], ['flower', 'Flower'], ['vape', 'Vape'], ['oil', 'Oil'], ['pastille', 'Pastilles']], f.form)}</div>
+   <div class="field"><span class="lbl">Plant type</span>${seg('ptype', [['', 'Any'], ['Indica', 'Indica'], ['Sativa', 'Sativa'], ['Hybrid', 'Hybrid']], f.ptype || '')}</div>
    <div class="field"><span class="lbl">Irradiation</span>${seg('irr', [['', 'Any'], ['no', 'Non-irradiated'], ['yes', 'Irradiated']], f.irr)}</div>
    <div class="field"><span class="lbl">Status</span>${seg('conf', [['', 'All'], ['released', 'Confirmed'], ['announced', 'Announced'], ['rumour', 'Rumours']], f.conf)}</div>
    <div class="field"><span class="lbl">Stock</span>${seg('stock', [['', 'Any'], ['in_stock', 'In'], ['low', 'Low'], ['out', 'Out']], f.stock)}</div>
@@ -206,7 +216,7 @@ function closeSheet() { $('#sheet-root').innerHTML = ''; document.body.style.ove
 function viewStock() {
   const P = state.products.filter(p => p.confidence !== 'rumour' && p.status !== 'upcoming');
   const groups = [['restocked', 'Recently restocked', P.filter(p => p.lastRestock && daysAgo(p.lastRestock) <= 14)], ['in_stock', 'In stock', P.filter(p => p.stock === 'in_stock')], ['low', 'Low stock', P.filter(p => p.stock === 'low')], ['out', 'Out of stock', P.filter(p => p.stock === 'out')], ['discontinued', 'Discontinued', P.filter(p => p.stock === 'discontinued')], ['unknown', 'Stock not yet tracked', P.filter(p => p.stock === 'unknown')]];
-  const cur = state.stockTab || 'restocked';
+  const cur = state.stockTab || (groups.find(g => g[2].length) || groups[0])[0];  // open on the first tab with products
   const g = groups.find(x => x[0] === cur);
   return `<h1>Stock tracker</h1><p class="sub">Availability as last seen at listed pharmacies. Stock changes fast — confirm with your clinic or pharmacy.</p>
    <div class="chips">${groups.map(([k, l, a]) => `<button class="chip" data-stab="${k}" aria-pressed="${cur === k}">${l} <span style="opacity:.7">${a.length}</span></button>`).join('')}</div>
@@ -218,13 +228,15 @@ function viewCompare() {
   const picker = `<div class="field"><label for="cmp-add">Add a product (up to 4)</label><select id="cmp-add"><option value="">Choose…</option>${state.products.filter(p => !state.compare.includes(p.id)).map(p => `<option value="${p.id}">${esc(p.name)}</option>`).join('')}</select></div>`;
   if (items.length < 1) return `<h1>Compare</h1><p class="sub">Side-by-side THC, price per gram, genetics and terpenes.</p>${picker}<div class="empty">Pick two to four products, or tap “Compare” on any product page.</div>`;
   const best = (fn, dir) => { const v = items.map(fn).filter(x => x != null); return v.length > 1 ? (dir === 'max' ? Math.max(...v) : Math.min(...v)) : null; };
-  const bThc = best(p => p.thc, 'max'), bPrice = best(p => p.pricePerGram, 'min'), bPpt = best(p => p.pricePerGram && p.thc ? p.pricePerGram / p.thc : null, 'min');
+  const bThc = best(p => p.thcUnit ? null : p.thc, 'max'), bPrice = best(p => p.pricePerGram, 'min'), bPpt = best(p => p.pricePerGram && p.thc ? p.pricePerGram / p.thc : null, 'min');
   const allT = uniq(items.flatMap(p => (p.terpenes || []).map(t => t.name))), maxT = Math.max(1.5, ...items.flatMap(p => (p.terpenes || []).map(t => t.pct)));
   const cell = (p, fn) => `<td>${fn(p)}</td>`;
   const rows = [
     ['', p => `<a href="#/p/${p.id}"><strong>${esc(p.name)}</strong></a><div class="muted">${esc(p.producer)}</div><button class="btn" style="min-height:36px;padding:4px 10px;margin-top:6px" data-cmp-rm="${p.id}">Remove</button>`],
     ['Status', p => confTag(p)], ['Stock', p => stockTag(p)],
-    ['THC', p => `<span class="${p.thc != null && p.thc === bThc ? 'best' : ''}">${pct(p.thc)}</span>`], ['CBD', p => pct(p.cbd)],
+    ['Form', p => `${FORM_LABEL[p.form] || esc(p.form || '—')}${p.type ? ' · ' + esc(p.type) : ''}`],
+    ['THC', p => `<span class="${p.thc != null && !p.thcUnit && p.thc === bThc ? 'best' : ''}">${thcText(p)}</span>`], ['CBD', p => cbdText(p)],
+    ['Pack price', p => p.price != null ? `${money(p.price)} <span class="muted">${esc(sizeText(p))}</span>` : '—'],
     ['Price / g', p => `<span class="${p.pricePerGram != null && p.pricePerGram === bPrice ? 'best' : ''}">${money(p.pricePerGram)}</span>`],
     ['£ per THC %', p => { const v = p.pricePerGram && p.thc ? p.pricePerGram / p.thc : null; return `<span class="${v != null && v === bPpt ? 'best' : ''}">${v ? '£' + v.toFixed(2) : '—'}</span>`; }],
     ['Genetics', p => esc(p.genetics || 'Not stated')], ['Irradiation', p => irrTag(p)], ['Aroma', p => aromaTags(p) || '—'], ['Origin', p => esc(p.origin || '—')],
@@ -264,7 +276,7 @@ function viewAlerts() {
   const sw = (k, l, d) => `<label class="switch"><span><strong>${l}</strong><div class="muted">${d}</div></span><input type="checkbox" role="switch" data-rule="${k}" ${r[k] ? 'checked' : ''}></label>`;
   const perm = 'Notification' in window ? Notification.permission : 'unsupported';
   return `<h1>Alerts</h1><p class="sub">Choose what matters. Alerts are matched against your watchlist and followed searches.</p>
-  <div class="panel">${sw('new_listing', 'New releases & listings', 'A product appears for the first time')}${sw('announced', 'Announced launches', 'Confirmed upcoming dates')}${sw('restock', 'Restocks', 'Back in stock')}${sw('price_change', 'Price changes', 'Per-gram price moves')}${sw('discontinued', 'Discontinued', 'Product withdrawn')}${sw('rumour', 'Rumours', 'Unconfirmed leads — noisy, off by default')}${sw('news_uk_launch', 'UK launch news', 'News stories mentioning UK launches')}
+  <div class="panel">${sw('new_listing', 'New releases & listings', 'A product appears for the first time')}${sw('announced', 'Announced launches', 'Confirmed upcoming dates')}${sw('restock', 'Restocks', 'Back in stock')}${sw('price_change', 'Price changes', 'Per-gram price moves')}${sw('out_of_stock', 'Out of stock', 'Dropped off the pharmacy list')}${sw('discontinued', 'Discontinued', 'Product withdrawn')}${sw('rumour', 'Rumours', 'Unconfirmed leads — noisy, off by default')}${sw('news_uk_launch', 'UK launch news', 'News stories mentioning UK launches')}
    <div class="field"><span class="lbl">Apply to</span><div class="seg"><button data-scope="watch+follow" aria-pressed="${r.scope !== 'all'}">Watchlist & follows</button><button data-scope="all" aria-pressed="${r.scope === 'all'}">Everything</button></div></div></div>
   <div class="panel"><h3>Phone notifications</h3>
    <p class="muted">Free option: install the <a href="https://ntfy.sh" target="_blank" rel="noopener">ntfy</a> app and subscribe to your topic. The daily data job publishes every event there.</p>
@@ -289,14 +301,21 @@ function viewProduct(id) {
   ${p.confidence === 'rumour' ? '<div class="callout"><strong>Unconfirmed.</strong> This is a rumour with no producer, importer or pharmacy source. It may never launch.</div>' : ''}
   ${p.confidence === 'announced' ? `<div class="callout info"><strong>Announced, not yet on sale.</strong> Expected ${esc(fmtDate(p.releaseDate))}. Dates can change.</div>` : ''}
   ${isSample(p) ? '<div class="callout warn"><strong>Sample record.</strong> Fictional demo data to show how a full entry looks. It is replaced by real listings once the data updater is connected to sources.</div>' : ''}
+  ${p.record === 'pharmacy-list' ? `<div class="callout ok"><strong>From ${esc((p.pharmacies || [])[0] || 'pharmacy')}'s product list</strong> (${esc(fmtDate(p.lastVerified))}). “In stock” means it was on the list; check the app before ordering.</div>` : ''}
   ${p.record === 'announcement' ? '<div class="callout ok"><strong>From a public announcement.</strong> Only details stated in the source are shown; unknown fields are left blank rather than guessed.</div>' : ''}
-  <div class="metrics" style="margin:12px 0"><div class="metric"><b>${pct(p.thc)}</b><span>THC</span></div><div class="metric"><b>${pct(p.cbd)}</b><span>CBD</span></div><div class="metric"><b>${p.pricePerGram != null ? money(p.pricePerGram) + '/g' : p.pricePerMl != null ? money(p.pricePerMl) + '/ml' : '—'}</b><span>Price</span></div></div>
+  <div class="metrics" style="margin:12px 0"><div class="metric"><b>${thcText(p)}</b><span>THC</span></div><div class="metric"><b>${cbdText(p)}</b><span>CBD</span></div><div class="metric"><b>${priceHTML(p)}</b><span>Price</span></div></div>
   <div class="panel"><dl class="kv">
-   <dt>Type</dt><dd>${esc(p.form)}</dd><dt>Genetics</dt><dd>${esc(p.genetics || 'Not stated')}</dd><dt>Origin</dt><dd>${esc(p.origin || '—')}</dd>
+   <dt>Form</dt><dd>${FORM_LABEL[p.form] || esc(p.form)}${p.type ? ' · ' + esc(p.type) : ''}${p.smalls ? ' · smalls' : ''}</dd>
+   ${p.price != null ? `<dt>Pack</dt><dd>${money(p.price)}${sizeText(p) ? ' for ' + esc(sizeText(p)) : ''}${p.maxPerOrder ? ` · max ${p.maxPerOrder} per order` : ''}</dd>` : ''}
+   ${p.code ? `<dt>Pharmacy code</dt><dd>${esc(p.code)}</dd>` : ''}
+   ${p.aroma?.length ? `<dt>Aroma family</dt><dd>${p.aroma.map(a => a === 'citrus' ? 'Citrus' : 'Diesel').join(', ')}${p.aromaSource === 'name' ? '<div class="muted">Guessed from the strain name, not lab terpene data</div>' : ''}</dd>` : ''}
+   <dt>Genetics</dt><dd>${esc(p.genetics || 'Not stated')}</dd><dt>Origin</dt><dd>${esc(p.origin || '—')}</dd>
    <dt>Irradiation</dt><dd>${p.irradiated === 'no' ? 'Non-irradiated' : p.irradiated === 'yes' ? 'Irradiated' : 'Unknown'}${p.irradiationNote ? `<div class="muted">${esc(p.irradiationNote)}</div>` : ''}</dd>
    <dt>Release</dt><dd>${esc(fmtDate(p.releaseDate))}</dd><dt>First tracked</dt><dd>${esc(fmtDate(p.firstSeen))}</dd>
    ${p.lastRestock ? `<dt>Last restock</dt><dd>${esc(fmtDate(p.lastRestock))}</dd>` : ''}${p.previousPricePerGram ? `<dt>Price change</dt><dd>${money(p.previousPricePerGram)} → ${money(p.pricePerGram)} on ${esc(fmtDate(p.priceChangedOn))}</dd>` : ''}
-   <dt>Available at</dt><dd>${p.pharmacies?.length ? esc(p.pharmacies.join(', ')) : 'No pharmacy listings tracked yet'}</dd></dl></div>
+   ${p.outSince ? `<dt>Missing since</dt><dd>${esc(fmtDate(p.outSince))}</dd>` : ''}${p.previousPrice && !p.previousPricePerGram ? `<dt>Price change</dt><dd>${money(p.previousPrice)} → ${money(p.price)} on ${esc(fmtDate(p.priceChangedOn))}</dd>` : ''}
+   <dt>Available at</dt><dd>${p.pharmacies?.length ? esc(p.pharmacies.join(', ')) : 'No pharmacy listings tracked yet'}</dd></dl>
+   ${p.listing ? `<p class="muted" style="margin-bottom:0">Listed as: ${esc(p.listing)}</p>` : ''}</div>
   ${p.terpenes?.length ? `<div class="panel"><h3>Terpene profile</h3>${p.terpenes.map(t => `<div style="margin-top:8px"><div class="row between"><span>${esc(t.name)}</span><span>${t.pct}%</span></div><div class="bar"><i style="width:${Math.min(100, t.pct / maxT * 100)}%"></i></div></div>`).join('')}<p class="muted">Terpene levels vary by batch. Check the certificate of analysis for your batch.</p></div>` : '<div class="panel muted">No terpene data published yet.</div>'}
   ${p.notes ? `<div class="panel">${esc(p.notes)}</div>` : ''}
   ${cupMatches(p).length ? `<div class="panel"><h3>🏆 Cup-winning genetics</h3><p class="muted">A strain with this name has won a cup. Cup wins belong to a specific grower and batch, so this product is not the same plant.</p><ul>${cupMatches(p).map(c => `<li>${esc(c.strain)}: ${ordinal(c.place)}, ${esc(c.category)}, ${esc(c.cup)} ${esc(c.edition)} ${c.year} (${esc(c.entrant)})${c.source ? ` <a href="${esc(c.source)}" target="_blank" rel="noopener noreferrer">source ↗</a>` : ''}</li>`).join('')}</ul></div>` : ''}
@@ -316,7 +335,7 @@ function viewLegend() {
   <div><span class="tag t-rumour">Rumour</span> Unverified chatter. Never counted as a release.</div>
   <div><span class="tag t-new">New listing</span> First time we saw it on a tracked source.</div>
   <div><span class="tag t-restock">Restocked</span> Returned to availability after being out.</div>
-  <div><span class="tag t-sample">Sample</span> Fictional demo record.</div></div>
+  <div><span class="tag t-restock">In stock</span> On the pharmacy's latest product list. <span class="tag t-out">Out of stock</span> Was listed before, missing from the latest list.</div></div>
   <h2>Data and method</h2>
   <p><strong>Automatic sources</strong> (checked every 6 hours): Medicann articles, Cannabis Health News, Leafie, Cannabis Industry Council, Business of Cannabis, High Times, MJBizDaily, Cannabis Business Times and Newsweed. News only ever creates leads; products are confirmed from producer, importer or pharmacy sources.</p>
   <p><strong>Not scraped:</strong> MedBud Wiki and Reddit block automated access, and Instagram, X, TikTok and Facebook have no free public feed. Product pages link out to MedBud Wiki for cross-checking instead.</p>
@@ -338,7 +357,7 @@ function viewMore() {
    ${item('/legend', 'How the data works', 'Labels, sources and verification')}</div>
   <div class="panel"><h3>My pharmacy</h3><p class="muted">Highlights products listed at your pharmacy and adds an “At my pharmacy” filter. Saved on this device.</p>
    <div class="field"><label for="pharm">Pharmacy</label><input id="pharm" value="${esc(state.pharmacy)}" placeholder="e.g. Medicann" list="pharm-list"><datalist id="pharm-list">${uniq(state.products.flatMap(p => p.pharmacies || [])).map(x => `<option value="${esc(x)}">`).join('')}</datalist></div>
-   ${/medicann/i.test(state.pharmacy) ? '<p class="muted">Medicann shows its products to patients inside the Medicann app, not on its public website, so stock for Medicann can’t be tracked automatically yet. Medicann news is included in the News feed.</p>' : ''}</div>`;
+   ${/medicann/i.test(state.pharmacy) ? `<p class="muted">Medicann's products come from its in-app product list (last imported ${esc(fmtDate(state.products.filter(p => (p.pharmacies || []).includes('Medicann') && p.record === 'pharmacy-list').map(p => p.lastVerified).sort().pop()))}). Send a fresh copy of the list to update prices and stock; Medicann news updates automatically.</p>` : ''}</div>`;
 }
 
 const NEWS_TAGS = [['all', 'All'], ['uk', '🇬🇧 UK'], ['launch', 'Launches'], ['regulation', 'Laws'], ['cup', 'Cups'], ['medical', 'Medical']];
@@ -423,11 +442,11 @@ document.addEventListener('click', e => {
     if (d.quick === 'stock') f.stock = f.stock === 'in_stock' ? '' : 'in_stock';
     if (d.quick === 'mine') f.mine = !f.mine;
     if (d.quick === 'cup') f.cup = !f.cup;
-    if (d.quick === 'clear') Object.assign(state.filters, { mine: false, cup: false, q: '', form: '', thcMin: 0, thcMax: 40, cbdMax: 30, priceMax: 20, strain: '', producer: [], terpene: [], aroma: [], irr: '', pharmacy: [], stock: '', conf: '' });
+    if (d.quick === 'clear') Object.assign(state.filters, { ptype: '', mine: false, cup: false, q: '', form: '', thcMin: 0, thcMax: 40, cbdMax: 30, priceMax: 20, strain: '', producer: [], terpene: [], aroma: [], irr: '', pharmacy: [], stock: '', conf: '' });
     return render();
   }
   if (t.id === 'open-filters') return openFilters();
-  if (t.id === 'reset-f') { Object.assign(state.filters, { form: '', thcMin: 0, thcMax: 40, cbdMax: 30, priceMax: 20, strain: '', producer: [], terpene: [], aroma: [], irr: '', pharmacy: [], stock: '', conf: '' }); return openFilters(); }
+  if (t.id === 'reset-f') { Object.assign(state.filters, { ptype: '', form: '', thcMin: 0, thcMax: 40, cbdMax: 30, priceMax: 20, strain: '', producer: [], terpene: [], aroma: [], irr: '', pharmacy: [], stock: '', conf: '' }); return openFilters(); }
   if (d.m) { const a = state.filters[d.m], i = a.indexOf(d.v); i < 0 ? a.push(d.v) : a.splice(i, 1); const y = $('.sheet').scrollTop; openFilters(); $('.sheet').scrollTop = y; return; }
   if (d.s) { state.filters[d.s] = d.v; const y = $('.sheet').scrollTop; openFilters(); $('.sheet').scrollTop = y; return; }
   if (t.id === 'follow-this') {

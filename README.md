@@ -20,7 +20,7 @@ Live at https://daviefenton.github.io/uk-medical-cannabis-tracker/ — `.github/
 | Medicann (article sitemap) | News | automatic |
 | Cannabis Health News, Leafie, Cannabis Industry Council | UK news | automatic (RSS) |
 | Business of Cannabis, High Times, MJBizDaily, Cannabis Business Times, Newsweed | International news, cup results, law changes | automatic (RSS) |
-| Medicann product list | Products/stock | not public (in-app only) |
+| Medicann product list | Products, prices, stock | imported from the app list: save as `data/imports/medicann-YYYY-MM-DD.txt` and push (the *Import pharmacy list* workflow diffs it), or run `node scripts/import-pharmacy-list.mjs <file>` |
 | MedBud Wiki | — | not scraped: blocks bots, proprietary; product pages link out instead |
 | Reddit | — | robots.txt disallows automated access |
 | Instagram / X / TikTok / Facebook | — | no free public API |

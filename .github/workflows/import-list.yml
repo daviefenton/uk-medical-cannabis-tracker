@@ -1,0 +1,35 @@
+name: Import pharmacy list
+# Add a new list as data/imports/<pharmacy>-YYYY-MM-DD.txt (e.g. medicann-2026-11-01.txt) and push:
+# this diffs it against the tracker (new listings, price changes, restocks, out of stock) and redeploys.
+on:
+  push: { branches: [main], paths: ['data/imports/*.txt'] }
+  workflow_dispatch:
+permissions: { contents: write, pages: write, id-token: write }
+concurrency: { group: data-write, cancel-in-progress: false }
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    outputs: { changed: '${{ steps.c.outputs.changed }}' }
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 2 }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - id: c
+        name: Import new list files and commit
+        run: |
+          git config user.name "leafwatch-bot"; git config user.email "bot@users.noreply.github.com"
+          files=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'data/imports/*.txt' 2>/dev/null || true)
+          for f in $files; do
+            pharmacy=$(basename "$f" | sed -E 's/-[0-9]{4}-[0-9]{2}-[0-9]{2}\.txt$//; s/^./\U&/')
+            echo "Importing $f for $pharmacy"
+            node scripts/import-pharmacy-list.mjs "$f" --pharmacy "$pharmacy"
+          done
+          git add data
+          if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
+          git commit -m "data: import pharmacy list" && git push
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+  deploy:
+    needs: import
+    if: needs.import.outputs.changed == 'true'
+    uses: ./.github/workflows/pages.yml
