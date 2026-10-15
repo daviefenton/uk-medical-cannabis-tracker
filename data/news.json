@@ -32,7 +32,6 @@
    "summary": "A British patient who uses cannabis for medical purposes and whose request for public funding for her treatment has been denied several times is launching a campaign to find out why the National Health Service (NHS) continues to reject her prescriptions. Lara Smith, a 53-year-old",
    "tags": [
     "uk",
-    "launch",
     "medical"
    ]
   },
@@ -58,7 +57,6 @@
    "summary": "Campaigner Lara Smith is bringing patients together to challenge a “cruel” system she says leaves them struggling to afford “life-changing” treatment.",
    "tags": [
     "uk",
-    "launch",
     "medical"
    ]
   },
@@ -95,7 +93,6 @@
    "summary": "The UK’s Cannabis Industry Council (CIC) has launched a new report calling for industrial hemp regulation to be transferred from the Home Office to the Department for Environment, Food and Rural Affairs (DEFRA), arguing that the current licensing regime is holding back a crop cap",
    "tags": [
     "uk",
-    "launch",
     "regulation"
    ]
   },
@@ -146,7 +143,6 @@
    "summary": "FOR IMMEDIATE RELEASE Cannabis Industry Council launches new report in Parliament calling for reform to unlock UK’s industrial hemp potential New report highlights opportunities for industrial hemp to support the UK’s net zero ambitions, while warning that outdated regulations ar",
    "tags": [
     "uk",
-    "launch",
     "regulation"
    ]
   },
@@ -239,7 +235,6 @@
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "Mandatory traceability, licensing for retail stores, protection of minors, and a new THC limit for drivers: a bill introduced in the Senate on October 8, 2026, aims to radically restructure the French CBD market. The bill is supported by two industry trade organizations. A parlia",
    "tags": [
-    "launch",
     "regulation"
    ]
   },
@@ -407,7 +402,6 @@
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "The approval by INFARMED strengthens the company’s global medical cannabis supply chain, accelerating product releases across regulated markets.",
    "tags": [
-    "launch",
     "regulation",
     "medical"
    ]
@@ -481,7 +475,6 @@
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "In partnership with armed forces veterans, the doctor-led online clinic has launched a parliamentary petition urging the U.K. government to reimburse prescriptions.",
    "tags": [
-    "launch",
     "regulation",
     "medical"
    ]
@@ -507,7 +500,6 @@
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "Uganda is continuing to develop its medical cannabis industry with the launch of a national cooperative bringing together producers, investors, and stakeholders in the medical cannabis and hemp sectors. Chaired by the minister Justine Kasule Lumumba , this new organization aims t",
    "tags": [
-    "launch",
     "regulation",
     "medical"
    ]
@@ -521,7 +513,6 @@
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "Bedrocan’s Dutch entities have officially been declared bankrupt, leaving stocks of life-saving medicinal cannabis in the hands of court-appointed administrators who cannot release them. Less than two weeks after being granted court-supervised suspension of payments, Bedrocan Ned",
    "tags": [
-    "launch",
     "medical"
    ]
   },
@@ -585,7 +576,8 @@
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "A new German study suggests that the medical marijuana could help women with endometriosis relieve their chronic pelvic pain, reduce their reliance on conventional pain relievers, and improve their quality of life. Posted in PLOS One In September 2026, this study presented encour",
    "tags": [
-    "medical"
+    "medical",
+    "launch"
    ]
   },
   {
@@ -746,7 +738,9 @@
    "published": "2026-10-08T22:31:24.000Z",
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "Ohio cannabis retailers can no longer sell certain products, including high potency vaporizers, after new state rules took effect Tuesday. In August, the DCC set new potency and package limits on a slew of cannabis products, including flower and edibles as well as concentrates. T",
-   "tags": []
+   "tags": [
+    "launch"
+   ]
   },
   {
    "id": "n-350431487f5b",
@@ -813,7 +807,6 @@
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "Florida is approaching a symbolic milestone: one million patients enrolled in its medical cannabis program. According to the latest data released by the’ Office of Medical Marijuana Use (OMMU), the U.S. state had 941,616 patients with active cards as of September 25, 2026. This f",
    "tags": [
-    "launch",
     "medical"
    ]
   },
@@ -991,7 +984,9 @@
    "published": "2026-10-07T12:53:46.000Z",
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "The american hemp industry is approaching a deadline that could bring about lasting changes to the industry. A new federal definition of the hemp , which is set to take effect on December 11, could drive a large portion of the products containing THC or CBD derived from hemp , th",
-   "tags": []
+   "tags": [
+    "launch"
+   ]
   },
   {
    "id": "n-ffe1ffb225f9",
@@ -1028,7 +1023,6 @@
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "Jamaica is continuing its efforts to integrate small-scale growers into its legal cannabis market. Six years after launching initiatives designed to facilitate traditional producers’ entry into the regulated sector, the country is taking another step forward with two new measures",
    "tags": [
-    "launch",
     "regulation"
    ]
   },
@@ -1074,19 +1068,6 @@
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "Wherefour’s expanded suite of AI capabilities streamlines regulatory workflows and minimizes the hands-on workload required to establish and support compliance operations.",
    "tags": [
-    "launch",
-    "regulation"
-   ]
-  },
-  {
-   "id": "n-43354f80e654",
-   "title": "US Congresswoman Joins Fight to Keep Cannabis Legal in Massachusetts",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/massachusetts/news/15836755/us-congresswoman-joins-fight-to-keep-cannabis-legal-in-massachusetts",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-06T15:59:09.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Rep. Ayanna Pressley is urging Massachusetts voters to reject a ballot measure that aims to repeal the state’s adult-use cannabis laws.",
-   "tags": [
     "regulation"
    ]
   },
@@ -1098,66 +1079,6 @@
    "published": "2026-10-06T14:50:11.000Z",
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "Curaleaf’s hostile takeover bid for Aurora Cannabis is struggling to break through the barriers. After the Canadian producer’s board of directors unanimously rejected its initial proposal, Curaleaf Holdings has decided to put more money on the table. The group announced on Octobe",
-   "tags": []
-  },
-  {
-   "id": "n-94cb8f5b5af8",
-   "title": "Spherex Acquires 2 Colorado Cultivation Facilities From Cannabist to Become Vertically Integrated",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/mergers-and-acquisitions/news/15836724/spherex-acquires-2-colorado-cultivation-facilities-from-cannabist-to-become-vertically-integrated",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-06T13:30:34.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The company’s first acquisition will more than double Spherex’s workforce, expand the brand into cultivation and strengthen control over its supply chain.",
-   "tags": []
-  },
-  {
-   "id": "n-b838d23451a6",
-   "title": "Ascend Wellness Opens 7th Ohio Dispensary in Lewis Center",
-   "url": "https://www.cannabisbusinesstimes.com/dispensary/news/15836719/ascend-wellness-opens-7th-ohio-dispensary-in-lewis-center",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-06T13:18:46.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The cannabis company’s new retail facility expands its Ohio footprint in the Columbus area.",
-   "tags": []
-  },
-  {
-   "id": "n-b523df7cc96f",
-   "title": "Aurora Maintains Shareholder Recommendation to Take No Action; Curaleaf Has Yet to File Revised Bid",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/mergers-and-acquisitions/news/15836718/aurora-maintains-shareholder-recommendation-to-take-no-action-curaleaf-has-yet-to-file-revised-bid",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-06T13:09:12.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Once Curaleaf files a Notice of Variation and Change to revise its offer, Aurora’s special committee will complete a comprehensive review.",
-   "tags": []
-  },
-  {
-   "id": "n-1c0d14aa6f0b",
-   "title": "Cannara Expands International Supply Agreement With Curaleaf",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/canadian-cannabis-market/news/15836715/cannara-expands-international-supply-agreement-with-curaleaf",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-06T12:53:10.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The amended agreement has a potential aggregate contract value of approximately C$34 million over its two-year term.",
-   "tags": []
-  },
-  {
-   "id": "n-b3c4eb6c3fae",
-   "title": "Vireo Growth Announces Financing for New York, Florida Cultivation Facilities",
-   "url": "https://www.cannabisbusinesstimes.com/cultivation/news/15836712/vireo-growth-announces-financing-for-new-york-florida-cultivation-facilities",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-06T12:42:03.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The transaction supports ownership of key cultivation and production infrastructure in two core markets",
-   "tags": []
-  },
-  {
-   "id": "n-aed099a09ace",
-   "title": "SNDL Board Director Abruptly Resigns",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/executive-leadership-team/news/15836709/sndl-board-director-abruptly-resigns",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-06T12:33:38.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Carolo Cannell’s resignation is effective ‘immediately.’ The cannabis company provided no further details.",
    "tags": []
   },
   {
@@ -1210,29 +1131,6 @@
    ]
   },
   {
-   "id": "n-f8198f4ef70a",
-   "title": "Curaleaf Enhances Offer to Acquire Aurora Cannabis in Takeover Bid",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/mergers-and-acquisitions/news/15836695/curaleaf-enhances-offer-to-acquire-aurora-cannabis-in-takeover-bid",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-05T21:06:09.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The cannabis company increased the total implied consideration by 25% to US $5 per Aurora share, representing a premium of 86% to Aurora’s unaffected share price.",
-   "tags": []
-  },
-  {
-   "id": "n-ca533537f9f3",
-   "title": "DEA Opens New Schedule III Registration Portal for Medical Cannabis Manufacturers, Distributors, Labs",
-   "url": "https://www.cannabisbusinesstimes.com/cannabis-rescheduling/news/15836687/dea-opens-new-schedule-iii-registration-portal-for-medical-cannabis-manufacturers-distributors-labs",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-05T20:28:07.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "State-licensed medical cannabis businesses can use the new Form 225 application process to register under the Controlled Substances Act.",
-   "tags": [
-    "regulation",
-    "medical"
-   ]
-  },
-  {
    "id": "n-6c3633ef254c",
    "title": "Why are marijuana multistate operators supporting an anti-marijuana Senate candidate?",
    "url": "https://mjbizdaily.com/news/why-are-marijuana-multistate-operators-supporting-an-anti-marijuana-senate-candidate/618470/",
@@ -1243,28 +1141,6 @@
    "tags": []
   },
   {
-   "id": "n-732f10b7ead9",
-   "title": "Is Sulfur Deficiency Stalling Your Cannabis Crop?",
-   "url": "https://www.cannabisbusinesstimes.com/top-stories/news/15836631/is-sulfur-deficiency-stalling-your-cannabis-crop",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-05T18:20:12.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Often overlooked in cannabis nutrient programs, sulfur plays a key role in plant growth, terpene production, and disease management. Learn how to identify and address common causes of sulfur deficiency.",
-   "tags": []
-  },
-  {
-   "id": "n-b4ca02071742",
-   "title": "Massachusetts Governor Urges 'No' Vote on Cannabis Prohibition Measure",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/massachusetts/news/15836662/massachusetts-governor-urges-no-vote-on-cannabis-prohibition-measure",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-05T18:01:00.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Gov. Maura Healey said she opposes Question 8, a ballot measure that aims to wipe out the state’s adult-use legalization laws.",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
    "id": "n-b365d9713403",
    "title": "How the federal hemp ban treats delta-8 THC differently – and what operators are doing",
    "url": "https://mjbizdaily.com/news/how-the-federal-hemp-ban-treats-delta-8-thc-differently-and-what-operators-are-doing/618459/",
@@ -1272,18 +1148,6 @@
    "published": "2026-10-05T17:40:58.000Z",
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "Sometimes controversial within the estimated $38 billion hemp sector, delta-8 THC is also playing by different rules as the federal hemp ban approaches. What those rules are no one can say for certain. How the federal hemp ban treats delta-8 THC differently – and what operators a",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
-   "id": "n-ba7bd86c30fd",
-   "title": "Florida May Have 3 Options to Legalize Adult-Use Cannabis in 2028",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/florida/news/15836634/florida-may-have-3-options-to-legalize-adultuse-cannabis-in-2028",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-05T17:11:04.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "A pair of related legalization campaigns filed their proposed initiatives with state officials, potentially competing with a Trulieve-backed campaign.",
    "tags": [
     "regulation"
    ]
@@ -1339,38 +1203,6 @@
    ]
   },
   {
-   "id": "n-794d21fdc42c",
-   "title": "AYR Wellness Announces Completion of Ohio Asset Transfer",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/ohio/news/15836521/ayr-wellness-announces-completion-of-ohio-asset-transfer",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-02T14:30:30.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The closing is the first transfer of its Ohio operations into wholly-owned subsidiaries of Arboretum Bidco.",
-   "tags": []
-  },
-  {
-   "id": "n-704744ac2745",
-   "title": "Operation Green Healing Joins Cannatrol's Cool Cure Limited Edition Program as 1st Veterans Nonprofit Partner",
-   "url": "https://www.cannabisbusinesstimes.com/vendor-news/news/15836515/operation-green-healing-joins-cannatrols-cool-cure-limited-edition-program-as-1st-veterans-nonprofit-partner",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-02T13:57:07.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The partnership will support veterans' wellness through the purchase of every specially designed Cool Cure Limited Edition.",
-   "tags": []
-  },
-  {
-   "id": "n-6cea2f47ca87",
-   "title": "Curaleaf International Secures Australian 1st With TGA-Registered Liquid Medical Cannabis Inhalation Device",
-   "url": "https://www.cannabisbusinesstimes.com/international/news/15836513/curaleaf-international-secures-australian-1st-with-tgaregistered-liquid-medical-cannabis-inhalation-device",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-02T13:47:44.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "In partnership with Jupiter Research, cannabis company’s Que Medical Inhalation Device is also available in New Zealand.",
-   "tags": [
-    "medical"
-   ]
-  },
-  {
    "id": "n-02f55da2f6c9",
    "title": "The test all cannabis operators need to run when selecting a vendor",
    "url": "https://mjbizdaily.com/news/the-test-all-cannabis-operators-need-to-run-when-selecting-a-vendor/618422/",
@@ -1417,7 +1249,6 @@
    "firstSeen": "2026-10-15T13:55:55.590Z",
    "summary": "Verano is remodeling its Virginia footprint ahead of a July adult-use launch, betting on timing to capture demand without overbuilding. How cannabis MSO Verano is preparing for a major new market is a post from: MJBizDaily: Financial, Legal & Cannabusiness news for cannabis entre",
    "tags": [
-    "launch",
     "regulation"
    ]
   },
@@ -1434,16 +1265,6 @@
    ]
   },
   {
-   "id": "n-2ecd7c20504d",
-   "title": "Jim Belushi Endorses No on 8: Stop the Repeal Campaign",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/massachusetts/news/15836489/jim-belushi-endorses-no-on-8-stop-the-repeal-campaign",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-01T20:46:56.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The founder of Belushi’s Farm added his support to the Massachusetts campaign aiming to preserve the state’s adult-use cannabis laws.",
-   "tags": []
-  },
-  {
    "id": "n-15d0f91951ff",
    "title": "GOP senators: hemp THC ‘loophole’ helps Chinese criminals",
    "url": "https://mjbizdaily.com/news/gop-senators-hemp-thc-loophole-helps-chinese-criminals/618404/",
@@ -1454,28 +1275,6 @@
    "tags": [
     "regulation"
    ]
-  },
-  {
-   "id": "n-27141bbe88f8",
-   "title": "Rove Enters Canada With Ontario Launch",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/canadian-cannabis-market/news/15836453/rove-enters-canada-with-ontario-launch",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-01T17:06:50.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The leading U.S. cannabis vape brand marks first international expansion.",
-   "tags": [
-    "launch"
-   ]
-  },
-  {
-   "id": "n-c4eab62c906f",
-   "title": "IND HEMP Invests in Premium Fiber Processing Line, Advancing Spinnable Hemp Fiber for Global Textile Markets",
-   "url": "https://www.cannabisbusinesstimes.com/hemp/news/15836450/ind-hemp-invests-in-premium-fiber-processing-line-advancing-spinnable-hemp-fiber-for-global-textile-markets",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-01T16:59:06.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "New equipment at the company's Montana facility puts spinnable fiber directly in the hands of yarn spinners – the essential step that unlocks hemp fiber for woven and knit production for textiles, home goods, and technical fabrics.",
-   "tags": []
   },
   {
    "id": "n-c7f7bba89e9f",
@@ -1490,26 +1289,6 @@
    ]
   },
   {
-   "id": "n-0fe641804ac1",
-   "title": "Missing Cannabis Moisture Standards Cost States Millions, Leaves Consumers Exposed, New Report Finds",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/cannabis-post-harvest-operations/news/15836441/missing-cannabis-moisture-standards-cost-states-millions-leaves-consumers-exposed-new-report-finds",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-01T15:59:06.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "An ATACH and FTI analysis of nearly 145,000 lab samples finds cannabis in all 10 states studied is dried below the national standard.",
-   "tags": []
-  },
-  {
-   "id": "n-a5f41de7ed5d",
-   "title": "4 GOP Senators Tell DOJ to Investigate Chinese Criminal Networks’ Role in Illicit Cannabis, Hemp Activities",
-   "url": "https://www.cannabisbusinesstimes.com/hemp/news/15836411/4-gop-senators-tell-doj-to-investigate-chinese-criminal-networks-role-in-illicit-cannabis-hemp-activities",
-   "source": "Cannabis Business Times",
-   "published": "2026-10-01T14:32:19.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The U.S. senators wrote a letter to Attorney General Todd Blanche, further addressing what they call a need to close an intoxicating hemp product ‘loophole.’",
-   "tags": []
-  },
-  {
    "id": "n-75eb5df8c671",
    "title": "Curaleaf Laboratories Signs Distribution Agreement With Vericura to Expand UK Manufacturing and Distribution of Medical Cannabis Products",
    "url": "https://cannabishealthnews.co.uk/2026/10/01/curaleaf-laboratories-signs-distribution-agreement-with-vericura-to-expand-uk-manufacturing-and-distribution-of-medical-cannabis-products/",
@@ -1519,6 +1298,7 @@
    "summary": "Curaleaf Laboratories and Vericura announce a new UK medical cannabis manufacturing and distribution agreement.",
    "tags": [
     "uk",
+    "launch",
     "medical"
    ]
   },
@@ -1560,52 +1340,6 @@
    ]
   },
   {
-   "id": "n-6a35733a3aea",
-   "title": "'Where Are We on Rescheduling?' Leads <i>CBT’s</i> Top Stories in September",
-   "url": "https://www.cannabisbusinesstimes.com/cannabis-rescheduling/news/15836188/federal-cannabis-rescheduling-update-leads-cbts-top-stories-in-september",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-30T15:35:00.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Former federal prosecutor and CBT contributor Julie A. Werner-Simon breaks down where we are months after the U.S. Attorney General’s April order.",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
-   "id": "n-3712b3895816",
-   "title": "BLAZE Launches BLAZE MCP, the Most Comprehensive AI Connector in Cannabis Retail",
-   "url": "https://www.cannabisbusinesstimes.com/vendor-news/news/15836280/blaze-launches-blaze-mcp-the-most-comprehensive-ai-connector-in-cannabis-retail",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-30T13:46:14.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "More than 250 actions across point of sale, e-commerce and marketing let operators run their entire business from the AI assistant they already use.",
-   "tags": [
-    "launch"
-   ]
-  },
-  {
-   "id": "n-912437a5af86",
-   "title": "Vireo Growth Announces Put/Call Agreement in Connection With Loan Acquisition",
-   "url": "https://www.cannabisbusinesstimes.com/finance/news/15836278/vireo-growth-announces-putcall-agreement-in-connection-with-loan-acquisition",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-30T13:33:59.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Under the agreement, Battle Green Holdings will have the right, but not the obligation, to cause Vireo to acquire a promissory note.",
-   "tags": []
-  },
-  {
-   "id": "n-27cefc449656",
-   "title": "DEA Judge Halts Cannabis Rescheduling Process, May Reopen Hearing Record",
-   "url": "https://www.cannabisbusinesstimes.com/cannabis-rescheduling/news/15836261/dea-judge-halts-cannabis-rescheduling-process-may-reopen-hearing-record",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-30T10:58:34.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The judge who oversaw the hearing proceedings granted anti-rescheduling parties a stay over a new report that found ‘gaps’ in the DEA’s scheduling policies.",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
    "id": "n-0de15a18b8be",
    "title": "Grünhorn Data Expert to Examine Germany’s Changing Medical Cannabis Market at Frankfurt Symposium",
    "url": "https://cannabishealthnews.co.uk/2026/09/30/grunhorn-data-expert-to-examine-germanys-changing-medical-cannabis-market-at-frankfurt-symposium/",
@@ -1641,16 +1375,6 @@
    ]
   },
   {
-   "id": "n-eca58bb23203",
-   "title": "NCS Analytics Announces Exclusive Partnership With Cannabiz Credit Association",
-   "url": "https://www.cannabisbusinesstimes.com/vendor-news/news/15836223/ncs-analytics-announces-exclusive-partnership-with-cannabiz-credit-association",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-29T19:30:21.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The cannabis industry's first credit bureau will power lending decisions through NCS Thea.",
-   "tags": []
-  },
-  {
    "id": "n-bea0fb196410",
    "title": "Meet the judges for the Cannabis Industry Awards 2026",
    "url": "https://www.cicouncil.org.uk/meet-the-judges-for-the-cannabis-industry-awards-2026/",
@@ -1660,44 +1384,8 @@
    "summary": "With nominations now closed for the Cannabis Industry Awards 2026, we introduce this year’s judging panel and find out what they will be looking for as they assess the individuals driving progress across the UK cannabis sector. Thank you to everyone who submitted a nomination for",
    "tags": [
     "uk",
-    "launch",
     "cup"
    ]
-  },
-  {
-   "id": "n-29f3b4a60b6c",
-   "title": "National Study Links State-Issued Cannabis QR Codes With Greater Consumer Trust, Confidence",
-   "url": "https://www.cannabisbusinesstimes.com/vendor-news/news/15836139/national-study-links-stateissued-cannabis-qr-codes-with-greater-consumer-trust-confidence",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-29T13:28:23.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "More than 3,000 cannabis consumers and patients signal wide support for QR code access to lab results, compliance data, recall alerts, and other verified product information.",
-   "tags": [
-    "medical"
-   ]
-  },
-  {
-   "id": "n-0035227d4778",
-   "title": "No on 8: Stop the Repeal Campaign Releases 1st Ads Focused on Public Health",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/massachusetts/news/15836130/no-on-8-stop-the-repeal-campaign-releases-1st-ads-focused-on-public-health",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-29T13:19:55.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The ad highlights the ‘real risk’ of potentially repealing Massachusetts’ adult-use cannabis laws, which ensure products are regulated, tested and labeled.",
-   "tags": [
-    "launch",
-    "regulation"
-   ]
-  },
-  {
-   "id": "n-2a6238d53f1a",
-   "title": "The Importance of Water and Soil Tests in Cannabis, Hemp Cultivation",
-   "url": "https://www.cannabisbusinesstimes.com/columns/tomorrow-in-cannabis/news/15836126/the-importance-of-water-and-soil-tests-in-cannabis-hemp-cultivation",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-29T13:06:49.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Even with years of farming on a plot of land, the properties of cannabis and hemp demand further soil and water analysis.",
-   "tags": []
   },
   {
    "id": "n-781470f4e289",
@@ -1713,16 +1401,6 @@
    ]
   },
   {
-   "id": "n-32539bd9099d",
-   "title": "California Dispute Over 'Burner Distros,' Illicit Market Diversion Drags On",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/california/news/15836081/california-opts-to-fight-not-fix-cannabis-trackandtrace-dispute",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-28T19:36:13.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The state’s Department of Cannabis Control appealed a court ruling that it failed to flag suspicious activity in the state’s supply chain.",
-   "tags": []
-  },
-  {
    "id": "n-a8ea2cc3a0c9",
    "title": "Register now for patient-focused broadcast, 20 Oct",
    "url": "https://www.cicouncil.org.uk/cannabis-industry-council-announces-live-broadcast-bringing-patients-clinicians-and-industry-together-to-explore-patient-choice-safety-and-quality-of-life/",
@@ -1733,18 +1411,6 @@
    "tags": [
     "medical",
     "uk"
-   ]
-  },
-  {
-   "id": "n-9268ef9aa7f4",
-   "title": "Trulieve Announces Exclusive Master Licensing Agreement With Connected for Florida and Texas",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/cannabis-licensing/news/15835986/trulieve-announces-exclusive-master-licensing-agreement-with-connected-for-florida-and-texas",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-28T12:56:00.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The perpetual royalty-free license covers Alien Labs and Connected Brands.",
-   "tags": [
-    "regulation"
    ]
   },
   {
@@ -1774,38 +1440,6 @@
    ]
   },
   {
-   "id": "n-1be47dbe610e",
-   "title": "Ty Dolla $ign and Zig-Zag Natural Leaf Wraps Take the Fan Experience Beyond the Stage",
-   "url": "https://www.cannabisbusinesstimes.com/vendor-news/news/15835561/ty-dolla-ign-and-zigzag-natural-leaf-wraps-take-the-fan-experience-beyond-the-stage",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-26T13:00:00.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Four tour-driven retail stops will feature meet-and-greets, signed Natural Leaf boxes and Golden Ticket giveaways for concert admission.",
-   "tags": []
-  },
-  {
-   "id": "n-10a97b331624",
-   "title": "Cresco Labs Files Management Information Circular, Prepares for US Listing",
-   "url": "https://www.cannabisbusinesstimes.com/finance/news/15835882/cresco-labs-files-management-information-circular-prepares-for-us-listing",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-25T13:25:52.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Shareholders will vote on measures that streamline capital structure and governance to position the company for a potential senior U.S. exchange listing.",
-   "tags": []
-  },
-  {
-   "id": "n-4b33eafd9338",
-   "title": "Pennsylvania Senate Lawmakers to Debate Adult-Use Cannabis Legalization",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/pennsylvania/news/15835878/pennsylvania-senate-lawmakers-to-debate-adultuse-cannabis-legalization",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-25T13:12:46.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "ResponsiblePA says a recent million-dollar bust proves the cost of inaction ahead of the Senate committee hearing.",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
    "id": "n-81538efd64cc",
    "title": "Senior Police Drugs Advisor to Present Medical Cannabis Guidance at London Symposium",
    "url": "https://cannabishealthnews.co.uk/2026/09/25/senior-police-drugs-advisor-to-present-medical-cannabis-guidance-at-london-symposium/",
@@ -1832,48 +1466,6 @@
    ]
   },
   {
-   "id": "n-00a04f84c29c",
-   "title": "Montana Leans on Federal Cannabis Prohibition to Adopt New Residency Licensing Requirement",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/montana/news/15835845/montana-leans-on-federal-cannabis-prohibition-to-adopt-new-residency-licensing-requirement",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-24T20:02:22.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The state’s licensed operators will be required to provide the name of each person who has ‘day-to-day operational control’ over their businesses.",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
-   "id": "n-6c9a767bfb9f",
-   "title": "Greenlight Dispensary Workers in Joplin, Mo., Vote to Unionize With UFCW Local 2",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/missouri/news/15835798/greenlight-dispensary-workers-in-joplin-mo-vote-to-unionize-with-ufcw-local-2",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-24T16:08:08.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The Joplin win is the latest in a string of cannabis worker victories across Missouri.",
-   "tags": []
-  },
-  {
-   "id": "n-31f680dd38fd",
-   "title": "Metrc Extends Track-and-Trace Partnership With Colorado",
-   "url": "https://www.cannabisbusinesstimes.com/vendor-news/news/15835796/metrc-extends-trackandtrace-partnership-with-colorado",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-24T15:50:30.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The new contract extends through 2029 and offers new solutions to Colorado businesses focused on efficiency and sustainability.",
-   "tags": []
-  },
-  {
-   "id": "n-9c23a0bb6abc",
-   "title": "Aurora Cannabis Files Application With Alberta Securities Commission to Protect Company Shareholders",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/mergers-and-acquisitions/news/15835768/aurora-cannabis-files-application-with-alberta-securities-commission-to-protect-company-shareholders",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-24T13:50:57.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The company filed the application, having identified what it calls several deficiencies in Curaleaf’s hostile bid disclosure.",
-   "tags": []
-  },
-  {
    "id": "n-e8ad856f37c8",
    "title": "Medical Cannabis for Anxiety in the UK: What the Evidence Actually Shows",
    "url": "https://cannabishealthnews.co.uk/2026/09/24/medical-cannabis-for-anxiety-in-the-uk-what-the-evidence-actually-shows/",
@@ -1887,42 +1479,6 @@
    ]
   },
   {
-   "id": "n-ea89f66b762c",
-   "title": "PROTEUS420 Launches PheeBee, a Privacy-First AI Assistant for Cannabis Operations",
-   "url": "https://www.cannabisbusinesstimes.com/vendor-news/news/15835737/proteus420-launches-pheebee-a-privacyfirst-ai-assistant-for-cannabis-operations",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-23T20:45:36.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The account-isolated technology provides insights across retail, inventory and compliance workflows while keeping operators in control of business data.",
-   "tags": [
-    "launch"
-   ]
-  },
-  {
-   "id": "n-8f6f3a7d9e37",
-   "title": "New CDC Data Confirms Youth Cannabis Use Declines Following Legalization",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/cannabis-consumer-trends/news/15835734/new-cdc-data-confirms-youth-cannabis-use-declines-following-legalization",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-23T20:31:37.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "All legalization states see declines in youth use; “easy” access for teens is down since 2012.",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
-   "id": "n-954c70785e0a",
-   "title": "Curaleaf Presses NY Governor to Fix Out-of-State Cannabis Problem",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/new-york/news/15835689/curaleaf-presses-ny-governor-to-fix-outofstate-cannabis-problem",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-23T18:24:53.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The company paid for a full-page ad in the New York Post , urging Gov. Kathy Hochul to sign legislation intended to crack down on cannabis 'inversion.'",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
    "id": "n-7a696384577b",
    "title": "Cannabis Europa Announces Three 2027 Events with New London Venue",
    "url": "https://cannabishealthnews.co.uk/2026/09/23/cannabis-europa-announces-three-2027-events-including-flagship-move-to-new-london-venue/",
@@ -1933,16 +1489,6 @@
    "tags": [
     "uk"
    ]
-  },
-  {
-   "id": "n-0858fe635c8c",
-   "title": "Curaleaf Added to FTSE Canada All Cap Index",
-   "url": "https://www.cannabisbusinesstimes.com/finance/news/15835616/curaleaf-added-to-ftse-canada-all-cap-index",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-23T13:46:22.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "This addition marks the second major Canadian benchmark inclusion following the company's addition to the S&P/TSX Composite Index in 2025.",
-   "tags": []
   },
   {
    "id": "n-dc2fe1956231",
@@ -1959,49 +1505,6 @@
    ]
   },
   {
-   "id": "n-50b092c33f39",
-   "title": "Canopy Growth Expands European Medical Cannabis Supply Into UK",
-   "url": "https://www.cannabisbusinesstimes.com/international/news/15835499/canopy-growth-expands-european-medical-cannabis-supply-into-uk",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-22T13:03:48.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The company will supply four Canadian-grown flower strains to distribute in the U.K. medical cannabis market under Spectrum Therapeutics.",
-   "tags": [
-    "uk",
-    "medical"
-   ]
-  },
-  {
-   "id": "n-477a3514d80d",
-   "title": "Trulieve Cannabis Corp. Added to S&P Total Market and S&P Completion Indices",
-   "url": "https://www.cannabisbusinesstimes.com/finance/news/15835497/trulieve-cannabis-corp-added-to-sp-total-market-and-sp-completion-indices",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-22T13:00:46.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The company’s inclusion marks another milestone as Trulieve Broadens its U.S. capital markets.",
-   "tags": []
-  },
-  {
-   "id": "n-19a841a75c40",
-   "title": "Organic Remedies Renews Commitment to Help Protect Environment",
-   "url": "https://www.cannabisbusinesstimes.com/climate-environment-control/news/15835495/organic-remedies-renews-commitment-to-help-protect-environment",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-22T12:45:39.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "By partnering with Sentinel Earth, Organic Remedies is offsetting carbon emissions by supporting two powerful environmental projects.",
-   "tags": []
-  },
-  {
-   "id": "n-0fae134eddd2",
-   "title": "Vireo Growth Completes Acquisition of M3 Wellness, a Nevada Dispensary",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/mergers-and-acquisitions/news/15835492/vireo-growth-completes-acquisition-of-m3-wellness-a-nevada-dispensary",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-22T12:36:58.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The cannabis operator acquired the Hawthorne dispensary for $500,000.",
-   "tags": []
-  },
-  {
    "id": "n-b3570fe21b66",
    "title": "What medication do you need to declare to the dvla",
    "url": "https://www.medicann.co.uk/article/what-medication-do-you-need-to-declare-to-the-dvla",
@@ -2011,86 +1514,6 @@
    "summary": "",
    "tags": [
     "uk"
-   ]
-  },
-  {
-   "id": "n-0baeb37b3272",
-   "title": "Terrabis Brings Medical Cannabis Service to 4 Illinois Dispensaries",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/medical-cannabis-access-and-pricing/news/15835381/terrabis-brings-medical-cannabis-service-to-4-illinois-dispensaries",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-21T14:53:30.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The company’s Woodstock, Dixon, Plainfield and Grayville locations are now serving registered patients, with Mundelein to follow.",
-   "tags": [
-    "medical"
-   ]
-  },
-  {
-   "id": "n-5d1a077ab820",
-   "title": "Green Thumb Industries Announces $50 Million Share Repurchase Program",
-   "url": "https://www.cannabisbusinesstimes.com/finance/news/15835376/green-thumb-industries-announces-50-million-share-repurchase-program",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-21T14:43:35.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The multistate cannabis operator’s board authorized the program to continue for 12 more months.",
-   "tags": []
-  },
-  {
-   "id": "n-6b4b5e5f9d7b",
-   "title": "Unsafe Butane Levels in Cannabis Concentrate Spur Warning",
-   "url": "https://www.cannabisbusinesstimes.com/extraction-distillation/butane-solvent-extraction/news/15835362/unsafe-butane-levels-in-cannabis-concentrate-spur-warning",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-21T14:07:46.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "After patients experienced adverse health reactions from the concentrate, Maine officials issued an advisory in connection with a cannabis delivery service.",
-   "tags": [
-    "medical"
-   ]
-  },
-  {
-   "id": "n-577c9bc2bc42",
-   "title": "Flourish Systems and Award-Winning Canadian Producer Origine Nature Expand Precision Irrigation Technology Across Origine Nature's Cultivation Facility",
-   "url": "https://www.cannabisbusinesstimes.com/vendor-news/news/15834915/flourish-systems-and-awardwinning-canadian-producer-origine-nature-expand-precision-irrigation-technology-across-origine-natures-cultivation-facility",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-21T12:07:00.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The collaboration focuses on crop standardization, early performance detection and the development of predictive yield capabilities.",
-   "tags": [
-    "cup"
-   ]
-  },
-  {
-   "id": "n-966b22cde005",
-   "title": "Smiling Bud Cannabis Manufacturing Workers Vote to Join UFCW Local 360",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/new-jersey/news/15835318/smiling-bud-cannabis-manufacturing-workers-vote-to-join-ufcw-local-360",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-18T19:29:08.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The latest Cannabis Workers Rising campaign victory expands union representation across New Jersey’s cannabis supply chain.",
-   "tags": [
-    "uk"
-   ]
-  },
-  {
-   "id": "n-222345dab9a8",
-   "title": "Zig-Zag Takes Over Southeast Gamedays With 2026 Tailgate Campaign Around College Football’s Marquee Matchups",
-   "url": "https://www.cannabisbusinesstimes.com/vendor-news/news/15835314/zigzag-takes-over-southeast-gamedays-with-2026-tailgate-campaign-around-college-footballs-marquee-matchups",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-18T19:15:45.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The 145-year-old rolling paper brand brings LED trucks, brand ambassadors, tailgate activations and more to college football this season.",
-   "tags": []
-  },
-  {
-   "id": "n-772c7fff3370",
-   "title": "US Lawmakers File Bill to Allow Cannabis Users Access to Federal Employment, Security Clearances",
-   "url": "https://www.cannabisbusinesstimes.com/legislation-and-regulation/news/15835292/us-lawmakers-file-bill-to-allow-cannabis-users-access-to-federal-employment-security-clearances",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-18T17:21:35.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The legislation would prevent an individual’s prior or current cannabis use from being a disqualifying factor in federal job opportunities.",
-   "tags": [
-    "regulation"
    ]
   },
   {
@@ -2104,18 +1527,6 @@
    "tags": [
     "uk",
     "medical"
-   ]
-  },
-  {
-   "id": "n-0c5a902446ac",
-   "title": "Worcester Regional Chamber of Commerce Endorses No on 8: Stop the Repeal Campaign",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/massachusetts/news/15835240/worcester-regional-chamber-of-commerce-endorses-no-on-8-stop-the-repeal-campaign",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-18T12:23:34.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The network of local businesses joined the Massachusetts campaign that’s focused on protecting legal cannabis, jobs and the progress made through legalization.",
-   "tags": [
-    "regulation"
    ]
   },
   {
@@ -2183,40 +1594,6 @@
    ]
   },
   {
-   "id": "n-002e501860f2",
-   "title": "Ohio Dispensary Reopens After Regulators Investigate Adverse Health Events",
-   "url": "https://www.cannabisbusinesstimes.com/dispensary/news/15835228/ohio-dispensary-reopens-after-regulators-investigate-adverse-health-events",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-17T22:11:52.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The Ohio Division of Cannabis Control authorized the Herbal Wellness Center dispensary in Jackson to reopen on Sept. 17.",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
-   "id": "n-f889e5d7a003",
-   "title": "MariMed Announces Thrive Wellness Dispensary Opening in Columbus, Ohio",
-   "url": "https://www.cannabisbusinesstimes.com/dispensary/news/15835173/marimed-announces-thrive-wellness-dispensary-opening-in-columbus-ohio",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-17T15:59:40.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The new retail facility marks the cannabis company’s second store in the state and 14th nationwide.",
-   "tags": []
-  },
-  {
-   "id": "n-0497351e6c07",
-   "title": "TerrAscend Acquires Aunt Mary’s Dispensary, Strengthens Leadership Position in New Jersey",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/mergers-and-acquisitions/news/15835166/terrascend-acquires-aunt-marys-dispensary-strengthens-leadership-position-in-new-jersey",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-17T15:33:31.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The transaction expands the company’s retail footprint to five dispensaries in the state. The store generates more than $10 million in annualized revenue.",
-   "tags": [
-    "uk"
-   ]
-  },
-  {
    "id": "n-7642fea0508b",
    "title": "Cannabis Health Symposium: Frankfurt – 04 November",
    "url": "https://www.cicouncil.org.uk/cannabis-health-symposium-frankfurt-04-november/",
@@ -2227,65 +1604,6 @@
    "tags": [
     "medical",
     "uk"
-   ]
-  },
-  {
-   "id": "n-f54636507b45",
-   "title": "US Lawmakers Introduce Bill to Assist Cannabis Businesses in Getting Insurance",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/cannabis-business-insurance/news/15835145/us-lawmakers-introduce-bill-to-assist-cannabis-businesses-in-getting-insurance",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-17T13:46:24.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The bipartisan legislation aims to shield insurance companies that serve the cannabis industry from federal prosecution and liability.",
-   "tags": [
-    "launch",
-    "regulation"
-   ]
-  },
-  {
-   "id": "n-c4ee343676a0",
-   "title": "Curaleaf Opens 1st Fishtown Dispensary, Expanding Access for Philadelphia Patients",
-   "url": "https://www.cannabisbusinesstimes.com/dispensary/news/15835113/curaleaf-opens-1st-fishtown-dispensary-expanding-access-for-philadelphia-patients",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-16T19:54:30.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The new location features expanded retail space, enhanced product selection and a custom mural celebrating Fishtown's unique character.",
-   "tags": [
-    "medical"
-   ]
-  },
-  {
-   "id": "n-c2b05a6e106c",
-   "title": "Aurora Cannabis Provides Business Update",
-   "url": "https://www.cannabisbusinesstimes.com/finance/news/15835111/aurora-cannabis-provides-business-update",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-16T19:47:20.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The company’s acquisition of Safari Flower and leading European performance are expected to fuel international growth in Q2 and beyond.",
-   "tags": []
-  },
-  {
-   "id": "n-7911eb73dc08",
-   "title": "Colorado Wrote the Cannabis Rulebook; It's Writing the AI Rulebook Next",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/regulations-and-reform/news/15835099/colorado-wrote-the-cannabis-rulebook-its-writing-the-ai-rulebook-next",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-16T19:22:19.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Colorado wrote the cannabis licensing template that other states copied. Its new AI law is now trailblazing another regulatory path for the industry.",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
-   "id": "n-91d947aa6213",
-   "title": "Can States Favor Own Residents for Cannabis Licenses? Michigan Man Asks Supreme Court to Decide",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/cannabis-licensing/news/15835082/can-states-favor-own-residents-for-cannabis-licenses-michigan-man-asks-supreme-court-to-decide",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-16T16:43:49.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Kenneth Gay, who owns the Peridot Tree companies, is petitioning the nation’s highest court to reverse the Ninth Circuit’s ruling involving residency requirements.",
-   "tags": [
-    "regulation"
    ]
   },
   {
@@ -2302,70 +1620,6 @@
    ]
   },
   {
-   "id": "n-93188a0157e1",
-   "title": "BatchNav Partners With <i>Cannabis Business Times</i> to Host Webinar on Hidden Costs Impacting Cannabis Margins",
-   "url": "https://www.cannabisbusinesstimes.com/vendor-news/news/15835026/batchnav-partners-with-cannabis-business-times-to-host-webinar-on-hidden-costs-impacting-cannabis-margins",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-16T13:13:17.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The free Sept. 22 webinar will show operators how cost averaging, inventory, equipment utilization and SKU complexity can distort product profitability.",
-   "tags": []
-  },
-  {
-   "id": "n-b9f6f58757ca",
-   "title": "TSRgrow Expands GROWHub Intelligent Cultivation Software With Advanced Analytics, Metrc Integration, Compliance Capabilities",
-   "url": "https://www.cannabisbusinesstimes.com/vendor-news/news/15835009/tsrgrow-expands-growhub-intelligent-cultivation-software-with-advanced-analytics-metrc-integration-compliance-capabilities",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-16T12:59:07.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The 2026 platform enhancements connect cultivation control, energy monitoring, facility systems and batch-level data to help commercial growers improve performance, efficiency and compliance readiness.",
-   "tags": []
-  },
-  {
-   "id": "n-bdb89161493e",
-   "title": "Theory Wellness Opens Its 1st Minnesota Dispensary in St. Paul",
-   "url": "https://www.cannabisbusinesstimes.com/dispensary/news/15834999/theory-wellness-opens-its-1st-minnesota-dispensary-in-st-paul",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-15T20:26:17.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The new St. Paul Theory location brings on-site cannabis cultivation into view, offering guests a rare look at the plant from grow room to storefront.",
-   "tags": []
-  },
-  {
-   "id": "n-2fa5a2cb7038",
-   "title": "SEIU State Council Endorses No on 8: Stop the Repeal Campaign",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/massachusetts/news/15834906/seiu-state-council-endorses-no-on-8-stop-the-repeal-campaign",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-15T14:30:23.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The labor organization joined the coalition working to protect legal marijuana, jobs and the progress made through legalization.",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
-   "id": "n-7fd2dfa00f57",
-   "title": "Curaleaf Sends Letter to Aurora Shareholders",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/mergers-and-acquisitions/news/15834903/curaleaf-sends-letter-to-aurora-shareholders",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-15T14:17:02.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Curaleaf Chairman and CEO Boris Jordan encourages Aurora’s shareholders to tender their shares and become owners of the world’s leading cannabis company.",
-   "tags": []
-  },
-  {
-   "id": "n-898eb13b6f4c",
-   "title": "Opening the Door to Social Consumption: Massachusetts’ Next Chapter in Cannabis Regulation",
-   "url": "https://www.cannabisbusinesstimes.com/us-states/massachusetts/news/15834882/opening-the-door-to-social-consumption-massachusetts-next-chapter-in-cannabis-regulation",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-15T13:40:48.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The state’s regulations are here, but the rollout largely depends on municipal and operational barriers that may slow or frustrate implementation.",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
    "id": "n-f288da39470c",
    "title": "Medical cannabis consumption methods explained oils vapes flower and pastilles",
    "url": "https://www.medicann.co.uk/article/medical-cannabis-consumption-methods-explained-oils-vapes-flower-and-pastilles",
@@ -2377,26 +1631,6 @@
     "medical",
     "uk"
    ]
-  },
-  {
-   "id": "n-9098ee63a629",
-   "title": "Aurora Cannabis Refutes Curaleaf's Latest Attempt To Distract Shareholders From Facts",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/mergers-and-acquisitions/news/15834851/aurora-cannabis-refutes-curaleafs-latest-attempt-to-distract-shareholders-from-facts",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-14T22:03:42.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "Aurora claims that Curaleaf’s latest announcement is a ‘desperate’ effort to shift shareholder attention away from a hostile bid that “undervalues’ Aurora.",
-   "tags": []
-  },
-  {
-   "id": "n-bd47cae8e890",
-   "title": "Curaleaf Submits Application to Alberta Securities Commission to Halt Aurora's ATM Program During Pending Offer",
-   "url": "https://www.cannabisbusinesstimes.com/business-issues-benchmarks/mergers-and-acquisitions/news/15834767/curaleaf-submits-application-to-alberta-securities-commission-to-halt-auroras-atm-program-during-pending-offer",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-14T13:02:34.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "The company argues Aurora’s share issuances are an improper and abusive defensive tactic that dilutes shareholders and interferes with the consideration of Curaleaf’s offer.",
-   "tags": []
   },
   {
    "id": "n-4dd4d2a239a5",
@@ -2412,18 +1646,6 @@
    ]
   },
   {
-   "id": "n-117e56aa28c5",
-   "title": "Where Are We on Cannabis Rescheduling? It’s Been Months Since the US Attorney General’s April 2026 Order",
-   "url": "https://www.cannabisbusinesstimes.com/cannabis-rescheduling/news/15834706/where-are-we-on-cannabis-rescheduling-its-been-months-since-the-us-attorney-generals-april-2026-order",
-   "source": "Cannabis Business Times",
-   "published": "2026-09-11T23:53:37.000Z",
-   "firstSeen": "2026-10-15T13:55:55.590Z",
-   "summary": "There’s been no transparency about the applications of those seeking DEA registration. The IRS/Treasury has provided no guidance about what to do regarding §280E on those federal tax returns – even though, in April, the feds promised it would be forthcoming.",
-   "tags": [
-    "regulation"
-   ]
-  },
-  {
    "id": "n-4bd5dbdc7118",
    "title": "Opportunities from Industrial Hemp Report Launch in UK Parliament: London – 14 October",
    "url": "https://www.cicouncil.org.uk/opportunities-from-industrial-hemp-report-launch-in-uk-parliament/",
@@ -2433,7 +1655,6 @@
    "summary": "The Cannabis Industry Council will host the launch of its new report, Opportunities from Industrial Hemp, on Wednesday 14 October 2026 at Thames Pavilion, UK Parliament, hosted by Baroness Jenny Jones. The report explores the current landscape for industrial hemp in the UK, the b",
    "tags": [
     "uk",
-    "launch",
     "regulation"
    ]
   },

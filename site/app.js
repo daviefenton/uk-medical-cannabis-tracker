@@ -119,6 +119,7 @@ function viewHome() {
   <div class="sec"><h2>Restocks</h2><a href="#/stock">Stock tracker</a></div>
   ${grid(restocks, p => card(p, `<div class="muted">Restocked ${rel(state.events.find(e => e.type === 'restock' && e.productId === p.id).ts)}</div>`))}
 
+  ${state.news.some(n => (n.tags || []).includes('uk')) ? `<div class="sec"><h2>Latest UK news</h2><a href="#/news">All news</a></div><div class="timeline">${state.news.filter(n => (n.tags || []).includes('uk')).slice(0, 4).map(n => `<a class="ev" href="${esc(n.url)}" target="_blank" rel="noopener noreferrer"><time>${rel(n.published)}</time><div class="b"><strong>${esc(n.title)}</strong><div class="muted">${esc(n.source)}</div></div></a>`).join('')}</div>` : ''}
   ${prices.length ? `<div class="sec"><h2>Price changes</h2></div><div class="timeline">${prices.map(evRow).join('')}</div>` : ''}
   <div class="sec"><h2>Recently added to the tracker</h2></div>
   <div class="timeline">${P.filter(p => p.record === 'announcement').map(p => `<a class="ev" href="#/p/${p.id}"><time>${rel(p.firstSeen)}</time><div class="b"><strong>${esc(p.name)}</strong><div class="muted">${esc(p.producer)} · from public announcement</div></div></a>`).join('')}</div>`;

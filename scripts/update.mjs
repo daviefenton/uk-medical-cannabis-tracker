@@ -20,11 +20,14 @@ const freshNews = [];
 // keyword tags drive the News filters and the "UK launch" alert
 const TAGS = {
   uk: /\b(UK|U\.K\.|Britain|British|England|Scotland|Wales|NHS|MHRA|Home Office|Jersey|Guernsey|Isle of Man)\b/i,
-  launch: /\b(launch\w*|new (strain|cultivar|product|flower)s?|now available|debut\w*|arriv\w+|introduc\w+|releases?d?)\b/i,
+  // a launch needs both a launch word and a product word, so "launches a report" doesn't count
+  launch: { test: t => /\b(launch\w*|now available|debut\w*|arriv\w+|introduc\w+|released?|new)\b/i.test(t) && /\b(strains?|cultivars?|flowers?|products?|range|oils?|vapes?|cartridges?|brand|SKUs?|genetics)\b/i.test(t) },
   regulation: /\b(law|legal\w*|regulat\w*|legislat\w*|reform|reschedul\w*|decriminali[sz]\w*|ban(ned|s)?|licen[cs]\w*|government|parliament|minister|bill)\b/i,
   cup: /\b(cannabis cup|emerald cup|cup winners?|awards?|champion\w*)\b/i,
   medical: /\b(medical|medicinal|patients?|prescri\w+|clinic\w*|pharmac\w+)\b/i
 };
+const NEWS_KINDS = new Set(['news', 'sitemap']);  // adapters that produce news, not products
+const PER_SOURCE_MAX = 30;                          // stop one busy feed flooding the page
 const tagsFor = (t, region) => [...Object.entries(TAGS).filter(([, re]) => re.test(t)).map(([k]) => k), ...(region === 'uk' ? ['uk'] : [])].filter((v, i, a) => a.indexOf(v) === i);
 
 for (const src of cfg.sources.filter(s => s.enabled)) {
@@ -32,6 +35,10 @@ for (const src of cfg.sources.filter(s => s.enabled)) {
   if (!adapter) { console.warn('unknown adapter', src.kind); continue; }
   let items;
   try { items = await adapter(src); } catch (e) { console.warn(`[${src.id}] failed: ${e.message}`); continue; }  // a failing source never deletes data
+  if (NEWS_KINDS.has(src.kind)) {
+    if (!items.length) console.warn(`[${src.id}] returned no items`);
+    items = items.slice(0, PER_SOURCE_MAX);
+  }
   for (const it of items) {
     if (it.kind === 'news') {
       if (newsSeen.has(it.url)) continue;
@@ -67,8 +74,8 @@ for (const src of cfg.sources.filter(s => s.enabled)) {
 // de-dupe events by id so reruns on the same day are idempotent
 const have = new Set(evDb.events.map(e => e.id));
 const fresh = newEvents.filter(e => !have.has(e.id));
-const touched = fresh.length || freshNews.length || cfg.sources.some(s => s.enabled && s.kind !== 'news');
-if (fresh.length || cfg.sources.some(s => s.enabled && s.kind !== 'news')) db.generatedAt = now;  // product data refreshed
+const touched = fresh.length || freshNews.length || cfg.sources.some(s => s.enabled && !NEWS_KINDS.has(s.kind));
+if (fresh.length || cfg.sources.some(s => s.enabled && !NEWS_KINDS.has(s.kind))) db.generatedAt = now;  // product data refreshed
 if (cfg.ntfyTopic) db.ntfyTopic = cfg.ntfyTopic;
 console.log(`${freshNews.length} new news items`);
 console.log(`${fresh.length} new events`, fresh.map(e => `${e.type}:${e.productId}`).join(', '));

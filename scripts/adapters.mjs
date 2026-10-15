@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs';
 const load = async url => url.startsWith('file:') || !/^https?:/.test(url)
   ? readFileSync(url.replace(/^file:/, ''), 'utf8')
-  : (await fetch(url, { headers: { 'user-agent': 'LeafwatchUK/1.0 (+contact in repo README)' } }).then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); }));
+  : (await fetch(url, { headers: { 'user-agent': 'LeafwatchUK/1.0 (+https://github.com/daviefenton/uk-medical-cannabis-tracker)' }, signal: AbortSignal.timeout(30000) }).then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); }));
 const get = (o, path) => path.split('.').reduce((a, k) => a?.[k], o);
 const num = v => v == null || v === '' ? null : Number(String(v).replace(/[^\d.]/g, '')) || null;
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
