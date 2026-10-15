@@ -11,7 +11,7 @@ const urls = process.argv.slice(2).length ? process.argv.slice(2) : [
 const UA = 'LeafwatchUK/1.0 (+https://github.com/daviefenton/uk-medical-cannabis-tracker)';
 async function get(u) {
   try {
-    const r = await fetch(u, { headers: { 'user-agent': UA }, redirect: 'follow', signal: AbortSignal.timeout(15000) });
+    const r = await fetch(u, { headers: { 'user-agent': UA }, redirect: 'follow', signal: AbortSignal.timeout(+(process.env.TIMEOUT_MS || 30000)) });
     const t = await r.text();
     return { status: r.status, final: r.url, type: (r.headers.get('content-type') || '').split(';')[0], size: t.length, text: t };
   } catch (e) { return { status: 'ERR ' + (e.cause?.code || e.message) }; }
