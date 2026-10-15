@@ -2,7 +2,7 @@
 import { readFileSync } from 'node:fs';
 const load = async url => url.startsWith('file:') || !/^https?:/.test(url)
   ? readFileSync(url.replace(/^file:/, ''), 'utf8')
-  : (await fetch(url, { headers: { 'user-agent': 'LeafwatchUK/1.0 (+https://github.com/daviefenton/uk-medical-cannabis-tracker)' }, signal: AbortSignal.timeout(30000) }).then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); }));
+  : (await fetch(url, { headers: { 'user-agent': 'LeafwatchUK/1.0 (+https://github.com/daviefenton/uk-medical-cannabis-tracker)', accept: 'application/rss+xml, application/atom+xml, application/xml;q=0.9, text/xml;q=0.9, */*;q=0.5' }, signal: AbortSignal.timeout(30000) }).then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); }));
 const get = (o, path) => path.split('.').reduce((a, k) => a?.[k], o);
 const num = v => v == null || v === '' ? null : Number(String(v).replace(/[^\d.]/g, '')) || null;
 const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -44,6 +44,7 @@ adapters.news = async src => {
     const summary = (tag(item, 'description') || tag(item, 'summary')).slice(0, 280);
     out.push({ kind: 'news', title, url: link, published: date ? new Date(date).toISOString() : null, summary, source: src.label, region: src.region || null });
   }
+  if (!out.length) throw new Error(`no feed items in response (${xml.length} bytes): ${xml.slice(0, 160).replace(/\s+/g, ' ')}`);
   return out;
 };
 
