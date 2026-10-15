@@ -12,7 +12,7 @@ Every item is **Confirmed**, **Announced** or **Rumour**; news-derived leads are
 npm run build      # -> dist/ (+ dist/preview.html, a single-file version)
 npm run serve      # http://localhost:8080
 ```
-Deployed to GitHub Pages by `.github/workflows/pages.yml` (enable Settings → Pages → Source: GitHub Actions).
+Live at https://daviefenton.github.io/uk-medical-cannabis-tracker/ — `.github/workflows/pages.yml` builds and pushes to the `gh-pages` branch (Settings → Pages → Deploy from a branch → gh-pages).
 
 ## Keeping data fresh
 1. List sources in `data/sources.json` (`json` feeds/APIs, `rss` news feeds; add adapters in `scripts/adapters.mjs`). Only use sources you may legitimately read; respect terms and robots.txt.
