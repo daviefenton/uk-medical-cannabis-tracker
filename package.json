@@ -1,0 +1,1 @@
+{ "name": "leafwatch-uk", "private": true, "type": "module", "scripts": { "build": "node scripts/build.mjs", "update": "node scripts/update.mjs", "serve": "node scripts/build.mjs && npx http-server dist -p 8080" } }

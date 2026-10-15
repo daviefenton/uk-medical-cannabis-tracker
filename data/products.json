@@ -1,0 +1,537 @@
+{
+ "generatedAt": "2026-10-15T12:00:00Z",
+ "products": [
+  {
+   "id": "isando-medcan",
+   "name": "Isando (South African-grown flower)",
+   "producer": "MedCan",
+   "form": "flower",
+   "genetics": null,
+   "thc": 16.1,
+   "cbd": null,
+   "pricePerGram": null,
+   "irradiated": "no",
+   "irradiationNote": "Producer says growing methods avoid irradiation",
+   "terpenes": [],
+   "aroma": [],
+   "origin": "South Africa",
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "unknown",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "pharmacies": [],
+   "sources": [
+    {
+     "label": "Business of Cannabis",
+     "url": "https://businessofcannabis.com/?p=1494"
+    }
+   ],
+   "lastVerified": "2026-10-15",
+   "record": "announcement"
+  },
+  {
+   "id": "cannfx-nz",
+   "name": "CannFx dried flower (New Zealand)",
+   "producer": "CannFx",
+   "form": "flower",
+   "genetics": null,
+   "thc": null,
+   "cbd": null,
+   "pricePerGram": null,
+   "irradiated": "unknown",
+   "terpenes": [],
+   "aroma": [],
+   "origin": "New Zealand",
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "unknown",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "pharmacies": [],
+   "importer": "Cantourage UK",
+   "sources": [
+    {
+     "label": "Business of Cannabis",
+     "url": "https://businessofcannabis.com/cantourage-uk-and-cannfx-make-history-by-delivering-the-first-ever-medical-cannabis-flower-from-new-zealand-to-the-uk/"
+    }
+   ],
+   "lastVerified": "2026-10-15",
+   "record": "announcement"
+  },
+  {
+   "id": "together-uganda",
+   "name": "Together Pharma flower (Uganda)",
+   "producer": "Together Pharma",
+   "form": "flower",
+   "genetics": null,
+   "thc": null,
+   "cbd": null,
+   "pricePerGram": null,
+   "irradiated": "no",
+   "irradiationNote": "Described as non-irradiated in coverage",
+   "terpenes": [],
+   "aroma": [],
+   "origin": "Uganda",
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "unknown",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "pharmacies": [],
+   "importer": "Cantourage UK",
+   "notes": "Further cultivars were promised \"over the next few months\".",
+   "sources": [
+    {
+     "label": "PR Newswire",
+     "url": "https://www.prnewswire.com/il/news-releases/cantourage-uk-brings-together-pharma-s-uganda-grown-medical-cannabis-to-the-united-kingdom-801225875.html"
+    }
+   ],
+   "lastVerified": "2026-10-15",
+   "record": "announcement"
+  },
+  {
+   "id": "ceres-craft",
+   "name": "Plantations Cérès craft flower",
+   "producer": "Plantations Cérès",
+   "form": "flower",
+   "genetics": null,
+   "thc": null,
+   "cbd": null,
+   "pricePerGram": null,
+   "irradiated": "no",
+   "irradiationNote": "Partnership announced as non-irradiated craft flower",
+   "terpenes": [],
+   "aroma": [],
+   "origin": "Canada (Quebec)",
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "unknown",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "pharmacies": [],
+   "importer": "Cantourage UK",
+   "sources": [
+    {
+     "label": "PR Newswire UK",
+     "url": "https://prnewswire.co.uk/news-releases/cantourage-uk-leading-medical-cannabis-company-forms-partnership-with-premier-craft-cannabis-cultivator-plantations-ceres-pioneering-access-to-premium-medical-cannabis-flowers-for-uk-patients-301852590.html"
+    }
+   ],
+   "lastVerified": "2026-10-15",
+   "record": "announcement"
+  },
+  {
+   "id": "glass-pharms-uk",
+   "name": "Glass Pharms UK-grown flower",
+   "producer": "Glass Pharms",
+   "form": "flower",
+   "genetics": null,
+   "thc": null,
+   "cbd": null,
+   "pricePerGram": null,
+   "irradiated": "unknown",
+   "terpenes": [],
+   "aroma": [],
+   "origin": "United Kingdom",
+   "status": "upcoming",
+   "confidence": "announced",
+   "stock": "unknown",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "pharmacies": [],
+   "notes": "Releaf announced it would be first clinic to offer it. No date confirmed.",
+   "sources": [
+    {
+     "label": "Farming News",
+     "url": "https://farming.co.uk/news/uk-patients-now-prescribed-first-domestically-grown-medical-cannabis-"
+    }
+   ],
+   "lastVerified": "2026-10-15",
+   "record": "announcement"
+  },
+  {
+   "id": "mamedica-own-brand",
+   "name": "Mamedica own-brand THC-dominant strains",
+   "producer": "Cantourage (Canada)",
+   "form": "flower",
+   "genetics": null,
+   "thc": null,
+   "cbd": null,
+   "pricePerGram": null,
+   "irradiated": "unknown",
+   "terpenes": [],
+   "aroma": [],
+   "origin": "Canada",
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "unknown",
+   "releaseDate": null,
+   "firstSeen": "2026-10-15",
+   "pharmacies": [],
+   "sources": [
+    {
+     "label": "Business of Cannabis",
+     "url": "https://businessofcannabis.com/mamedica-launches-first-own-brand-strains-of-canadian-thc-dominant-cannabis-in-the-uk-with-cantourage/"
+    }
+   ],
+   "lastVerified": "2026-10-15",
+   "record": "announcement"
+  },
+  {
+   "id": "s-citrus-meridian",
+   "name": "Citrus Meridian",
+   "producer": "Harbourfield Botanics (sample)",
+   "form": "flower",
+   "genetics": "Lemon Haze × Tangie",
+   "thc": 24,
+   "cbd": 0.5,
+   "pricePerGram": 8.5,
+   "irradiated": "no",
+   "terpenes": [
+    {
+     "name": "Limonene",
+     "pct": 1.1
+    },
+    {
+     "name": "Terpinolene",
+     "pct": 0.6
+    },
+    {
+     "name": "Myrcene",
+     "pct": 0.4
+    }
+   ],
+   "aroma": [
+    "citrus"
+   ],
+   "origin": "Canada",
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "releaseDate": "2026-10-12",
+   "firstSeen": "2026-10-12",
+   "pharmacies": [
+    "Northgate Pharmacy",
+    "Riverside Dispensary"
+   ],
+   "sources": [],
+   "lastVerified": "2026-10-15",
+   "record": "sample"
+  },
+  {
+   "id": "s-diesel-dawn",
+   "name": "Dawn Diesel",
+   "producer": "Calder & Moss (sample)",
+   "form": "flower",
+   "genetics": "Sour Diesel × OG Kush",
+   "thc": 27,
+   "cbd": 0.3,
+   "pricePerGram": 9.2,
+   "irradiated": "no",
+   "terpenes": [
+    {
+     "name": "Caryophyllene",
+     "pct": 0.9
+    },
+    {
+     "name": "Limonene",
+     "pct": 0.7
+    },
+    {
+     "name": "Myrcene",
+     "pct": 0.5
+    }
+   ],
+   "aroma": [
+    "diesel",
+    "citrus"
+   ],
+   "origin": "Portugal",
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "low",
+   "releaseDate": "2026-10-09",
+   "firstSeen": "2026-10-09",
+   "pharmacies": [
+    "Northgate Pharmacy"
+   ],
+   "sources": [],
+   "lastVerified": "2026-10-14",
+   "record": "sample"
+  },
+  {
+   "id": "s-gas-lantern",
+   "name": "Gas Lantern",
+   "producer": "Calder & Moss (sample)",
+   "form": "flower",
+   "genetics": "GMO × Gelato",
+   "thc": 29,
+   "cbd": 0.2,
+   "pricePerGram": 10.5,
+   "irradiated": "yes",
+   "terpenes": [
+    {
+     "name": "Caryophyllene",
+     "pct": 1.2
+    },
+    {
+     "name": "Limonene",
+     "pct": 0.5
+    },
+    {
+     "name": "Humulene",
+     "pct": 0.3
+    }
+   ],
+   "aroma": [
+    "diesel"
+   ],
+   "origin": "Portugal",
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "releaseDate": "2026-09-20",
+   "firstSeen": "2026-09-20",
+   "lastRestock": "2026-10-13",
+   "pharmacies": [
+    "Riverside Dispensary",
+    "Eastbank Pharmacy"
+   ],
+   "sources": [],
+   "lastVerified": "2026-10-14",
+   "record": "sample"
+  },
+  {
+   "id": "s-tangerine-fold",
+   "name": "Tangerine Fold",
+   "producer": "Westmarch Growers (sample)",
+   "form": "flower",
+   "genetics": "Tangie × Cookies",
+   "thc": 21,
+   "cbd": 1,
+   "pricePerGram": 7.4,
+   "irradiated": "no",
+   "terpenes": [
+    {
+     "name": "Limonene",
+     "pct": 1.4
+    },
+    {
+     "name": "Ocimene",
+     "pct": 0.4
+    },
+    {
+     "name": "Linalool",
+     "pct": 0.3
+    }
+   ],
+   "aroma": [
+    "citrus"
+   ],
+   "origin": "Netherlands",
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "out",
+   "releaseDate": "2026-08-30",
+   "firstSeen": "2026-08-30",
+   "pharmacies": [
+    "Eastbank Pharmacy"
+   ],
+   "sources": [],
+   "lastVerified": "2026-10-13",
+   "record": "sample"
+  },
+  {
+   "id": "s-nightfall-fuel",
+   "name": "Nightfall Fuel",
+   "producer": "Westmarch Growers (sample)",
+   "form": "flower",
+   "genetics": "Chemdawg × Purple Punch",
+   "thc": 25,
+   "cbd": 0.4,
+   "pricePerGram": 8.8,
+   "irradiated": "yes",
+   "terpenes": [
+    {
+     "name": "Myrcene",
+     "pct": 1
+    },
+    {
+     "name": "Caryophyllene",
+     "pct": 0.8
+    },
+    {
+     "name": "Linalool",
+     "pct": 0.4
+    }
+   ],
+   "aroma": [
+    "diesel"
+   ],
+   "origin": "Netherlands",
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "releaseDate": "2026-07-02",
+   "firstSeen": "2026-07-02",
+   "previousPricePerGram": 9.8,
+   "priceChangedOn": "2026-10-11",
+   "pharmacies": [
+    "Northgate Pharmacy",
+    "Eastbank Pharmacy"
+   ],
+   "sources": [],
+   "lastVerified": "2026-10-14",
+   "record": "sample"
+  },
+  {
+   "id": "s-lemon-ledger",
+   "name": "Lemon Ledger",
+   "producer": "Harbourfield Botanics (sample)",
+   "form": "flower",
+   "genetics": "Super Lemon Haze",
+   "thc": 19,
+   "cbd": 0.6,
+   "pricePerGram": 6.9,
+   "irradiated": "no",
+   "terpenes": [
+    {
+     "name": "Terpinolene",
+     "pct": 1
+    },
+    {
+     "name": "Limonene",
+     "pct": 0.9
+    }
+   ],
+   "aroma": [
+    "citrus"
+   ],
+   "origin": "Canada",
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "releaseDate": "2026-06-10",
+   "firstSeen": "2026-06-10",
+   "lastRestock": "2026-10-14",
+   "pharmacies": [
+    "Riverside Dispensary"
+   ],
+   "sources": [],
+   "lastVerified": "2026-10-14",
+   "record": "sample"
+  },
+  {
+   "id": "s-old-reliable",
+   "name": "Old Reliable 18",
+   "producer": "Calder & Moss (sample)",
+   "form": "flower",
+   "genetics": "Hybrid",
+   "thc": 18,
+   "cbd": 0.1,
+   "pricePerGram": 5.9,
+   "irradiated": "yes",
+   "terpenes": [
+    {
+     "name": "Myrcene",
+     "pct": 0.8
+    }
+   ],
+   "aroma": [],
+   "origin": "Portugal",
+   "status": "discontinued",
+   "confidence": "confirmed",
+   "stock": "discontinued",
+   "releaseDate": "2025-02-01",
+   "firstSeen": "2025-02-01",
+   "discontinuedOn": "2026-10-05",
+   "pharmacies": [],
+   "sources": [],
+   "lastVerified": "2026-10-10",
+   "record": "sample"
+  },
+  {
+   "id": "s-balanced-oil",
+   "name": "Balanced 10:10 Oil",
+   "producer": "Westmarch Growers (sample)",
+   "form": "oil",
+   "genetics": null,
+   "thc": 10,
+   "cbd": 10,
+   "pricePerGram": null,
+   "pricePerMl": 48,
+   "irradiated": "unknown",
+   "terpenes": [],
+   "aroma": [],
+   "origin": "Netherlands",
+   "status": "released",
+   "confidence": "confirmed",
+   "stock": "in_stock",
+   "releaseDate": "2026-03-01",
+   "firstSeen": "2026-03-01",
+   "pharmacies": [
+    "Northgate Pharmacy"
+   ],
+   "sources": [],
+   "lastVerified": "2026-10-12",
+   "record": "sample"
+  },
+  {
+   "id": "s-pomelo-pending",
+   "name": "Pomelo Pending",
+   "producer": "Harbourfield Botanics (sample)",
+   "form": "flower",
+   "genetics": "Grapefruit × Zkittlez",
+   "thc": 26,
+   "cbd": 0.3,
+   "pricePerGram": null,
+   "irradiated": "no",
+   "terpenes": [
+    {
+     "name": "Limonene",
+     "pct": 1.2
+    }
+   ],
+   "aroma": [
+    "citrus"
+   ],
+   "origin": "Canada",
+   "status": "upcoming",
+   "confidence": "announced",
+   "stock": "unknown",
+   "releaseDate": "2026-10-28",
+   "firstSeen": "2026-10-10",
+   "pharmacies": [],
+   "notes": "Producer-announced; UK date from importer notice.",
+   "sources": [],
+   "lastVerified": "2026-10-14",
+   "record": "sample"
+  },
+  {
+   "id": "s-diesel-whisper",
+   "name": "Diesel Whisper",
+   "producer": "Calder & Moss (sample)",
+   "form": "flower",
+   "genetics": null,
+   "thc": null,
+   "cbd": null,
+   "pricePerGram": null,
+   "irradiated": "unknown",
+   "terpenes": [],
+   "aroma": [
+    "diesel"
+   ],
+   "origin": "Portugal",
+   "status": "upcoming",
+   "confidence": "rumour",
+   "stock": "unknown",
+   "releaseDate": null,
+   "firstSeen": "2026-10-13",
+   "pharmacies": [],
+   "notes": "Unconfirmed community chatter. No producer or pharmacy source yet.",
+   "sources": [],
+   "lastVerified": "2026-10-13",
+   "record": "sample"
+  }
+ ]
+}
