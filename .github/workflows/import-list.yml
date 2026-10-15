@@ -27,7 +27,7 @@ jobs:
           done
           git add data
           if git diff --cached --quiet; then echo "changed=false" >> "$GITHUB_OUTPUT"; exit 0; fi
-          git commit -m "data: import pharmacy list" && git push
+          git commit -m "data: import pharmacy list" && git pull --rebase origin main && git push
           echo "changed=true" >> "$GITHUB_OUTPUT"
   deploy:
     needs: import
